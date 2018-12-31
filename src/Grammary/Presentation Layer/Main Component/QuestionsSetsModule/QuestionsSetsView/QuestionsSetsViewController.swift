@@ -22,7 +22,7 @@ final class QuestionsSetsViewController: UIViewController, QuestionsSetsView {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewManager = QuestionsSetsTableViewManager(tableView: tableView)
+        tableViewManager = QuestionsSetsTableViewManager(tableView: tableView, cellTypes: [QuestionsSetTableViewCell.self])
     }
 
     // MARK: - Actions
@@ -31,7 +31,7 @@ final class QuestionsSetsViewController: UIViewController, QuestionsSetsView {
 
     var presenter: QuestionsSetsPresenter?
 
-    func setDataSource(_ dataSource: [Int]) {
+    func setDataSource(_ dataSource: [TableViewSection]) {
         tableViewManager.dataSource = dataSource
     }
 }

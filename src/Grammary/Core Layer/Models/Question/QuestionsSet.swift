@@ -18,4 +18,8 @@ struct QuestionProgress {
     var progress: Int = 0
     var errorCount: Int = 0
     var nextExerciseDate: Date?
+    
+    var percentOfProgress: Double {
+        return Double(progress) / Double(QuestionsSetConstants.maxNumberOfExersice)
+    }
 }

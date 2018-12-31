@@ -12,13 +12,13 @@ final class QuestionsSetsTableViewManager: NSObject, UITableViewDataSource, UITa
 
     private weak var tableView: UITableView?
 
-    var dataSource: [Int] = [] {
+    var dataSource: [TableViewSection] = [] {
         didSet {
             tableView?.reloadData()
         }
     }
 
-    init(tableView: UITableView) {
+    init(tableView: UITableView, cellTypes: [UITableViewCell.Type]) {
         self.tableView = tableView
 
         super.init()
@@ -26,25 +26,27 @@ final class QuestionsSetsTableViewManager: NSObject, UITableViewDataSource, UITa
         tableView.delegate = self
         tableView.dataSource = self
 
-        //tableView.registerWithNib(cellClass: <#CellClass#>.self)
+        cellTypes.forEach { tableView.registerWithNib(cellClass: $0) }
     }
 
     // MARK: - UITableViewDataSource
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource[section].items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let item = dataSource[indexPath.row]
-//        let cell = tableView.dequeue(<#CellClass#>.self, for: indexPath)
-//        return cell
-        return UITableViewCell()
+        let item = dataSource[indexPath.section].items[indexPath.row]
+        return tableView.dequeueAndConfigureTableViewCell(forItem: item, indexPath: indexPath)
     }
 
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        dataSource[indexPath.section].didSelectItem?(indexPath.row)
     }
 }

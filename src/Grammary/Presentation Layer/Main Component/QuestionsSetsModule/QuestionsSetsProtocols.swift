@@ -36,5 +36,5 @@ protocol QuestionsSetsInteractorOutput: AnyObject {
 
 protocol QuestionsSetsView: AnyObject {
 	var presenter: QuestionsSetsPresenter? { get set }
-    func setDataSource(_ dataSource: [Int])
+    func setDataSource(_ dataSource: [TableViewSection])
 }

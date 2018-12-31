@@ -8,13 +8,15 @@
 
 import UIKit
 
-struct QuestionsSetItem {
+struct QuestionsSetItem: TableViewItem {
     var name: String
-    var totalProgress: Int
-    var onTap: (()->Void)?
+    var totalProgress: Double
+    
+    // MARK: - TableViewItem
+    
+    static let cellClass: UITableViewCell.Type = QuestionsSetTableViewCell.self
 }
 
 struct QuestionsSetsState {
-    var sets: [QuestionsSet]
-    var items: [QuestionsSetItem]
+    var sections: [CommonSection<QuestionsSetItem>] = []
 }

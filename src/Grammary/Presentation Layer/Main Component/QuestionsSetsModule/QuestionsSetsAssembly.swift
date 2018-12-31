@@ -14,7 +14,7 @@ final class QuestionsSetsAssembly {
         let view = QuestionsSetsViewController()
         let interactor = QuestionsSetsInteractorImpl()
         let router = QuestionsSetsRouterImpl(serviceAssembly: serviceAssembly)
-        let state = QuestionsSetsState(sets: [], items: [])
+        let state = QuestionsSetsState()
         let presenter = QuestionsSetsPresenterImpl(view: view,
                                                    interactor: interactor,
                                                    router: router,
