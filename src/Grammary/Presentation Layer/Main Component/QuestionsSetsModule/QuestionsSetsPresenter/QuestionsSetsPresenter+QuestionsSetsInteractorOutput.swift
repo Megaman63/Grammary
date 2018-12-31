@@ -17,13 +17,18 @@ extension QuestionsSetsPresenterImpl: QuestionsSetsInteractorOutput {
             var sumOfProgresses = 0.0
             set.progress.forEach { sumOfProgresses = sumOfProgresses + $0.percentOfProgress }
             let totalProgress = sumOfProgresses / Double(set.progress.count)
-            return QuestionsSetItem(name: set.name, totalProgress: totalProgress)
+            return QuestionsSetItem(id: set.id, name: set.name, totalProgress: totalProgress)
         }
         
-        let section = CommonSection(items: items) { [weak router] _ in
-            router?.dismissView()
+        let section = CommonSection(items: items) { [weak self] index in
+            guard let item = self?.state.sections.first?.items[index] as? QuestionsSetItem else {
+                return
+            }
+            
+            self?.router.showExercise(questionsSetId: item.id)
         }
         
         state.sections = [section]
+        view?.setDataSource(state.sections)
     }
 }

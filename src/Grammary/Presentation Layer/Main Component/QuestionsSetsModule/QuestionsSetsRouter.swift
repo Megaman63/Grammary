@@ -20,7 +20,8 @@ final class QuestionsSetsRouterImpl: QuestionsSetsRouter {
 
     // MARK: - QuestionsSetsRouter
 
-    func dismissView() {
-
+    func showExercise(questionsSetId: String) {
+        let vc = ExerciseAssembly.createModule(serviceAssembly: serviceAssembly, questionsSetId: questionsSetId)
+        viewController?.present(vc, animated: true, completion: nil)
     }
 }

@@ -11,19 +11,19 @@ import UIKit
 // MARK: - Router
 
 protocol QuestionsSetsRouter: AnyObject {
-    func dismissView()
+    func showExercise(questionsSetId: String)
 }
 
 // MARK: - Presenter
 
 protocol QuestionsSetsPresenter: AnyObject {
-
+    func didTriggerViewReadyEvent()
 }
 
 // MARK: - Interactor
 
 protocol QuestionsSetsInteractor: AnyObject {
-
+    func requestQuestionsSets()
 }
 
 // MARK: - InteractorOutput

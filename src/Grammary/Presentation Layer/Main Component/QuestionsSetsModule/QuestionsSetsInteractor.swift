@@ -15,7 +15,7 @@ final class QuestionsSetsInteractorImpl: QuestionsSetsInteractor {
     // MARK: - QuestionsSetsInteractor
     
     func requestQuestionsSets() {
-        output?.didLoadQuestionsSets([])
+        output?.didLoadQuestionsSets(questionSet)
     }
     
 }

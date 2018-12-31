@@ -100,6 +100,7 @@ warn    Why didn’t they warn me to turn down the heat?
 """
 
 var questions: [Question] = []
+var questionSet: [QuestionsSet] = []
 func parse() {
     var i = 0
     let gerundQuestions = str
@@ -143,4 +144,10 @@ func parse() {
     questions = gerundQuestions + infinitiveQuestions
 
     questions = questions.shuffled().shuffled()
+    
+    let progress = questions.map { QuestionProgress.init(question: $0) }
+    let set = QuestionsSet(id: "0",
+                           name: "Gerund or Infinitive",
+                           progress: progress)
+    questionSet = [set]
 }

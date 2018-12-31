@@ -34,11 +34,7 @@ final class ExercisePresenterImpl: ExercisePresenter {
     // MARK: - ExercisePresenter
 
     func didTriggerViewReadyEvent() {
-        guard let currentQuestion = state.currentQuestion else {
-            return
-        }
-        
-        view?.showQuestion(currentQuestion, animation: .none)
+        interactor.loadQuestions(forSetWithId: state.questionsSetId)
     }
     
     func didChooseAnswer(atIndex index: Int) {

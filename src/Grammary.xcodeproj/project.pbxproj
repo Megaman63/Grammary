@@ -23,15 +23,16 @@
 		1CEC0CFB21D90E6D003C9C7A /* QuestionsSetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */; };
 		1CEC0D0421D91031003C9C7A /* QuestionsSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0121D91031003C9C7A /* QuestionsSetsViewController.swift */; };
 		1CEC0D0521D91031003C9C7A /* QuestionsSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0221D91031003C9C7A /* QuestionsSetsViewController.xib */; };
-		1CEC0D0921D9453B003C9C7A /* QuestionsSetsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0821D9453B003C9C7A /* QuestionsSetsTableViewManager.swift */; };
+		1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */; };
 		1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */; };
 		1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */; };
 		1CEC0D1621DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1421DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift */; };
 		1CEC0D1721DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1521DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib */; };
 		1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */; };
 		1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */; };
-		1CEC0D1F21DA1D9E003C9C7A /* CommonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1E21DA1D9E003C9C7A /* CommonStruct.swift */; };
 		1CEC0D2321DA1F30003C9C7A /* QuestionsSetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2221DA1F30003C9C7A /* QuestionsSetConstants.swift */; };
+		1CEC0D2621DA2070003C9C7A /* QuestionsSetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */; };
+		1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */; };
 		1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD63A21D3EA8600F9D5A8 /* AppDelegate.swift */; };
 		1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */; };
 		1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD64321D3EA8700F9D5A8 /* LaunchScreen.storyboard */; };
@@ -83,15 +84,16 @@
 		1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsState.swift; sourceTree = "<group>"; };
 		1CEC0D0121D91031003C9C7A /* QuestionsSetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsSetsViewController.swift; sourceTree = "<group>"; };
 		1CEC0D0221D91031003C9C7A /* QuestionsSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsSetsViewController.xib; sourceTree = "<group>"; };
-		1CEC0D0821D9453B003C9C7A /* QuestionsSetsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsSetsTableViewManager.swift; sourceTree = "<group>"; };
+		1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
 		1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		1CEC0D1421DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetTableViewCell.swift; sourceTree = "<group>"; };
 		1CEC0D1521DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsSetTableViewCell.xib; sourceTree = "<group>"; };
 		1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
-		1CEC0D1E21DA1D9E003C9C7A /* CommonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStruct.swift; sourceTree = "<group>"; };
 		1CEC0D2221DA1F30003C9C7A /* QuestionsSetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetConstants.swift; sourceTree = "<group>"; };
+		1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetItem.swift; sourceTree = "<group>"; };
+		1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
 		1CFCD63721D3EA8600F9D5A8 /* Grammary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grammary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFCD63A21D3EA8600F9D5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,8 +179,8 @@
 		1CEC0CE121D905A3003C9C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
 				1CEC0D1D21DA1D8C003C9C7A /* Structs */,
-				1CEC0D0C21D9464E003C9C7A /* Protocols */,
 				1CEC0D0B21D94579003C9C7A /* Extensions */,
 				1CEC0D0A21D9456E003C9C7A /* Constants */,
 			);
@@ -211,6 +213,7 @@
 		1CEC0CFD21D90E83003C9C7A /* State */ = {
 			isa = PBXGroup;
 			children = (
+				1CEC0D2421DA2063003C9C7A /* Items */,
 				1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */,
 			);
 			path = State;
@@ -230,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D1321DA0C4C003C9C7A /* Cells */,
-				1CEC0D0821D9453B003C9C7A /* QuestionsSetsTableViewManager.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -281,7 +283,6 @@
 		1CEC0D1D21DA1D8C003C9C7A /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D1E21DA1D9E003C9C7A /* CommonStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -300,6 +301,31 @@
 				1CEC0D2221DA1F30003C9C7A /* QuestionsSetConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		1CEC0D2421DA2063003C9C7A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		1CEC0D2721DA29C9003C9C7A /* TableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC0D0C21D9464E003C9C7A /* Protocols */,
+				1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */,
+			);
+			path = TableViewManager;
+			sourceTree = "<group>";
+		};
+		1CEC0D2821DA2C49003C9C7A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		1CFCD62E21D3EA8600F9D5A8 = {
@@ -355,6 +381,7 @@
 		1CFCD66921D3EFE000F9D5A8 /* Main Component */ = {
 			isa = PBXGroup;
 			children = (
+				1CEC0D2821DA2C49003C9C7A /* TabBarController */,
 				1CEC0CE721D90E49003C9C7A /* QuestionsSetsModule */,
 				1CFCD68221D3F16F00F9D5A8 /* ExerciseModule */,
 			);
@@ -674,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
+				1CEC0D2621DA2070003C9C7A /* QuestionsSetItem.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* QuestionsSetsPresenter.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
@@ -686,7 +714,6 @@
 				1CEC0D2321DA1F30003C9C7A /* QuestionsSetConstants.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
-				1CEC0D1F21DA1D9E003C9C7A /* CommonStruct.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
 				1CEC0CF521D90E6D003C9C7A /* QuestionsSetsProtocols.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
@@ -697,11 +724,12 @@
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* QuestionsSetsViewController.swift in Sources */,
-				1CEC0D0921D9453B003C9C7A /* QuestionsSetsTableViewManager.swift in Sources */,
+				1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */,
 				1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */,
 				1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */,
 				1CEC0CDB21D4015D003C9C7A /* Question.swift in Sources */,
 				1CEC0CF321D90E6D003C9C7A /* QuestionsSetsRouter.swift in Sources */,
+				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* QuestionsSetsInteractor.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,

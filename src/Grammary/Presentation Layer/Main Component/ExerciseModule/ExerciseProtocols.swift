@@ -24,13 +24,13 @@ protocol ExercisePresenter: AnyObject {
 // MARK: - Interactor
 
 protocol ExerciseInteractor: AnyObject {
-
+    func loadQuestions(forSetWithId id: String)
 }
 
 // MARK: - InteractorOutput
 
 protocol ExerciseInteractorOutput: AnyObject {
-
+    func didLoad(questions: [Question])
 }
 
 // MARK: - View

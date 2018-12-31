@@ -10,8 +10,9 @@ import UIKit
 
 extension UITableView {
     func registerWithNib<CellClass: UITableViewCell>(cellClass: CellClass.Type) {
-        let nib = UINib(nibName: String(describing: CellClass.self), bundle: nil)
-        register(nib, forCellReuseIdentifier: String(describing: CellClass.self))
+        let cellClassName = String(describing: CellClass.self)
+        let nib = UINib(nibName: cellClassName, bundle: nil)
+        register(nib, forCellReuseIdentifier: cellClassName)
     }
     
     func dequeue<CellClass: UITableViewCell>(_: CellClass.Type) -> CellClass {

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         parse()
         serviceAssembly = ServiceAssemblyImpl()
-        window?.rootViewController = ExerciseAssembly.createModule(serviceAssembly: serviceAssembly)
+        window?.rootViewController = TabBarAssembly.createModule(serviceAssembly: serviceAssembly)
         return true
     }
 }

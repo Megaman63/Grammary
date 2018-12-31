@@ -12,7 +12,7 @@ final class QuestionsSetsViewController: UIViewController, QuestionsSetsView {
 
     // MARK: - Private properties
 
-    private var tableViewManager: QuestionsSetsTableViewManager!
+    private var tableViewManager: TableViewManager!
 
     // MARK: - Outlets
 
@@ -22,7 +22,9 @@ final class QuestionsSetsViewController: UIViewController, QuestionsSetsView {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewManager = QuestionsSetsTableViewManager(tableView: tableView, cellTypes: [QuestionsSetTableViewCell.self])
+        tableViewManager = TableViewManager(tableView: tableView)
+        tableView.registerWithNib(cellClass: QuestionsSetTableViewCell.self)
+        presenter?.didTriggerViewReadyEvent() 
     }
 
     // MARK: - Actions

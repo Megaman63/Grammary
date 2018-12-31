@@ -15,8 +15,10 @@ enum QuestionAppearanceAnimation {
 }
 
 struct ExerciseState {
+    let questionsSetId: String
+    
     var currentQuestionIndex = 0
-    var questions: [Question]
+    var questions: [Question] = []
     
     var currentQuestion: Question? {
         guard currentQuestionIndex < questions.count else {
@@ -24,5 +26,9 @@ struct ExerciseState {
         }
         
         return questions[currentQuestionIndex]
+    }
+    
+    init(questionsSetId: String) {
+        self.questionsSetId = questionsSetId
     }
 }

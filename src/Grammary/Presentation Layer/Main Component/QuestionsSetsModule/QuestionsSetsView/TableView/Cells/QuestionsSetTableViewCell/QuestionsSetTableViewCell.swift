@@ -10,6 +10,10 @@ import UIKit
 
 class QuestionsSetTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
+    
     // MARK: - Private properties
     
     var item: QuestionsSetItem!
@@ -31,5 +35,8 @@ extension QuestionsSetTableViewCell: TableViewCell {
             return
         }
         self.item = item
+        
+        nameLabel.text = item.name
+        progressLabel.text = "\(Int(item.totalProgress * 100)) %"
     }
 }

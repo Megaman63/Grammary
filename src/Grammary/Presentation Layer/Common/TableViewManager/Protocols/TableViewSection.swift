@@ -1,5 +1,5 @@
 //
-//  CommonStruct.swift
+//  TableViewSection.swift
 //  Grammary
 //
 //  Created by Сергей Гребеножко on 31/12/2018.
@@ -8,17 +8,33 @@
 
 import CoreGraphics
 
-struct CommonSection<ItemType: TableViewItem> {
+protocol TableViewSection {
+    var name: String? { get }
     
+    var sectionHeight: CGFloat { get }
+    
+    var items: [TableViewItem] { get }
+    
+    var didSelectItem: ((Int) -> Void)? { get }
+}
+
+struct CommonSection<ItemType: TableViewItem>: TableViewSection {
+
     // MARK: - TableViewSection
     
     var name: String? = nil
     
     var sectionHeight: CGFloat = 0
     
-    var items: [ItemType]
+    var items: [TableViewItem]
+    
+    var genericItems: [ItemType] {
+        return items as? [ItemType] ?? []
+    }
     
     var didSelectItem: ((Int) -> Void)?
+    
+    // MARK: - Init
     
     init(name: String? = nil, sectionHeight: CGFloat = 0, items: [ItemType], didSelectItem: ((Int) -> Void)?) {
         self.name = name

@@ -32,5 +32,8 @@ final class QuestionsSetsPresenterImpl: QuestionsSetsPresenter {
     }
 
     // MARK: - QuestionsSetsPresenter
-
+    
+    func didTriggerViewReadyEvent() {
+        interactor.requestQuestionsSets()
+    }
 }

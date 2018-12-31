@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class QuestionsSetsTableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     private weak var tableView: UITableView?
 
@@ -18,15 +18,13 @@ final class QuestionsSetsTableViewManager: NSObject, UITableViewDataSource, UITa
         }
     }
 
-    init(tableView: UITableView, cellTypes: [UITableViewCell.Type]) {
+    init(tableView: UITableView) {
         self.tableView = tableView
 
         super.init()
 
         tableView.delegate = self
         tableView.dataSource = self
-
-        cellTypes.forEach { tableView.registerWithNib(cellClass: $0) }
     }
 
     // MARK: - UITableViewDataSource

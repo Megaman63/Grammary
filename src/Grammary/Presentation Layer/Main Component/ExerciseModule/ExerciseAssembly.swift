@@ -10,11 +10,11 @@ import UIKit
 
 final class ExerciseAssembly {
 
-    static func createModule(serviceAssembly: ServiceAssembly) -> UIViewController {
+    static func createModule(serviceAssembly: ServiceAssembly, questionsSetId: String) -> UIViewController {
         let view = ExerciseViewController()
         let interactor = ExerciseInteractorImpl()
         let router = ExerciseRouterImpl(serviceAssembly: serviceAssembly)
-        let state = ExerciseState(currentQuestionIndex: 0, questions: questions)
+        let state = ExerciseState(questionsSetId: questionsSetId)
         let presenter = ExercisePresenterImpl(view: view,
                                               interactor: interactor,
                                               router: router,
