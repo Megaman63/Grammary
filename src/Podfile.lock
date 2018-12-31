@@ -1,0 +1,26 @@
+PODS:
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
+  - SwiftGen (5.3.0)
+
+DEPENDENCIES:
+  - RealmSwift (~> 3.7.6)
+  - SwiftGen (~> 5.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Realm
+    - RealmSwift
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+
+PODFILE CHECKSUM: c5001407e4cdd2445019e6d38cab50c78e7acab3
+
+COCOAPODS: 1.5.3

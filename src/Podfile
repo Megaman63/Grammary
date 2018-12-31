@@ -1,0 +1,11 @@
+
+target 'Grammary' do
+  use_frameworks!
+
+  pod 'SwiftGen', '~> 5.3.0'
+  pod 'RealmSwift', '~> 3.7.6'
+
+  target 'GrammaryTests' do
+    inherit! :search_paths
+  end
+end

@@ -1,0 +1,30 @@
+
+[
+    {
+        id: "0",
+        questionTitle: "Following a verb (gerund or infinitive)",
+        questionSubject: "acknowledge"
+        answers: [
+            {
+                number: 0,
+                text: "Infinitive with to"
+            },
+            {
+                number: 1,
+                text: "Gerund"
+            },
+            {
+                number: 2,
+                text: "Infinitive without to"
+            }
+        ]
+        correctAnswer: 1,
+        description: "Both gerunds and infinitives can replace a noun as the object of a verb. Whether you use a gerund or an infinitive depends on the main verb in the sentence",
+        examples: [
+            "She acknowledged receiving assistance."
+        ]
+    }
+]
+
+
+
