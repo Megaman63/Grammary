@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Example: Codable {
-    let text: String
+class Example: Object {
     
-    init(text: String) {
+    @objc dynamic var text: String = ""
+    
+    convenience init(text: String) {
+        self.init()
+        
         self.text = text
     }
 }

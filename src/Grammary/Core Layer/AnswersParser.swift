@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 var str = """
 acknowledge    She acknowledged receiving assistance.
@@ -99,8 +100,6 @@ want    I do not want you to have an accident.
 warn    Why didn’t they warn me to turn down the heat?
 """
 
-var questions: [Question] = []
-var questionSet: [QuestionsSet] = []
 func parse() {
     var i = 0
     let gerundQuestions = str
@@ -116,10 +115,10 @@ func parse() {
                     Answer(id: "\(i)-0", text: "Infinitive with to"),
                     Answer(id: "\(i)-1", text: "Gerund"),
                     Answer(id: "\(i)-2", text: "Infinitive without to")
-                ],
+                ].toRealmList(),
                 correctAnswer: 1,
-                description: "",
-                examples: [Example(text: row[1])]
+                questionDescription: "",
+                examples: [Example(text: row[1])].toRealmList()
             )
     }
     let infinitiveQuestions = str1
@@ -135,19 +134,23 @@ func parse() {
                     Answer(id: "\(i)-0", text: "Infinitive with to"),
                     Answer(id: "\(i)-1", text: "Gerund"),
                     Answer(id: "\(i)-2", text: "Infinitive without to")
-                ],
+                ].toRealmList(),
                 correctAnswer: 0,
-                description: "",
-                examples: [Example(text: row[1])]
+                questionDescription: "",
+                examples: [Example(text: row[1])].toRealmList()
             )
     }
-    questions = gerundQuestions + infinitiveQuestions
+    var questions = gerundQuestions + infinitiveQuestions
 
     questions = questions.shuffled().shuffled()
     
-    let progress = questions.map { QuestionProgress.init(question: $0) }
+    let progress = questions.map { QuestionProgress(question: $0) }
     let set = QuestionsSet(id: "0",
                            name: "Gerund or Infinitive",
-                           progress: progress)
-    questionSet = [set]
+                           progress: progress.toRealmList())
+    let realm = try? Realm()
+    try? realm?.write {
+        realm?.add(set, update: true)
+    }
 }
+

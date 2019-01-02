@@ -12,7 +12,7 @@ final class ExerciseAssembly {
 
     static func createModule(serviceAssembly: ServiceAssembly, questionsSetId: String) -> UIViewController {
         let view = ExerciseViewController()
-        let interactor = ExerciseInteractorImpl()
+        let interactor = ExerciseInteractorImpl(exerciseFacade: serviceAssembly.getExerciseFacade())
         let router = ExerciseRouterImpl(serviceAssembly: serviceAssembly)
         let state = ExerciseState(questionsSetId: questionsSetId)
         let presenter = ExercisePresenterImpl(view: view,

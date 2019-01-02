@@ -12,7 +12,7 @@ final class QuestionsSetsAssembly {
 
     static func createModule(serviceAssembly: ServiceAssembly) -> UIViewController {
         let view = QuestionsSetsViewController()
-        let interactor = QuestionsSetsInteractorImpl()
+        let interactor = QuestionsSetsInteractorImpl(exerciseFacade: serviceAssembly.getExerciseFacade())
         let router = QuestionsSetsRouterImpl(serviceAssembly: serviceAssembly)
         let state = QuestionsSetsState()
         let presenter = QuestionsSetsPresenterImpl(view: view,

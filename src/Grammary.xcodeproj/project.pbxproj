@@ -48,6 +48,13 @@
 		1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */; };
 		1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */; };
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
+		A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */; };
+		A5737A8821DCF4270037AAFD /* QuestionLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */; };
+		A5737A8A21DCF4B50037AAFD /* QuestionNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */; };
+		A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */; };
+		A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8E21DD0C530037AAFD /* PersistenceService.swift */; };
+		A5737A9121DD0CF80037AAFD /* QuestionsSetLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */; };
+		A5737A9321DD0E980037AAFD /* QuestionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9221DD0E980037AAFD /* QuestionProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +124,13 @@
 		1E6E41E56F37D17CE5FB39A2 /* Pods-Grammary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.debug.xcconfig"; sourceTree = "<group>"; };
 		9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFacade.swift; sourceTree = "<group>"; };
+		A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLocalService.swift; sourceTree = "<group>"; };
+		A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionNetworkService.swift; sourceTree = "<group>"; };
+		A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+toRealmList.swift"; sourceTree = "<group>"; };
+		A5737A8E21DD0C530037AAFD /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetLocalService.swift; sourceTree = "<group>"; };
+		A5737A9221DD0E980037AAFD /* QuestionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgress.swift; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0CE521D90CFB003C9C7A /* QuestionsSet.swift */,
+				A5737A9221DD0E980037AAFD /* QuestionProgress.swift */,
 				1CEC0CDA21D4015D003C9C7A /* Question.swift */,
 				1CEC0CDD21D402A1003C9C7A /* Example.swift */,
 				1CEC0CDF21D402AD003C9C7A /* Answer.swift */,
@@ -401,9 +416,10 @@
 		1CFCD66B21D3F00300F9D5A8 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0CD921D40151003C9C7A /* Models */,
+				A5737A8B21DCFB520037AAFD /* Extensions */,
 				1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */,
 				1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */,
+				A5737A8E21DD0C530037AAFD /* PersistenceService.swift */,
 			);
 			path = "Core Layer";
 			sourceTree = "<group>";
@@ -411,6 +427,9 @@
 		1CFCD66C21D3F00F00F9D5A8 /* Business Logic Layer */ = {
 			isa = PBXGroup;
 			children = (
+				A5737A8021DCF19A0037AAFD /* Facades */,
+				A5737A7F21DCF18C0037AAFD /* Services */,
+				1CEC0CD921D40151003C9C7A /* Models */,
 				1CEC0D2021DA1F0E003C9C7A /* Common */,
 			);
 			path = "Business Logic Layer";
@@ -491,6 +510,32 @@
 				A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5737A7F21DCF18C0037AAFD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */,
+				A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */,
+				A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5737A8021DCF19A0037AAFD /* Facades */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */,
+			);
+			path = Facades;
+			sourceTree = "<group>";
+		};
+		A5737A8B21DCFB520037AAFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,7 +722,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Grammary/Pods-Grammary-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Grammary/Pods-Grammary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -690,7 +735,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grammary/Pods-Grammary-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Grammary/Pods-Grammary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -707,16 +752,22 @@
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
 				1CEC0CF621D90E6D003C9C7A /* QuestionsSetsAssembly.swift in Sources */,
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
+				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* QuestionsSet.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* Example.swift in Sources */,
+				A5737A9121DD0CF80037AAFD /* QuestionsSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift in Sources */,
+				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
+				A5737A8A21DCF4B50037AAFD /* QuestionNetworkService.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* QuestionsSetConstants.swift in Sources */,
+				A5737A8821DCF4270037AAFD /* QuestionLocalService.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
 				1CEC0CF521D90E6D003C9C7A /* QuestionsSetsProtocols.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
+				A5737A9321DD0E980037AAFD /* QuestionProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
 				1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* QuestionsSetsState.swift in Sources */,
@@ -729,6 +780,7 @@
 				1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */,
 				1CEC0CDB21D4015D003C9C7A /* Question.swift in Sources */,
 				1CEC0CF321D90E6D003C9C7A /* QuestionsSetsRouter.swift in Sources */,
+				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* QuestionsSetsInteractor.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,

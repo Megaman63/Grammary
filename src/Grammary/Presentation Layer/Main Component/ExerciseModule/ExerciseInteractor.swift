@@ -11,13 +11,21 @@ import UIKit
 final class ExerciseInteractorImpl: ExerciseInteractor {
 
     weak var output: ExerciseInteractorOutput?
-
+    
+    // MARK: - Private properties
+    
+    private let exerciseFacade: ExerciseFacade
+    
+    // MARK: - Init
+    
+    init(exerciseFacade: ExerciseFacade) {
+        self.exerciseFacade = exerciseFacade
+    }
+    
     // MARK: - ExerciseInteractor
     
     func loadQuestions(forSetWithId id: String) {
-        guard let set = questionSet.first(where: { $0.id == id }) else {
-            return
-        }
-        output?.didLoad(questions: set.progress.map { $0.question })
+        let questions = exerciseFacade.obtainQuestions(forQuestionsSetId: id)
+        output?.didLoad(questions: questions)
     }
 }

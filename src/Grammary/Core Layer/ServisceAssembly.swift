@@ -9,9 +9,15 @@
 import Foundation
 
 protocol ServiceAssembly: AnyObject {
-    
+    func getExerciseFacade() -> ExerciseFacade
 }
 
 final class ServiceAssemblyImpl: ServiceAssembly {
     
+    // MARK: - ServiceAssembly
+    
+    func getExerciseFacade() -> ExerciseFacade {
+        return ExerciseFacadeImpl(questionLocalService: QuestionLocalServiceImpl(),
+                                  questionsSetLocalService: QuestionsSetLocalServiceImpl())
+    }
 }

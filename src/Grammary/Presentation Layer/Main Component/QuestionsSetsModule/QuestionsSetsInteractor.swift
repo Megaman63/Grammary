@@ -12,10 +12,20 @@ final class QuestionsSetsInteractorImpl: QuestionsSetsInteractor {
 
     weak var output: QuestionsSetsInteractorOutput?
 
+    // MARK: - Private functions
+    
+    private let exerciseFacade: ExerciseFacade
+    
+    // MARK: - Init
+    
+    init(exerciseFacade: ExerciseFacade) {
+        self.exerciseFacade = exerciseFacade
+    }
     // MARK: - QuestionsSetsInteractor
     
     func requestQuestionsSets() {
-        output?.didLoadQuestionsSets(questionSet)
+        let questionsSets = exerciseFacade.obtainQuestionsSet()
+        output?.didLoadQuestionsSets(questionsSets)
     }
     
 }

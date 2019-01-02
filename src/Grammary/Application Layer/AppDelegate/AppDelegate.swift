@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         parse()
         serviceAssembly = ServiceAssemblyImpl()
         window?.rootViewController = TabBarAssembly.createModule(serviceAssembly: serviceAssembly)
+        
+        let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first?.absoluteString ?? "nil"
+        print(url)
         return true
     }
 }
