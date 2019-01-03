@@ -41,7 +41,7 @@ protocol ExerciseInteractorOutput: AnyObject {
 protocol ExerciseView: AnyObject {
     var presenter: ExercisePresenter? { get set }
     
-    func showRule(_ rule: Rule)
+    func show(question: Question)
     func showAnswer(animation: RuleAppearanceAnimation)
     func showExample()
 }

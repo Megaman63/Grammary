@@ -39,31 +39,36 @@ final class ExercisePresenterImpl: ExercisePresenter {
     }
     
     func didChooseAnswer(atIndex index: Int) {
-        guard let currentRule = state.currentRule,  index < currentRule.answers.count else {
-            return
+        guard
+            let currentRule = state.currentRule,
+            let currentQuestion = state.currentQuestion,
+            index < currentQuestion.answers.count else {
+                return
         }
         
         let animation: RuleAppearanceAnimation
-        if currentRule.correctAnswer == index {
+        if currentQuestion.correctAnswer == index {
             animation = .correctAnswer(correctIndex: index)
         } else {
-            animation = .wrongAnswer(correctIndex: currentRule.correctAnswer, wrongIndex: index)
+            animation = .wrongAnswer(correctIndex: currentQuestion.correctAnswer, wrongIndex: index)
         }
         
         interactor.setProgress(forRulesSetId: state.rulesSetId,
                                ruleId: currentRule.id,
-                               isCorrectAnswer: currentRule.correctAnswer == index)
+                               isCorrectAnswer: currentQuestion.correctAnswer == index)
         
         view?.showAnswer(animation: animation)
     }
     
     func didShowAnswer() {
-        guard let currentRule = state.currentRule else {
-            return
+        guard
+            let currentRule = state.currentRule,
+            let currentQuestion = state.currentQuestion else {
+                return
         }
         view?.showExample()
         exampleModuleInput?.set(examples: currentRule.examples.toArray(),
-                                correctAnswer: currentRule.answers[currentRule.correctAnswer].text)
+                                correctAnswer: currentQuestion.answers[currentQuestion.correctAnswer].text)
     }
     
     func didTapNextButton() {
@@ -72,7 +77,13 @@ final class ExercisePresenterImpl: ExercisePresenter {
             router.dismissView()
             return
         }
+        state.currentQuestionIndex = Int( arc4random() % UInt32(nextRule.questions.count) )
         
-        view?.showRule(nextRule)
+        guard let nextQuestion = state.currentQuestion else {
+            assertionFailure()
+            return
+        }
+        
+        view?.show(question: nextQuestion)
     }
 }

@@ -21,7 +21,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
             assertionFailure()
             return nil
         }
-        view.addSubview(exampleView)
+        view.insertSubview(exampleView, belowSubview: nextButton)
         exampleView.snp.makeConstraints {
             $0.top.equalTo(ruleLabel)
             $0.bottom.left.right.equalToSuperview()
@@ -34,6 +34,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     @IBOutlet var answerButtons: [UIButton]!
     @IBOutlet weak var ruleLabel: UILabel!
     @IBOutlet weak var answersStackView: UIStackView!
+    @IBOutlet weak var nextButton: UIButton!
     
     // MARK: - Lifecycle
 
@@ -52,21 +53,30 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         presenter?.didChooseAnswer(atIndex: index)
     }
     
+    @IBAction func nextButtonTap(_ sender: UIButton) {
+        presenter?.didTapNextButton()
+    }
+    
     // MARK: - ExerciseView
 
     var presenter: ExercisePresenter?
     
-    func showRule(_ rule: Rule) {
-        answersStackView.isHidden = false
+    func show(question: Question) {
+        if answersStackView.isHidden {
+            answersStackView.isHidden = false
+            nextButton.isHidden = true
+            exampleView?.isHidden = true
+        }
+        
         for (index, button) in answerButtons.enumerated() {
-            if index < rule.answers.count{
-                button.setTitle(rule.answers[index].text, for: .normal)
+            if index < question.answers.count{
+                button.setTitle(question.answers[index].text, for: .normal)
                 button.isHidden = false
             } else {
                 button.isHidden = true
             }
         }
-        ruleLabel.text = rule.ruleTitle + "\n\n" + rule.ruleSubject
+        ruleLabel.text = question.ruleTitle + "\n\n" + question.ruleSubject
     }
     
     func showAnswer(animation: RuleAppearanceAnimation) {
@@ -84,26 +94,25 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         answerButtons.forEach { $0.isUserInteractionEnabled = false }
         UIView.animate(
             withDuration: PresentationConstants.animationDuration,
-            animations: {
+            animations: { [weak correctButton, wrongButton] in
                 correctButton?.backgroundColor = .green
                 wrongButton?.backgroundColor = .red
-        }, completion: { _ in
-            self.answerButtons.forEach { $0.isUserInteractionEnabled = true }
-            correctButton?.backgroundColor = nil
-            wrongButton?.backgroundColor = nil
-            self.presenter?.didShowAnswer()
+        }, completion: { [weak self] _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {  [weak correctButton, wrongButton] in
+                self?.answerButtons.forEach { $0.isUserInteractionEnabled = true }
+                correctButton?.backgroundColor = nil
+                wrongButton?.backgroundColor = nil
+                self?.presenter?.didShowAnswer()
+            }
         })
     }
     
     func showExample() {
         answersStackView.isHidden = true
         exampleView?.isHidden = false
+        nextButton.isHidden = false
     }
     
     // MARK: - Private functions
-    
-    private func showExamples(forRule rule: Rule) {
-        answersStackView.isHidden = true
-    }
     
 }

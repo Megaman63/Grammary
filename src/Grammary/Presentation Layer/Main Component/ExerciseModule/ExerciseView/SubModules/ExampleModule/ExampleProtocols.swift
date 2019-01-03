@@ -24,7 +24,7 @@ protocol ExamplePresenter: AnyObject {
 // MARK: - ExampleModuleInput
 
 protocol ExampleModuleInput: AnyObject {
-    func set(examples: [Example], correctAnswer: String)
+    func set(examples: [RuleExample], correctAnswer: String)
 }
 
 // MARK: - Interactor

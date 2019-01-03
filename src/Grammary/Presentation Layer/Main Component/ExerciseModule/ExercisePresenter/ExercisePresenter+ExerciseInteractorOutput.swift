@@ -19,6 +19,13 @@ extension ExercisePresenterImpl: ExerciseInteractorOutput {
             return
         }
         
-        view?.showRule(currentRule)
+        state.currentQuestionIndex = Int( arc4random() % UInt32(currentRule.questions.count) )
+        
+        guard let currentQuestion = state.currentQuestion else {
+            assertionFailure()
+            return
+        }
+        
+        view?.show(question: currentQuestion)
     }
 }

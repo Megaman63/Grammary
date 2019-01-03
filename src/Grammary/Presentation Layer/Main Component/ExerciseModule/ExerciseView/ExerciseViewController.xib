@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseViewController" customModule="Grammary" customModuleProvider="target">
             <connections>
                 <outlet property="answersStackView" destination="nFn-Mn-hWp" id="SHM-HV-d7G"/>
+                <outlet property="nextButton" destination="JOw-IG-0Em" id="0pL-dJ-1hY"/>
                 <outlet property="ruleLabel" destination="99T-ul-d9J" id="ofa-vA-ulT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="answerButtons" destination="vPc-Qn-dPQ" collectionClass="NSMutableArray" id="0RY-PS-HYK"/>
@@ -32,31 +37,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nFn-Mn-hWp">
-                    <rect key="frame" x="0.0" y="236" width="375" height="431"/>
+                    <rect key="frame" x="0.0" y="236" width="375" height="381"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPc-Qn-dPQ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="answerButtonTap:" destination="-1" eventType="touchUpInside" id="v6z-mK-xVb"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-NA-FxA">
-                            <rect key="frame" x="0.0" y="108" width="375" height="107.5"/>
+                            <rect key="frame" x="0.0" y="95.5" width="375" height="95"/>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="answerButtonTap:" destination="-1" eventType="touchUpInside" id="XZe-A5-AqL"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ1-Sb-pQy">
-                            <rect key="frame" x="0.0" y="215.5" width="375" height="108"/>
+                            <rect key="frame" x="0.0" y="190.5" width="375" height="95.5"/>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="answerButtonTap:" destination="-1" eventType="touchUpInside" id="UNo-je-3nz"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My6-6u-oaD">
-                            <rect key="frame" x="0.0" y="323.5" width="375" height="107.5"/>
+                            <rect key="frame" x="0.0" y="286" width="375" height="95"/>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="answerButtonTap:" destination="-1" eventType="touchUpInside" id="et7-H1-B6U"/>
@@ -64,16 +69,30 @@
                         </button>
                     </subviews>
                 </stackView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOw-IG-0Em">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonTap:" destination="-1" eventType="touchUpInside" id="Z7r-45-wfx"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nFn-Mn-hWp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0ju-h1-mYL"/>
+                <constraint firstItem="JOw-IG-0Em" firstAttribute="top" secondItem="nFn-Mn-hWp" secondAttribute="bottom" id="6Qk-CR-Vp2"/>
                 <constraint firstAttribute="trailing" secondItem="99T-ul-d9J" secondAttribute="trailing" id="JLo-jb-jAj"/>
+                <constraint firstItem="FjZ-Qi-Efy" firstAttribute="trailing" secondItem="JOw-IG-0Em" secondAttribute="trailing" id="Z5z-eQ-37k"/>
+                <constraint firstItem="JOw-IG-0Em" firstAttribute="bottom" secondItem="FjZ-Qi-Efy" secondAttribute="bottom" id="bMe-Fl-gmH"/>
                 <constraint firstItem="99T-ul-d9J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dx6-iX-uAT"/>
                 <constraint firstItem="FjZ-Qi-Efy" firstAttribute="trailing" secondItem="nFn-Mn-hWp" secondAttribute="trailing" id="joM-3L-2Iy"/>
                 <constraint firstItem="nFn-Mn-hWp" firstAttribute="top" secondItem="99T-ul-d9J" secondAttribute="bottom" id="lAd-pP-n8y"/>
                 <constraint firstItem="99T-ul-d9J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p8B-nt-PbB"/>
-                <constraint firstItem="nFn-Mn-hWp" firstAttribute="bottom" secondItem="FjZ-Qi-Efy" secondAttribute="bottom" id="wXs-aR-naU"/>
+                <constraint firstItem="nFn-Mn-hWp" firstAttribute="bottom" secondItem="FjZ-Qi-Efy" secondAttribute="bottom" constant="-50" id="wXs-aR-naU"/>
+                <constraint firstItem="JOw-IG-0Em" firstAttribute="leading" secondItem="FjZ-Qi-Efy" secondAttribute="leading" id="wgO-OR-c2Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="FjZ-Qi-Efy"/>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>

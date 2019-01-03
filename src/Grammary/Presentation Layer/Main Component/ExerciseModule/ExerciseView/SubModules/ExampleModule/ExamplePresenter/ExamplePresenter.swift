@@ -40,7 +40,7 @@ final class ExamplePresenterImpl: ExamplePresenter, ExampleModuleInput {
     
     // MARK: - ExampleModuleInput
     
-    func set(examples: [Example], correctAnswer: String) {
+    func set(examples: [RuleExample], correctAnswer: String) {
         state.examples = examples
         let correctItem = ExampleItem(text: correctAnswer)
         let exampleItems = state.examples.map { ExampleItem(text: $0.text ) }

@@ -10,7 +10,6 @@ import UIKit
 
 class RulesSetTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     

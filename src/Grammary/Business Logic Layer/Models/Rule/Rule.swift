@@ -14,30 +14,20 @@ class Rule: Object {
     override static func primaryKey() -> String? { return "id" }
     
     @objc dynamic var id: String = ""
-    @objc dynamic var ruleTitle: String = ""
-    @objc dynamic var ruleSubject: String = ""
-    @objc dynamic var correctAnswer: Int = -1
     @objc dynamic var ruleDescription: String = ""
     
-    var answers = List<Answer>()
-    var examples = List<Example>()
+    var questions = List<Question>()
+    var examples = List<RuleExample>()
     
     convenience init(id: String,
-                     ruleTitle: String,
-                     ruleSubject: String,
-                     answers: List<Answer>,
-                     correctAnswer: Int,
                      ruleDescription: String,
-                     examples: List<Example>) {
-        
+                     questions: List<Question>,
+                     examples: List<RuleExample>) {
         self.init()
         
         self.id = id
-        self.ruleTitle = ruleTitle
-        self.ruleSubject = ruleSubject
-        self.answers = answers
-        self.correctAnswer = correctAnswer
         self.ruleDescription = ruleDescription
+        self.questions = questions
         self.examples = examples
     }
 }

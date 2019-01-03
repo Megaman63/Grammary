@@ -10,7 +10,7 @@
 		07DCEF0B6E4AB4534D627D95 /* Pods_Grammary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */; };
 		1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */; };
 		1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDA21D4015D003C9C7A /* Rule.swift */; };
-		1CEC0CDE21D402A1003C9C7A /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDD21D402A1003C9C7A /* Example.swift */; };
+		1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDD21D402A1003C9C7A /* RuleExample.swift */; };
 		1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDF21D402AD003C9C7A /* Answer.swift */; };
 		1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE321D905C0003C9C7A /* PresentationConstants.swift */; };
 		1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */; };
@@ -48,6 +48,7 @@
 		1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */; };
 		1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */; };
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
+		A52855F221DE409100228F0E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52855F121DE409100228F0E /* Question.swift */; };
 		A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */; };
 		A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* RuleLocalService.swift */; };
 		A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */; };
@@ -89,7 +90,7 @@
 		016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrammaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersParser.swift; sourceTree = "<group>"; };
 		1CEC0CDA21D4015D003C9C7A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		1CEC0CDD21D402A1003C9C7A /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		1CEC0CDD21D402A1003C9C7A /* RuleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExample.swift; sourceTree = "<group>"; };
 		1CEC0CDF21D402AD003C9C7A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		1CEC0CE321D905C0003C9C7A /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
 		1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSet.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		1E6E41E56F37D17CE5FB39A2 /* Pods-Grammary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.debug.xcconfig"; sourceTree = "<group>"; };
 		9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		A52855F121DE409100228F0E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFacade.swift; sourceTree = "<group>"; };
 		A5737A8721DCF4270037AAFD /* RuleLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleLocalService.swift; sourceTree = "<group>"; };
 		A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNetworkService.swift; sourceTree = "<group>"; };
@@ -196,21 +198,22 @@
 		1CEC0CD921D40151003C9C7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0CDC21D40290003C9C7A /* Question */,
+				1CEC0CDC21D40290003C9C7A /* Rule */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1CEC0CDC21D40290003C9C7A /* Question */ = {
+		1CEC0CDC21D40290003C9C7A /* Rule */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */,
 				A5737A9221DD0E980037AAFD /* RuleProgress.swift */,
 				1CEC0CDA21D4015D003C9C7A /* Rule.swift */,
-				1CEC0CDD21D402A1003C9C7A /* Example.swift */,
+				1CEC0CDD21D402A1003C9C7A /* RuleExample.swift */,
+				A52855F121DE409100228F0E /* Question.swift */,
 				1CEC0CDF21D402AD003C9C7A /* Answer.swift */,
 			);
-			path = Question;
+			path = Rule;
 			sourceTree = "<group>";
 		};
 		1CEC0CE121D905A3003C9C7A /* Common */ = {
@@ -840,6 +843,7 @@
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
+				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
 				1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */,
@@ -847,7 +851,7 @@
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
-				1CEC0CDE21D402A1003C9C7A /* Example.swift in Sources */,
+				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,

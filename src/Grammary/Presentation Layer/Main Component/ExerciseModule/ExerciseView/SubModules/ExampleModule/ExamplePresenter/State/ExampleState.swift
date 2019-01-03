@@ -9,6 +9,6 @@
 import UIKit
 
 struct ExampleState {
-    var examples: [Example] = []
+    var examples: [RuleExample] = []
     var sections: [CommonSection<ExampleItem>] = []
 }

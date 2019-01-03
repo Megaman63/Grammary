@@ -109,16 +109,21 @@ func parse() {
             i = i + 1
             return Rule(
                 id: "\(i)",
-                ruleTitle: "Following a verb (gerund or infinitive)",
-                ruleSubject: row[0],
-                answers: [
-                    Answer(id: "\(i)-0", text: "Infinitive with to"),
-                    Answer(id: "\(i)-1", text: "Gerund"),
-                    Answer(id: "\(i)-2", text: "Infinitive without to")
-                ].toRealmList(),
-                correctAnswer: 1,
                 ruleDescription: "",
-                examples: [Example(text: row[1])].toRealmList()
+                questions: [
+                    Question(
+                        id: "\(i)-\(0)",
+                        ruleTitle: "Following a verb (gerund or infinitive)",
+                        ruleSubject: row[0],
+                        correctAnswer: 1,
+                        answers: [
+                            Answer(id: "\(i)-0", text: "Infinitive with to"),
+                            Answer(id: "\(i)-1", text: "Gerund"),
+                            Answer(id: "\(i)-2", text: "Infinitive without to")
+                            ].toRealmList()
+                    )
+                    ].toRealmList(),
+                examples: [RuleExample(text: row[1])].toRealmList()
             )
     }
     let infinitiveRules = str1
@@ -128,16 +133,21 @@ func parse() {
             i = i + 1
             return Rule(
                 id: "\(i)",
-                ruleTitle: "Following a verb (gerund or infinitive)",
-                ruleSubject: row[0],
-                answers: [
-                    Answer(id: "\(i)-0", text: "Infinitive with to"),
-                    Answer(id: "\(i)-1", text: "Gerund"),
-                    Answer(id: "\(i)-2", text: "Infinitive without to")
-                ].toRealmList(),
-                correctAnswer: 0,
                 ruleDescription: "",
-                examples: [Example(text: row[1])].toRealmList()
+                questions: [
+                    Question(
+                        id: "\(i)-\(0)",
+                        ruleTitle: "Following a verb (gerund or infinitive)",
+                        ruleSubject: row[0],
+                        correctAnswer: 0,
+                        answers: [
+                            Answer(id: "\(i)-0", text: "Infinitive with to"),
+                            Answer(id: "\(i)-1", text: "Gerund"),
+                            Answer(id: "\(i)-2", text: "Infinitive without to")
+                            ].toRealmList()
+                    )
+                    ].toRealmList(),
+                examples: [RuleExample(text: row[1])].toRealmList()
             )
     }
     var rules = gerundRules + infinitiveRules

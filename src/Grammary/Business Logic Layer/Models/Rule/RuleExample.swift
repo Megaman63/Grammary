@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Example: Object {
+class RuleExample: Object {
     
     @objc dynamic var text: String = ""
     

@@ -17,6 +17,7 @@ struct ExerciseState {
     let rulesSetId: String
     
     var currentRuleIndex = 0
+    var currentQuestionIndex = 0
     var rules: [Rule] = []
     
     var currentRule: Rule? {
@@ -25,6 +26,16 @@ struct ExerciseState {
         }
         
         return rules[currentRuleIndex]
+    }
+    
+    var currentQuestion: Question? {
+        guard
+            let currentRule = currentRule,
+            currentQuestionIndex < currentRule.questions.count else {
+            return nil
+        }
+        
+        return currentRule.questions[currentQuestionIndex]
     }
     
     init(rulesSetId: String) {

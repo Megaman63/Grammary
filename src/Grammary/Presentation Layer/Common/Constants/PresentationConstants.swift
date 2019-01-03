@@ -9,5 +9,5 @@
 import Foundation
 
 enum PresentationConstants {
-    static let animationDuration = 1.0
+    static let animationDuration = 1.2
 }
