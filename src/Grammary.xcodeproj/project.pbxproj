@@ -9,29 +9,29 @@
 /* Begin PBXBuildFile section */
 		07DCEF0B6E4AB4534D627D95 /* Pods_Grammary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */; };
 		1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */; };
-		1CEC0CDB21D4015D003C9C7A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDA21D4015D003C9C7A /* Question.swift */; };
+		1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDA21D4015D003C9C7A /* Rule.swift */; };
 		1CEC0CDE21D402A1003C9C7A /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDD21D402A1003C9C7A /* Example.swift */; };
 		1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDF21D402AD003C9C7A /* Answer.swift */; };
 		1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE321D905C0003C9C7A /* PresentationConstants.swift */; };
-		1CEC0CE621D90CFB003C9C7A /* QuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE521D90CFB003C9C7A /* QuestionsSet.swift */; };
-		1CEC0CF221D90E6D003C9C7A /* QuestionsSetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE821D90E6D003C9C7A /* QuestionsSetsPresenter.swift */; };
-		1CEC0CF321D90E6D003C9C7A /* QuestionsSetsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE921D90E6D003C9C7A /* QuestionsSetsRouter.swift */; };
-		1CEC0CF521D90E6D003C9C7A /* QuestionsSetsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEB21D90E6D003C9C7A /* QuestionsSetsProtocols.swift */; };
-		1CEC0CF621D90E6D003C9C7A /* QuestionsSetsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEC21D90E6D003C9C7A /* QuestionsSetsAssembly.swift */; };
-		1CEC0CF721D90E6D003C9C7A /* QuestionsSetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CED21D90E6D003C9C7A /* QuestionsSetsInteractor.swift */; };
-		1CEC0CF821D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEE21D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift */; };
-		1CEC0CFB21D90E6D003C9C7A /* QuestionsSetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */; };
-		1CEC0D0421D91031003C9C7A /* QuestionsSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0121D91031003C9C7A /* QuestionsSetsViewController.swift */; };
-		1CEC0D0521D91031003C9C7A /* QuestionsSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0221D91031003C9C7A /* QuestionsSetsViewController.xib */; };
+		1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */; };
+		1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE821D90E6D003C9C7A /* RulesSetsPresenter.swift */; };
+		1CEC0CF321D90E6D003C9C7A /* RulesSetsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CE921D90E6D003C9C7A /* RulesSetsRouter.swift */; };
+		1CEC0CF521D90E6D003C9C7A /* RulesSetsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEB21D90E6D003C9C7A /* RulesSetsProtocols.swift */; };
+		1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEC21D90E6D003C9C7A /* RulesSetsAssembly.swift */; };
+		1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CED21D90E6D003C9C7A /* RulesSetsInteractor.swift */; };
+		1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CEE21D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift */; };
+		1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CF121D90E6D003C9C7A /* RulesSetsState.swift */; };
+		1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0121D91031003C9C7A /* RulesSetsViewController.swift */; };
+		1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0221D91031003C9C7A /* RulesSetsViewController.xib */; };
 		1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */; };
 		1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */; };
 		1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */; };
-		1CEC0D1621DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1421DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift */; };
-		1CEC0D1721DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1521DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib */; };
+		1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */; };
+		1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */; };
 		1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */; };
 		1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */; };
 		1CEC0D2321DA1F30003C9C7A /* QuestionsSetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2221DA1F30003C9C7A /* QuestionsSetConstants.swift */; };
-		1CEC0D2621DA2070003C9C7A /* QuestionsSetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */; };
+		1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2521DA2070003C9C7A /* RulesSetItem.swift */; };
 		1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */; };
 		1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD63A21D3EA8600F9D5A8 /* AppDelegate.swift */; };
 		1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */; };
@@ -49,12 +49,23 @@
 		1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */; };
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
 		A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */; };
-		A5737A8821DCF4270037AAFD /* QuestionLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */; };
-		A5737A8A21DCF4B50037AAFD /* QuestionNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */; };
+		A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* RuleLocalService.swift */; };
+		A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */; };
 		A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */; };
 		A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8E21DD0C530037AAFD /* PersistenceService.swift */; };
-		A5737A9121DD0CF80037AAFD /* QuestionsSetLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */; };
-		A5737A9321DD0E980037AAFD /* QuestionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9221DD0E980037AAFD /* QuestionProgress.swift */; };
+		A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9021DD0CF80037AAFD /* RulesSetLocalService.swift */; };
+		A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9221DD0E980037AAFD /* RuleProgress.swift */; };
+		A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */; };
+		A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9A21DD533A0037AAFD /* ExamplePresenter.swift */; };
+		A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */; };
+		A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9D21DD533A0037AAFD /* ExampleProtocols.swift */; };
+		A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9E21DD533A0037AAFD /* ExampleAssembly.swift */; };
+		A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9F21DD533A0037AAFD /* ExampleInteractor.swift */; };
+		A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AA021DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift */; };
+		A5737AAD21DD533A0037AAFD /* ExampleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AA321DD533A0037AAFD /* ExampleState.swift */; };
+		A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB221DDDFF50037AAFD /* ExampleItem.swift */; };
+		A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */; };
+		A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,29 +88,29 @@
 /* Begin PBXFileReference section */
 		016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrammaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersParser.swift; sourceTree = "<group>"; };
-		1CEC0CDA21D4015D003C9C7A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1CEC0CDA21D4015D003C9C7A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		1CEC0CDD21D402A1003C9C7A /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		1CEC0CDF21D402AD003C9C7A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		1CEC0CE321D905C0003C9C7A /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
-		1CEC0CE521D90CFB003C9C7A /* QuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSet.swift; sourceTree = "<group>"; };
-		1CEC0CE821D90E6D003C9C7A /* QuestionsSetsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsPresenter.swift; sourceTree = "<group>"; };
-		1CEC0CE921D90E6D003C9C7A /* QuestionsSetsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsRouter.swift; sourceTree = "<group>"; };
-		1CEC0CEB21D90E6D003C9C7A /* QuestionsSetsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsProtocols.swift; sourceTree = "<group>"; };
-		1CEC0CEC21D90E6D003C9C7A /* QuestionsSetsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsAssembly.swift; sourceTree = "<group>"; };
-		1CEC0CED21D90E6D003C9C7A /* QuestionsSetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsInteractor.swift; sourceTree = "<group>"; };
-		1CEC0CEE21D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift"; sourceTree = "<group>"; };
-		1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetsState.swift; sourceTree = "<group>"; };
-		1CEC0D0121D91031003C9C7A /* QuestionsSetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsSetsViewController.swift; sourceTree = "<group>"; };
-		1CEC0D0221D91031003C9C7A /* QuestionsSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsSetsViewController.xib; sourceTree = "<group>"; };
+		1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSet.swift; sourceTree = "<group>"; };
+		1CEC0CE821D90E6D003C9C7A /* RulesSetsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsPresenter.swift; sourceTree = "<group>"; };
+		1CEC0CE921D90E6D003C9C7A /* RulesSetsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsRouter.swift; sourceTree = "<group>"; };
+		1CEC0CEB21D90E6D003C9C7A /* RulesSetsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsProtocols.swift; sourceTree = "<group>"; };
+		1CEC0CEC21D90E6D003C9C7A /* RulesSetsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsAssembly.swift; sourceTree = "<group>"; };
+		1CEC0CED21D90E6D003C9C7A /* RulesSetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsInteractor.swift; sourceTree = "<group>"; };
+		1CEC0CEE21D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RulesSetsPresenter+QuestionsSetsInteractorOutput.swift"; sourceTree = "<group>"; };
+		1CEC0CF121D90E6D003C9C7A /* RulesSetsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetsState.swift; sourceTree = "<group>"; };
+		1CEC0D0121D91031003C9C7A /* RulesSetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesSetsViewController.swift; sourceTree = "<group>"; };
+		1CEC0D0221D91031003C9C7A /* RulesSetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesSetsViewController.xib; sourceTree = "<group>"; };
 		1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
 		1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		1CEC0D1421DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetTableViewCell.swift; sourceTree = "<group>"; };
-		1CEC0D1521DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsSetTableViewCell.xib; sourceTree = "<group>"; };
+		1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetTableViewCell.swift; sourceTree = "<group>"; };
+		1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetTableViewCell.xib; sourceTree = "<group>"; };
 		1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
 		1CEC0D2221DA1F30003C9C7A /* QuestionsSetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetConstants.swift; sourceTree = "<group>"; };
-		1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetItem.swift; sourceTree = "<group>"; };
+		1CEC0D2521DA2070003C9C7A /* RulesSetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetItem.swift; sourceTree = "<group>"; };
 		1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
 		1CFCD63721D3EA8600F9D5A8 /* Grammary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grammary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFCD63A21D3EA8600F9D5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,12 +136,23 @@
 		9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFacade.swift; sourceTree = "<group>"; };
-		A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLocalService.swift; sourceTree = "<group>"; };
-		A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionNetworkService.swift; sourceTree = "<group>"; };
+		A5737A8721DCF4270037AAFD /* RuleLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleLocalService.swift; sourceTree = "<group>"; };
+		A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNetworkService.swift; sourceTree = "<group>"; };
 		A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+toRealmList.swift"; sourceTree = "<group>"; };
 		A5737A8E21DD0C530037AAFD /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
-		A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSetLocalService.swift; sourceTree = "<group>"; };
-		A5737A9221DD0E980037AAFD /* QuestionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgress.swift; sourceTree = "<group>"; };
+		A5737A9021DD0CF80037AAFD /* RulesSetLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetLocalService.swift; sourceTree = "<group>"; };
+		A5737A9221DD0E980037AAFD /* RuleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgress.swift; sourceTree = "<group>"; };
+		A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A5737A9A21DD533A0037AAFD /* ExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresenter.swift; sourceTree = "<group>"; };
+		A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewImpl.swift; sourceTree = "<group>"; };
+		A5737A9D21DD533A0037AAFD /* ExampleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProtocols.swift; sourceTree = "<group>"; };
+		A5737A9E21DD533A0037AAFD /* ExampleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAssembly.swift; sourceTree = "<group>"; };
+		A5737A9F21DD533A0037AAFD /* ExampleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleInteractor.swift; sourceTree = "<group>"; };
+		A5737AA021DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExamplePresenter+ExampleInteractorOutput.swift"; sourceTree = "<group>"; };
+		A5737AA321DD533A0037AAFD /* ExampleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleState.swift; sourceTree = "<group>"; };
+		A5737AB221DDDFF50037AAFD /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
+		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,9 +204,9 @@
 		1CEC0CDC21D40290003C9C7A /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0CE521D90CFB003C9C7A /* QuestionsSet.swift */,
-				A5737A9221DD0E980037AAFD /* QuestionProgress.swift */,
-				1CEC0CDA21D4015D003C9C7A /* Question.swift */,
+				1CEC0CE521D90CFB003C9C7A /* RulesSet.swift */,
+				A5737A9221DD0E980037AAFD /* RuleProgress.swift */,
+				1CEC0CDA21D4015D003C9C7A /* Rule.swift */,
 				1CEC0CDD21D402A1003C9C7A /* Example.swift */,
 				1CEC0CDF21D402AD003C9C7A /* Answer.swift */,
 			);
@@ -195,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
-				1CEC0D1D21DA1D8C003C9C7A /* Structs */,
 				1CEC0D0B21D94579003C9C7A /* Extensions */,
 				1CEC0D0A21D9456E003C9C7A /* Constants */,
 			);
@@ -205,43 +226,43 @@
 		1CEC0CE721D90E49003C9C7A /* QuestionsSetsModule */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0CEC21D90E6D003C9C7A /* QuestionsSetsAssembly.swift */,
-				1CEC0CED21D90E6D003C9C7A /* QuestionsSetsInteractor.swift */,
-				1CEC0CFC21D90E79003C9C7A /* QuestionsSetsPresenter */,
-				1CEC0CEB21D90E6D003C9C7A /* QuestionsSetsProtocols.swift */,
-				1CEC0CE921D90E6D003C9C7A /* QuestionsSetsRouter.swift */,
-				1CEC0CFF21D91031003C9C7A /* QuestionsSetsView */,
+				1CEC0CEC21D90E6D003C9C7A /* RulesSetsAssembly.swift */,
+				1CEC0CED21D90E6D003C9C7A /* RulesSetsInteractor.swift */,
+				1CEC0CFC21D90E79003C9C7A /* RulesSetsPresenter */,
+				1CEC0CEB21D90E6D003C9C7A /* RulesSetsProtocols.swift */,
+				1CEC0CE921D90E6D003C9C7A /* RulesSetsRouter.swift */,
+				1CEC0CFF21D91031003C9C7A /* RulesSetsView */,
 			);
 			path = QuestionsSetsModule;
 			sourceTree = "<group>";
 		};
-		1CEC0CFC21D90E79003C9C7A /* QuestionsSetsPresenter */ = {
+		1CEC0CFC21D90E79003C9C7A /* RulesSetsPresenter */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0CFD21D90E83003C9C7A /* State */,
-				1CEC0CE821D90E6D003C9C7A /* QuestionsSetsPresenter.swift */,
-				1CEC0CEE21D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift */,
+				1CEC0CE821D90E6D003C9C7A /* RulesSetsPresenter.swift */,
+				1CEC0CEE21D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift */,
 			);
-			path = QuestionsSetsPresenter;
+			path = RulesSetsPresenter;
 			sourceTree = "<group>";
 		};
 		1CEC0CFD21D90E83003C9C7A /* State */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0D2421DA2063003C9C7A /* Items */,
-				1CEC0CF121D90E6D003C9C7A /* QuestionsSetsState.swift */,
+				1CEC0CF121D90E6D003C9C7A /* RulesSetsState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
 		};
-		1CEC0CFF21D91031003C9C7A /* QuestionsSetsView */ = {
+		1CEC0CFF21D91031003C9C7A /* RulesSetsView */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0D0721D9453B003C9C7A /* TableView */,
-				1CEC0D0121D91031003C9C7A /* QuestionsSetsViewController.swift */,
-				1CEC0D0221D91031003C9C7A /* QuestionsSetsViewController.xib */,
+				1CEC0D0121D91031003C9C7A /* RulesSetsViewController.swift */,
+				1CEC0D0221D91031003C9C7A /* RulesSetsViewController.xib */,
 			);
-			path = QuestionsSetsView;
+			path = RulesSetsView;
 			sourceTree = "<group>";
 		};
 		1CEC0D0721D9453B003C9C7A /* TableView */ = {
@@ -264,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */,
+				A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,25 +303,18 @@
 		1CEC0D1321DA0C4C003C9C7A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D1821DA0C70003C9C7A /* QuestionsSetTableViewCell */,
+				1CEC0D1821DA0C70003C9C7A /* RulesSetTableViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		1CEC0D1821DA0C70003C9C7A /* QuestionsSetTableViewCell */ = {
+		1CEC0D1821DA0C70003C9C7A /* RulesSetTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D1421DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift */,
-				1CEC0D1521DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib */,
+				1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */,
+				1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */,
 			);
-			path = QuestionsSetTableViewCell;
-			sourceTree = "<group>";
-		};
-		1CEC0D1D21DA1D8C003C9C7A /* Structs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Structs;
+			path = RulesSetTableViewCell;
 			sourceTree = "<group>";
 		};
 		1CEC0D2021DA1F0E003C9C7A /* Common */ = {
@@ -321,7 +336,7 @@
 		1CEC0D2421DA2063003C9C7A /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D2521DA2070003C9C7A /* QuestionsSetItem.swift */,
+				1CEC0D2521DA2070003C9C7A /* RulesSetItem.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -487,6 +502,7 @@
 		1CFCD68421D3F1A000F9D5A8 /* ExerciseView */ = {
 			isa = PBXGroup;
 			children = (
+				A5737A9421DD4F280037AAFD /* SubModules */,
 				1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */,
 				1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */,
 			);
@@ -515,9 +531,9 @@
 		A5737A7F21DCF18C0037AAFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A5737A8721DCF4270037AAFD /* QuestionLocalService.swift */,
-				A5737A8921DCF4B50037AAFD /* QuestionNetworkService.swift */,
-				A5737A9021DD0CF80037AAFD /* QuestionsSetLocalService.swift */,
+				A5737A8721DCF4270037AAFD /* RuleLocalService.swift */,
+				A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */,
+				A5737A9021DD0CF80037AAFD /* RulesSetLocalService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -536,6 +552,79 @@
 				A5737A8C21DCFB6D0037AAFD /* Array+toRealmList.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5737A9421DD4F280037AAFD /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A9921DD53070037AAFD /* ExampleModule */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
+		A5737A9921DD53070037AAFD /* ExampleModule */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A9E21DD533A0037AAFD /* ExampleAssembly.swift */,
+				A5737A9F21DD533A0037AAFD /* ExampleInteractor.swift */,
+				A5737AAE21DD53470037AAFD /* ExamplePresenter */,
+				A5737A9D21DD533A0037AAFD /* ExampleProtocols.swift */,
+				A5737AB021DD53660037AAFD /* ExampleView */,
+			);
+			path = ExampleModule;
+			sourceTree = "<group>";
+		};
+		A5737AAE21DD53470037AAFD /* ExamplePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AAF21DD53560037AAFD /* State */,
+				A5737A9A21DD533A0037AAFD /* ExamplePresenter.swift */,
+				A5737AA021DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift */,
+			);
+			path = ExamplePresenter;
+			sourceTree = "<group>";
+		};
+		A5737AAF21DD53560037AAFD /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB121DDDFCF0037AAFD /* Items */,
+				A5737AA321DD533A0037AAFD /* ExampleState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A5737AB021DD53660037AAFD /* ExampleView */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB521DDE04F0037AAFD /* TableView */,
+				A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */,
+			);
+			path = ExampleView;
+			sourceTree = "<group>";
+		};
+		A5737AB121DDDFCF0037AAFD /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB221DDDFF50037AAFD /* ExampleItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		A5737AB421DDE02F0037AAFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */,
+				A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A5737AB521DDE04F0037AAFD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB421DDE02F0037AAFD /* Cells */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,10 +734,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CEC0D1721DA0C6A003C9C7A /* QuestionsSetTableViewCell.xib in Resources */,
+				1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */,
 				1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */,
-				1CEC0D0521D91031003C9C7A /* QuestionsSetsViewController.xib in Resources */,
+				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				1CFCD68021D3F16B00F9D5A8 /* ExerciseViewController.xib in Resources */,
+				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +815,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Grammary/Pods-Grammary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -732,6 +823,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -746,43 +838,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
-				1CEC0D2621DA2070003C9C7A /* QuestionsSetItem.swift in Sources */,
-				1CEC0CF221D90E6D003C9C7A /* QuestionsSetsPresenter.swift in Sources */,
+				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
+				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
-				1CEC0CF621D90E6D003C9C7A /* QuestionsSetsAssembly.swift in Sources */,
+				1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */,
+				A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */,
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
-				1CEC0CE621D90CFB003C9C7A /* QuestionsSet.swift in Sources */,
+				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* Example.swift in Sources */,
-				A5737A9121DD0CF80037AAFD /* QuestionsSetLocalService.swift in Sources */,
-				1CEC0D1621DA0C6A003C9C7A /* QuestionsSetTableViewCell.swift in Sources */,
+				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
+				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
-				A5737A8A21DCF4B50037AAFD /* QuestionNetworkService.swift in Sources */,
+				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* QuestionsSetConstants.swift in Sources */,
-				A5737A8821DCF4270037AAFD /* QuestionLocalService.swift in Sources */,
+				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
-				1CEC0CF821D90E6D003C9C7A /* QuestionsSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
-				1CEC0CF521D90E6D003C9C7A /* QuestionsSetsProtocols.swift in Sources */,
+				1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
+				A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */,
+				1CEC0CF521D90E6D003C9C7A /* RulesSetsProtocols.swift in Sources */,
+				A5737AAD21DD533A0037AAFD /* ExampleState.swift in Sources */,
+				A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
-				A5737A9321DD0E980037AAFD /* QuestionProgress.swift in Sources */,
+				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
 				1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */,
-				1CEC0CFB21D90E6D003C9C7A /* QuestionsSetsState.swift in Sources */,
+				A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */,
+				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */,
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
+				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
-				1CEC0D0421D91031003C9C7A /* QuestionsSetsViewController.swift in Sources */,
+				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
+				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
 				1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */,
+				A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */,
 				1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */,
 				1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */,
-				1CEC0CDB21D4015D003C9C7A /* Question.swift in Sources */,
-				1CEC0CF321D90E6D003C9C7A /* QuestionsSetsRouter.swift in Sources */,
+				1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */,
+				A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */,
+				1CEC0CF321D90E6D003C9C7A /* RulesSetsRouter.swift in Sources */,
+				A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
-				1CEC0CF721D90E6D003C9C7A /* QuestionsSetsInteractor.swift in Sources */,
+				1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,
 			);

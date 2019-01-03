@@ -10,10 +10,29 @@ import UIKit
 
 final class ExerciseViewController: UIViewController, ExerciseView {
 
+    // MARK: - Public properties
+    
+    var exampleViewFactory: ( () -> UIView )?
+    
+    // MARK: - Private properties
+    
+    private lazy var exampleView: UIView! = {
+        guard let exampleView = exampleViewFactory?() else {
+            assertionFailure()
+            return nil
+        }
+        view.addSubview(exampleView)
+        exampleView.snp.makeConstraints {
+            $0.top.equalTo(ruleLabel)
+            $0.bottom.left.right.equalToSuperview()
+        }
+        return exampleView
+    }()
+    
     // MARK: - Outlets
 
     @IBOutlet var answerButtons: [UIButton]!
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var ruleLabel: UILabel!
     @IBOutlet weak var answersStackView: UIStackView!
     
     // MARK: - Lifecycle
@@ -37,61 +56,54 @@ final class ExerciseViewController: UIViewController, ExerciseView {
 
     var presenter: ExercisePresenter?
     
-    func showQuestion(_ question: Question, animation: QuestionAppearanceAnimation) {
-        switch animation {
-        case .none:
-            changeTitles(nextQuestion: question)
-            
-        case .correctAnswer(let index):
-            animateCorrectAnswer(correctButton: answerButtons[index],
-                                 nextQuestion: question)
-            
-        case .wrongAnswer(let correctIndex, let wrongIndex):
-            animateWrongAnswer(correctButton: answerButtons[correctIndex],
-                               wrongButton: answerButtons[wrongIndex],
-                               nextQuestion: question)
-        }
-    }
-    
-    // MARK: - Private functions
-    
-    private func animateWrongAnswer(correctButton: UIButton, wrongButton: UIButton, nextQuestion: Question) {
-        answerButtons.forEach { $0.isUserInteractionEnabled = false }
-        UIView.animate(
-            withDuration: PresentationConstants.animationDuration,
-            animations: {
-                correctButton.backgroundColor = .green
-                wrongButton.backgroundColor = .red
-        }, completion: { _ in
-            self.answerButtons.forEach { $0.isUserInteractionEnabled = true }
-            correctButton.backgroundColor = nil
-            wrongButton.backgroundColor = nil
-            self.changeTitles(nextQuestion: nextQuestion)
-        })
-    }
-    
-    private func animateCorrectAnswer(correctButton: UIButton, nextQuestion: Question) {
-        answerButtons.forEach { $0.isUserInteractionEnabled = false }
-        UIView.animate(
-            withDuration: PresentationConstants.animationDuration,
-            animations: {
-                correctButton.backgroundColor = .green
-        }, completion: { _ in
-            self.answerButtons.forEach { $0.isUserInteractionEnabled = true }
-            correctButton.backgroundColor = nil
-            self.changeTitles(nextQuestion: nextQuestion)
-        })
-    }
-    
-    private func changeTitles(nextQuestion: Question) {
+    func showRule(_ rule: Rule) {
+        answersStackView.isHidden = false
         for (index, button) in answerButtons.enumerated() {
-            if index < nextQuestion.answers.count{
-                button.setTitle(nextQuestion.answers[index].text, for: .normal)
+            if index < rule.answers.count{
+                button.setTitle(rule.answers[index].text, for: .normal)
                 button.isHidden = false
             } else {
                 button.isHidden = true
             }
         }
-        questionLabel.text = nextQuestion.questionTitle + "\n\n" + nextQuestion.questionSubject
+        ruleLabel.text = rule.ruleTitle + "\n\n" + rule.ruleSubject
     }
+    
+    func showAnswer(animation: RuleAppearanceAnimation) {
+        var correctButton: UIButton? = nil
+        var wrongButton: UIButton? = nil
+        
+        switch animation {
+        case .correctAnswer(let index):
+            correctButton = answerButtons[index]
+        case .wrongAnswer(let correctIndex, let wrongIndex):
+            correctButton = answerButtons[correctIndex]
+            wrongButton =  answerButtons[wrongIndex]
+        }
+        
+        answerButtons.forEach { $0.isUserInteractionEnabled = false }
+        UIView.animate(
+            withDuration: PresentationConstants.animationDuration,
+            animations: {
+                correctButton?.backgroundColor = .green
+                wrongButton?.backgroundColor = .red
+        }, completion: { _ in
+            self.answerButtons.forEach { $0.isUserInteractionEnabled = true }
+            correctButton?.backgroundColor = nil
+            wrongButton?.backgroundColor = nil
+            self.presenter?.didShowAnswer()
+        })
+    }
+    
+    func showExample() {
+        answersStackView.isHidden = true
+        exampleView?.isHidden = false
+    }
+    
+    // MARK: - Private functions
+    
+    private func showExamples(forRule rule: Rule) {
+        answersStackView.isHidden = true
+    }
+    
 }

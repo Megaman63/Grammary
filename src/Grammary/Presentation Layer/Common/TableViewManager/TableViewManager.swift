@@ -1,5 +1,5 @@
 //
-//  QuestionsSetsTableViewManager.swift
+//  RulesSetsTableViewManager.swift
 //  Grammary
 //
 //  Created Сергей Гребеножко on 30/12/2018.

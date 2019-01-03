@@ -24,8 +24,12 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     
     // MARK: - ExerciseInteractor
     
-    func loadQuestions(forSetWithId id: String) {
-        let questions = exerciseFacade.obtainQuestions(forQuestionsSetId: id)
-        output?.didLoad(questions: questions)
+    func loadRules(forSetWithId id: String) {
+        let rules = exerciseFacade.obtainRules(forRulesSetId: id)
+        output?.didLoad(rules: rules)
+    }
+    
+    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool) {
+        exerciseFacade.setProgress(forRulesSetId: id, ruleId: ruleId, isCorrectAnswer: isCorrectAnswer)
     }
 }

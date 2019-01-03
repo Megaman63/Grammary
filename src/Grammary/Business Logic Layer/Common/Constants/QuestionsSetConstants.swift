@@ -1,5 +1,5 @@
 //
-//  QuestionsSetConstants.swift
+//  RulesSetConstants.swift
 //  Grammary
 //
 //  Created by Сергей Гребеножко on 31/12/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum QuestionsSetConstants {
+enum RulesSetConstants {
     static let maxNumberOfExersice = 6
 }

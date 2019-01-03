@@ -2,8 +2,8 @@
 [
     {
         id: "0",
-        questionTitle: "Following a verb (gerund or infinitive)",
-        questionSubject: "acknowledge"
+        ruleTitle: "Following a verb (gerund or infinitive)",
+        ruleSubject: "acknowledge"
         answers: [
             {
                 number: 0,

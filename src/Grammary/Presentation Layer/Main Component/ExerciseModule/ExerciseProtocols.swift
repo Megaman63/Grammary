@@ -19,23 +19,29 @@ protocol ExerciseRouter: AnyObject {
 protocol ExercisePresenter: AnyObject {
     func didTriggerViewReadyEvent()
     func didChooseAnswer(atIndex index: Int)
+    func didShowAnswer()
+    func didTapNextButton()
 }
 
 // MARK: - Interactor
 
 protocol ExerciseInteractor: AnyObject {
-    func loadQuestions(forSetWithId id: String)
+    func loadRules(forSetWithId id: String)
+    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool)
 }
 
 // MARK: - InteractorOutput
 
 protocol ExerciseInteractorOutput: AnyObject {
-    func didLoad(questions: [Question])
+    func didLoad(rules: [Rule])
 }
 
 // MARK: - View
 
 protocol ExerciseView: AnyObject {
-    func showQuestion(_ question: Question, animation: QuestionAppearanceAnimation)
-	var presenter: ExercisePresenter? { get set }
+    var presenter: ExercisePresenter? { get set }
+    
+    func showRule(_ rule: Rule)
+    func showAnswer(animation: RuleAppearanceAnimation)
+    func showExample()
 }

@@ -43,3 +43,25 @@ struct CommonSection<ItemType: TableViewItem>: TableViewSection {
         self.didSelectItem = didSelectItem
     }
 }
+
+struct CommonAnyTypeSection: TableViewSection {
+    
+    // MARK: - TableViewSection
+    
+    var name: String? = nil
+    
+    var sectionHeight: CGFloat = 0
+    
+    var items: [TableViewItem]
+    
+    var didSelectItem: ((Int) -> Void)?
+    
+    // MARK: - Init
+    
+    init(name: String? = nil, sectionHeight: CGFloat = 0, items: [TableViewItem], didSelectItem: ((Int) -> Void)?) {
+        self.name = name
+        self.sectionHeight = sectionHeight
+        self.items = items
+        self.didSelectItem = didSelectItem
+    }
+}

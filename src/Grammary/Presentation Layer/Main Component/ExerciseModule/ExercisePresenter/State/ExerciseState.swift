@@ -8,27 +8,26 @@
 
 import UIKit
 
-enum QuestionAppearanceAnimation {
-    case none
+enum RuleAppearanceAnimation {
     case wrongAnswer(correctIndex: Int, wrongIndex: Int)
     case correctAnswer(correctIndex: Int)
 }
 
 struct ExerciseState {
-    let questionsSetId: String
+    let rulesSetId: String
     
-    var currentQuestionIndex = 0
-    var questions: [Question] = []
+    var currentRuleIndex = 0
+    var rules: [Rule] = []
     
-    var currentQuestion: Question? {
-        guard currentQuestionIndex < questions.count else {
+    var currentRule: Rule? {
+        guard currentRuleIndex < rules.count else {
             return nil
         }
         
-        return questions[currentQuestionIndex]
+        return rules[currentRuleIndex]
     }
     
-    init(questionsSetId: String) {
-        self.questionsSetId = questionsSetId
+    init(rulesSetId: String) {
+        self.rulesSetId = rulesSetId
     }
 }

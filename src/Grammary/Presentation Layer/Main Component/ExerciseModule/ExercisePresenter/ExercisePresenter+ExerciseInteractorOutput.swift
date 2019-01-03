@@ -12,13 +12,13 @@ extension ExercisePresenterImpl: ExerciseInteractorOutput {
 
     // MARK: - ExerciseInteractorOutput
 
-    func didLoad(questions: [Question]) {
-        state.questions = questions
+    func didLoad(rules: [Rule]) {
+        state.rules = rules
         
-        guard let currentQuestion = state.questions.first else {
+        guard let currentRule = state.rules.first else {
             return
         }
         
-        view?.showQuestion(currentQuestion, animation: .none)
+        view?.showRule(currentRule)
     }
 }

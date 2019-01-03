@@ -11,9 +11,10 @@ import UIKit
 final class ExercisePresenterImpl: ExercisePresenter {
 
     weak var view: ExerciseView?
+    weak var exampleModuleInput: ExampleModuleInput?
     var interactor: ExerciseInteractor
     let router: ExerciseRouter
-
+    
     // MARK: - State
 
     var state: ExerciseState
@@ -34,27 +35,44 @@ final class ExercisePresenterImpl: ExercisePresenter {
     // MARK: - ExercisePresenter
 
     func didTriggerViewReadyEvent() {
-        interactor.loadQuestions(forSetWithId: state.questionsSetId)
+        interactor.loadRules(forSetWithId: state.rulesSetId)
     }
     
     func didChooseAnswer(atIndex index: Int) {
-        guard let currentQuestion = state.currentQuestion,  index < currentQuestion.answers.count else {
+        guard let currentRule = state.currentRule,  index < currentRule.answers.count else {
             return
         }
-
-        state.currentQuestionIndex = state.currentQuestionIndex + 1
-        guard let nextQuestion = state.currentQuestion else {
+        
+        let animation: RuleAppearanceAnimation
+        if currentRule.correctAnswer == index {
+            animation = .correctAnswer(correctIndex: index)
+        } else {
+            animation = .wrongAnswer(correctIndex: currentRule.correctAnswer, wrongIndex: index)
+        }
+        
+        interactor.setProgress(forRulesSetId: state.rulesSetId,
+                               ruleId: currentRule.id,
+                               isCorrectAnswer: currentRule.correctAnswer == index)
+        
+        view?.showAnswer(animation: animation)
+    }
+    
+    func didShowAnswer() {
+        guard let currentRule = state.currentRule else {
+            return
+        }
+        view?.showExample()
+        exampleModuleInput?.set(examples: currentRule.examples.toArray(),
+                                correctAnswer: currentRule.answers[currentRule.correctAnswer].text)
+    }
+    
+    func didTapNextButton() {
+        state.currentRuleIndex = state.currentRuleIndex + 1
+        guard let nextRule = state.currentRule else {
             router.dismissView()
             return
         }
         
-        let animation: QuestionAppearanceAnimation
-        if currentQuestion.correctAnswer == index {
-            animation = .correctAnswer(correctIndex: index)
-        } else {
-            animation = .wrongAnswer(correctIndex: currentQuestion.correctAnswer, wrongIndex: index)
-        }
-        
-        view?.showQuestion(nextQuestion, animation: animation)
+        view?.showRule(nextRule)
     }
 }

@@ -16,7 +16,7 @@ admit    They admitted falsifying the data.
 advise    The author advises undertaking further study.
 anticipate    He anticipates having trouble with his supervisor.
 appreciate    I appreciated having a chance to read your draft.
-avoid    He avoided answering my question.
+avoid    He avoided answering my rule.
 complete    I finally completed writing my thesis.
 consider    They will consider granting you money.
 defer    She deferred writing her report.
@@ -102,55 +102,60 @@ warn    Why didn’t they warn me to turn down the heat?
 
 func parse() {
     var i = 0
-    let gerundQuestions = str
+    let gerundRules = str
         .components(separatedBy: "\n")
-        .map { s -> Question in
+        .map { s -> Rule in
             let row = s.components(separatedBy: "    ")
             i = i + 1
-            return Question(
+            return Rule(
                 id: "\(i)",
-                questionTitle: "Following a verb (gerund or infinitive)",
-                questionSubject: row[0],
+                ruleTitle: "Following a verb (gerund or infinitive)",
+                ruleSubject: row[0],
                 answers: [
                     Answer(id: "\(i)-0", text: "Infinitive with to"),
                     Answer(id: "\(i)-1", text: "Gerund"),
                     Answer(id: "\(i)-2", text: "Infinitive without to")
                 ].toRealmList(),
                 correctAnswer: 1,
-                questionDescription: "",
+                ruleDescription: "",
                 examples: [Example(text: row[1])].toRealmList()
             )
     }
-    let infinitiveQuestions = str1
+    let infinitiveRules = str1
         .components(separatedBy: "\n")
-        .map { s -> Question in
+        .map { s -> Rule in
             let row = s.components(separatedBy: "    ")
             i = i + 1
-            return Question(
+            return Rule(
                 id: "\(i)",
-                questionTitle: "Following a verb (gerund or infinitive)",
-                questionSubject: row[0],
+                ruleTitle: "Following a verb (gerund or infinitive)",
+                ruleSubject: row[0],
                 answers: [
                     Answer(id: "\(i)-0", text: "Infinitive with to"),
                     Answer(id: "\(i)-1", text: "Gerund"),
                     Answer(id: "\(i)-2", text: "Infinitive without to")
                 ].toRealmList(),
                 correctAnswer: 0,
-                questionDescription: "",
+                ruleDescription: "",
                 examples: [Example(text: row[1])].toRealmList()
             )
     }
-    var questions = gerundQuestions + infinitiveQuestions
+    var rules = gerundRules + infinitiveRules
 
-    questions = questions.shuffled().shuffled()
+    rules = rules.shuffled().shuffled()
     
-    let progress = questions.map { QuestionProgress(question: $0) }
-    let set = QuestionsSet(id: "0",
-                           name: "Gerund or Infinitive",
-                           progress: progress.toRealmList())
-    let realm = try? Realm()
-    try? realm?.write {
-        realm?.add(set, update: true)
+    let partCount = rules.count / 10
+    for i in 0..<partCount {
+        let lastIndex = i * 10 + 10 < rules.count ? i * 10 + 10 :  rules.count
+        let progress = rules[i * 10..<lastIndex].map { RuleProgress(rule: $0) }
+        let set = RulesSet(id: "\(i)",
+                               name: "Gerund or Infinitive. Part \(i+1)",
+                               progress: progress.toRealmList())
+        let realm = try? Realm()
+        try? realm?.write {
+            realm?.add(set, update: true)
+        }
     }
+
 }
 

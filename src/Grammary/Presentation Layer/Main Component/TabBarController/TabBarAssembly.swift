@@ -13,9 +13,9 @@ final class TabBarAssembly {
     static func createModule(serviceAssembly: ServiceAssembly) -> UIViewController {
         let view = UITabBarController()
         
-        let questionsSetsController = QuestionsSetsAssembly.createModule(serviceAssembly: serviceAssembly)
+        let rulesSetsController = RulesSetsAssembly.createModule(serviceAssembly: serviceAssembly)
         view.viewControllers = [
-            questionsSetsController
+            rulesSetsController
         ]
 
         return view

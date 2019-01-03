@@ -26,3 +26,10 @@ extension Results {
         return Array(self)
     }
 }
+
+extension List {
+    
+    func toArray() -> [Element] {
+        return Array(self)
+    }
+}
