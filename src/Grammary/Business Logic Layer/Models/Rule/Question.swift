@@ -16,6 +16,7 @@ class Question: Object {
     @objc dynamic var ruleTitle: String = ""
     @objc dynamic var ruleSubject: String = ""
     @objc dynamic var correctAnswer: Int = -1
+    @objc dynamic var shuffleAnswers: Bool = false
     
     var answers = List<Answer>()
     
@@ -23,6 +24,7 @@ class Question: Object {
                      ruleTitle: String,
                      ruleSubject: String,
                      correctAnswer: Int,
+                     shuffleAnswers: Bool,
                      answers: List<Answer>) {
         self.init()
         
@@ -30,6 +32,7 @@ class Question: Object {
         self.ruleTitle = ruleTitle
         self.ruleSubject = ruleSubject
         self.correctAnswer = correctAnswer
+        self.shuffleAnswers = shuffleAnswers
         self.answers = answers
     }
 }

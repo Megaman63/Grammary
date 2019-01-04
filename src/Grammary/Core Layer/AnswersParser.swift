@@ -116,6 +116,7 @@ func parse() {
                         ruleTitle: "Following a verb (gerund or infinitive)",
                         ruleSubject: row[0],
                         correctAnswer: 1,
+                        shuffleAnswers: false,
                         answers: [
                             Answer(id: "\(i)-0", text: "Infinitive with to"),
                             Answer(id: "\(i)-1", text: "Gerund"),
@@ -140,6 +141,7 @@ func parse() {
                         ruleTitle: "Following a verb (gerund or infinitive)",
                         ruleSubject: row[0],
                         correctAnswer: 0,
+                        shuffleAnswers: false,
                         answers: [
                             Answer(id: "\(i)-0", text: "Infinitive with to"),
                             Answer(id: "\(i)-1", text: "Gerund"),
@@ -166,6 +168,361 @@ func parse() {
             realm?.add(set, update: true)
         }
     }
+    
+    let progress = parseConditional().map { RuleProgress(rule: $0 )}
+    let set = RulesSet(id: "c-1",
+                       name: "Conditional clauses",
+                       progress: progress.toRealmList())
+    let realm = try? Realm()
+    try? realm?.write {
+        realm?.add(set, update: true)
+    }
 
 }
+
+
+
+
+func parseConditional() -> [Rule] {
+    let zero = Rule(
+        id: "c-z",
+        ruleDescription: "Zero Conditional",
+        questions: [
+            Question(
+                id: "c-z-0",
+                ruleTitle: "Zero conditional construction",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-z-0-0", text: "If clause - if + Present Simple. Main clause - Present Simple "),
+                    Answer(id: "c-z-0-1", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
+                    Answer(id: "c-z-0-2", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
+                    Answer(id: "c-z-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-z-1",
+                ruleTitle: "Выберите правильное суждение",
+                ruleSubject: "Условные предложения Zero Conditional...",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-z-1-0", text: "всегда являются 100% истинной"),
+                    Answer(id: "c-z-1-1", text: "выражают реальные, возможные ситуации в настоящем или будущем"),
+                    Answer(id: "c-z-1-2", text: "выражают действия, совершение которых в определенных ситуациях в настоящем и будущем оказывается нереальным"),
+                    Answer(id: "c-z-1-3", text: "выражают воображаемые ситуации, относящиеся к прошлому")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-z-2",
+                ruleTitle: "Какая форма используется в Main clause конуструкции Zero Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-z-2-0", text: "Present Simple"),
+                    Answer(id: "c-z-2-1", text: "Past Simple"),
+                    Answer(id: "c-z-2-2", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-z-2-3", text: "would + infinitive without to")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-z-3",
+                ruleTitle: "Какая форма используется в If clause конуструкции Zero Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-z-3-0", text: "Present Simple"),
+                    Answer(id: "c-z-3-1", text: "Past Simple"),
+                    Answer(id: "c-z-3-2", text: "Past Perfect"),
+                    Answer(id: "c-z-3-3", text: "would + infinitive without to")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-z-4",
+                ruleTitle: "Какой Conditional также используется для того, чтобы дать указания или инструкции?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-z-4-0", text: "Zero conditional"),
+                    Answer(id: "c-z-4-1", text: "Second conditional"),
+                    Answer(id: "c-z-4-2", text: "Third conditional"),
+                    Answer(id: "c-z-4-3", text: "First conditional")
+                    ].toRealmList()
+            ),
+            ].toRealmList(),
+        examples: [
+            RuleExample(text: "If you cut your finger with a knife, it hurts. – Если порезать палец ножом, он болит."),
+            RuleExample(text: "If temperature is zero, water freezes. – Если температура равна нулю, вода замерзает. "),
+            
+            ].toRealmList()
+    )
+    let first = Rule(
+        id: "c-f",
+        ruleDescription: "Zero Conditional",
+        questions: [
+            Question(
+                id: "c-f-0",
+                ruleTitle: "First conditional construction",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-0-0", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
+                    Answer(id: "c-f-0-1", text: "If clause - if + Present Simple. Main clause - Present Simple "),
+                    Answer(id: "c-f-0-2", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
+                    Answer(id: "c-f-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-f-1",
+                ruleTitle: "Выберите правильное суждение",
+                ruleSubject: "Условные предложения First Conditional...",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-1-0", text: "выражают реальные, возможные ситуации в настоящем или будущем"),
+                    Answer(id: "c-f-1-1", text: "всегда являются 100% истинной"),
+                    Answer(id: "c-f-1-2", text: "выражают действия, совершение которых в определенных ситуациях в настоящем и будущем оказывается нереальным"),
+                    Answer(id: "c-f-1-3", text: "выражают воображаемые ситуации, относящиеся к прошлому")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-f-2",
+                ruleTitle: "Какая форма используется в Main clause конуструкции First Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-2-0", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-f-2-1", text: "Present Simple"),
+                    Answer(id: "c-f-2-2", text: "Past Simple"),
+                    Answer(id: "c-f-2-3", text: "would + infinitive without to")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-f-3",
+                ruleTitle: "Какая форма используется в If clause конуструкции First Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-3-0", text: "Present Simple"),
+                    Answer(id: "c-f-3-1", text: "Past Simple"),
+                    Answer(id: "c-f-3-2", text: "Past Perfect"),
+                    Answer(id: "c-f-3-3", text: "Future Simple")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-f-4",
+                ruleTitle: "Какой Conditional часто используется, если мы хотим предупредить или предостеречь от чего-либо?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-4-0", text: "First conditional"),
+                    Answer(id: "c-f-4-1", text: "Second conditional"),
+                    Answer(id: "c-f-4-2", text: "Third conditional"),
+                    Answer(id: "c-f-4-3", text: "Zero conditional")
+                    ].toRealmList()
+            ),
+            
+            ].toRealmList(),
+        examples: [
+            RuleExample(text: "You will find a good job if you study well. – Ты найдешь хорошую работу, если будешь хорошо учиться."),
+            RuleExample(text: "If the weather is good, we’ll walk our dogs in the park. – Если погода будет хорошей, мы пойдем выгуливать собак в парке.")
+            
+            ].toRealmList()
+    )
+    
+    let second = Rule(
+        id: "c-s",
+        ruleDescription: "Second Conditional",
+        questions: [
+            Question(
+                id: "c-s-0",
+                ruleTitle: "Second conditional construction",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-0-0", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
+                    Answer(id: "c-s-0-1", text: "If clause - if + Present Simple. Main clause - Present Simple "),
+                    Answer(id: "c-s-0-1", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
+                    Answer(id: "c-s-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-s-1",
+                ruleTitle: "Выберите правильное суждение",
+                ruleSubject: "Условные предложения Second Conditional...",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-1-0", text: "выражают действия, совершение которых в определенных ситуациях в настоящем и будущем оказывается нереальным"),
+                    Answer(id: "c-s-1-1", text: "выражают реальные, возможные ситуации в настоящем или будущем"),
+                    Answer(id: "c-s-1-2", text: "всегда являются 100% истинной"),
+                    Answer(id: "c-s-1-3", text: "выражают воображаемые ситуации, относящиеся к прошлому")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-s-2",
+                ruleTitle: "Какая форма используется в Main clause конуструкции Second Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-2-0", text: "would + infinitive without to"),
+                    Answer(id: "c-s-2-1", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-s-2-2", text: "Present Simple"),
+                    Answer(id: "c-s-2-3", text: "Past Simple")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-s-3",
+                ruleTitle: "Какая форма используется в If clause конуструкции Second Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-3-0", text: "Past Simple"),
+                    Answer(id: "c-s-3-1", text: "Present Simple"),
+                    Answer(id: "c-s-3-2", text: "Past Perfect"),
+                    Answer(id: "c-s-3-3", text: "Future Simple")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-s-4",
+                ruleTitle: "Какой Conditional используется для того чтобы дать совет",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-4-0", text: "Second conditional"),
+                    Answer(id: "c-s-4-1", text: "First conditional"),
+                    Answer(id: "c-s-4-2", text: "Third conditional"),
+                    Answer(id: "c-s-4-3", text: "Zero conditional")
+                    ].toRealmList()
+            ),
+            ].toRealmList(),
+        examples: [
+            RuleExample(text: "If I were a billionaire, I would buy an island. – Если бы я был миллиардером, я бы купил остров."),
+            RuleExample(text: "If I lived in the countryside, I would walk in the forest every day. – Если бы я жил за городом, я бы гулял в лесу каждый день.")
+            
+            ].toRealmList()
+    )
+    
+    let third = Rule(
+        id: "c-t",
+        ruleDescription: "Third Conditional",
+        questions: [
+            Question(
+                id: "c-t-0",
+                ruleTitle: "Third conditional construction",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-0-0", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle"),
+                    Answer(id: "c-t-0-1", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
+                    Answer(id: "c-t-0-2", text: "If clause - if + Present Simple. Main clause - Present Simple "),
+                    Answer(id: "c-t-0-3", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-1",
+                ruleTitle: "Выберите правильное суждение",
+                ruleSubject: "Условные предложения Third Conditional...",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-1-0", text: "выражают воображаемые ситуации, относящиеся к прошлому"),
+                    Answer(id: "c-t-1-1", text: "выражают действия, совершение которых в определенных ситуациях в настоящем и будущем оказывается нереальным"),
+                    Answer(id: "c-t-1-2", text: "выражают реальные, возможные ситуации в настоящем или будущем"),
+                    Answer(id: "c-t-1-3", text: "всегда являются 100% истинной")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-2",
+                ruleTitle: "Какая форма используется в Main clause конуструкции Third Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-2-0", text: "would + infinitive without to"),
+                    Answer(id: "c-s-2-1", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-s-2-2", text: "Present Simple"),
+                    Answer(id: "c-s-2-3", text: "Past Simple")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-3",
+                ruleTitle: "Какая форма используется в If clause конуструкции Third Conditional?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-3-0", text: "Past Perfect"),
+                    Answer(id: "c-t-3-1", text: "Past Simple"),
+                    Answer(id: "c-t-3-2", text: "Present Simple"),
+                    Answer(id: "c-t-3-3", text: "Future Simple")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-4",
+                ruleTitle: "Какой Conditional используется когда мы критикуем какие-то действия, которые произошли в прошлом и которые мы не можем уже изменить?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-4-0", text: "Third conditional"),
+                    Answer(id: "c-t-4-1", text: "Second conditional"),
+                    Answer(id: "c-t-4-2", text: "First conditional"),
+                    Answer(id: "c-t-4-3", text: "Zero conditional")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-5",
+                ruleTitle: "Какой Conditional используется когда хотим сообщить о хороших событиях, которые произошли в прошлом и положительно повлияли на наше настоящее.?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-4-0", text: "Third conditional"),
+                    Answer(id: "c-t-4-1", text: "Second conditional"),
+                    Answer(id: "c-t-4-2", text: "First conditional"),
+                    Answer(id: "c-t-4-3", text: "Zero conditional")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-6",
+                ruleTitle: "Какой Conditional используется в случае когда-то в прошлом что-то произошло, мы об этом сожалеем, но изменить событие уже не можем?",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-4-0", text: "Third conditional"),
+                    Answer(id: "c-t-4-1", text: "Second conditional"),
+                    Answer(id: "c-t-4-2", text: "First conditional"),
+                    Answer(id: "c-t-4-3", text: "Zero conditional")
+                    ].toRealmList()
+            ),
+            
+            ].toRealmList(),
+        examples: [
+            RuleExample(text: "If I hadn’t missed the bus, I wouldn’t have been late for work. – Если бы я не опоздал на автобус, я бы не опоздал на работу."),
+            RuleExample(text: "If he had been more diligent, he would have been promoted long time ago. – Если бы он был более ответственный, его бы давно повысили.")
+            
+            ].toRealmList()
+    )
+    
+    return [zero, first, second, third]
+    
+}
+
+
+
 
