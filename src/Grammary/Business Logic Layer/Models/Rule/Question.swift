@@ -19,13 +19,15 @@ class Question: Object {
     @objc dynamic var shuffleAnswers: Bool = false
     
     var answers = List<Answer>()
+    var examples = List<RuleExample>()
     
     convenience init(id: String,
                      ruleTitle: String,
                      ruleSubject: String,
                      correctAnswer: Int,
                      shuffleAnswers: Bool,
-                     answers: List<Answer>) {
+                     answers: List<Answer>,
+                     examples: List<RuleExample>) {
         self.init()
         
         self.id = id
@@ -34,5 +36,6 @@ class Question: Object {
         self.correctAnswer = correctAnswer
         self.shuffleAnswers = shuffleAnswers
         self.answers = answers
+        self.examples = examples
     }
 }

@@ -17,17 +17,14 @@ class Rule: Object {
     @objc dynamic var ruleDescription: String = ""
     
     var questions = List<Question>()
-    var examples = List<RuleExample>()
     
     convenience init(id: String,
                      ruleDescription: String,
-                     questions: List<Question>,
-                     examples: List<RuleExample>) {
+                     questions: List<Question>) {
         self.init()
         
         self.id = id
         self.ruleDescription = ruleDescription
         self.questions = questions
-        self.examples = examples
     }
 }

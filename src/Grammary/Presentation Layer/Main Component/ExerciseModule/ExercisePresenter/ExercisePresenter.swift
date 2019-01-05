@@ -61,13 +61,11 @@ final class ExercisePresenterImpl: ExercisePresenter {
     }
     
     func didShowAnswer() {
-        guard
-            let currentRule = state.currentRule,
-            let currentQuestion = state.currentQuestion else {
-                return
+        guard let currentQuestion = state.currentQuestion else {
+            return
         }
         view?.showExample()
-        exampleModuleInput?.set(examples: currentRule.examples.toArray(),
+        exampleModuleInput?.set(examples: currentQuestion.examples.toArray(),
                                 correctAnswer: currentQuestion.answers[currentQuestion.correctAnswer].text)
     }
     

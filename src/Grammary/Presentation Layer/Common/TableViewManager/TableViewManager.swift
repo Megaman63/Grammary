@@ -18,13 +18,19 @@ final class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    init(tableView: UITableView) {
+    init(tableView: UITableView,
+         estimatedRowHeight: CGFloat = 44.0,
+         rowHeight: CGFloat = UITableView.automaticDimension) {
+        
         self.tableView = tableView
 
         super.init()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.rowHeight = rowHeight
     }
 
     // MARK: - UITableViewDataSource

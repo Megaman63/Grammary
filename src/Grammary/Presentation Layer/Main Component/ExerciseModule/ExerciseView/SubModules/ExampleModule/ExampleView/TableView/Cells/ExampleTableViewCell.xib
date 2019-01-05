@@ -20,16 +20,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-1O-j7h">
-                        <rect key="frame" x="16" y="13" width="288" height="18"/>
+                        <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="ZIa-1O-j7h" secondAttribute="trailing" id="FrO-00-qJS"/>
-                    <constraint firstItem="ZIa-1O-j7h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="f8I-eK-haA"/>
-                    <constraint firstItem="ZIa-1O-j7h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xAS-8m-TMq"/>
+                    <constraint firstItem="ZIa-1O-j7h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1S1-z7-GyM"/>
+                    <constraint firstAttribute="trailing" secondItem="ZIa-1O-j7h" secondAttribute="trailing" constant="8" id="LMu-3H-ck4"/>
+                    <constraint firstItem="ZIa-1O-j7h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PZL-dj-nYS"/>
+                    <constraint firstAttribute="bottom" secondItem="ZIa-1O-j7h" secondAttribute="bottom" constant="8" id="fig-2R-Kal"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
