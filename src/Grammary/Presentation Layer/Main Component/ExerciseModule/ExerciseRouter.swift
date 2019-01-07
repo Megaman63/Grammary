@@ -21,6 +21,6 @@ final class ExerciseRouterImpl: ExerciseRouter {
     // MARK: - ExerciseRouter
 
     func dismissView() {
-
+        viewController?.dismiss(animated: true, completion: nil)
     }
 }

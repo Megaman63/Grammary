@@ -18,6 +18,7 @@ final class ServiceAssemblyImpl: ServiceAssembly {
     
     func getExerciseFacade() -> ExerciseFacade {
         return ExerciseFacadeImpl(ruleLocalService: RuleLocalServiceImpl(),
-                                  rulesSetLocalService: RulesSetLocalServiceImpl())
+                                  rulesSetLocalService: RulesSetLocalServiceImpl(),
+                                  ruleProgressLocalService: RuleProgressLocalServiceImpl())
     }
 }

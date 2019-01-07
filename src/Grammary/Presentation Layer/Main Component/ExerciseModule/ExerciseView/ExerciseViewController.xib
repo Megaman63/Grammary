@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseViewController" customModule="Grammary" customModuleProvider="target">
             <connections>
                 <outlet property="answersStackView" destination="nFn-Mn-hWp" id="SHM-HV-d7G"/>
+                <outlet property="closeButton" destination="H5T-s6-rov" id="dBi-zW-yJZ"/>
                 <outlet property="nextButton" destination="JOw-IG-0Em" id="0pL-dJ-1hY"/>
                 <outlet property="ruleLabel" destination="99T-ul-d9J" id="ofa-vA-ulT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -79,11 +80,20 @@
                         <action selector="nextButtonTap:" destination="-1" eventType="touchUpInside" id="Z7r-45-wfx"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5T-s6-rov">
+                    <rect key="frame" x="322" y="28" width="37" height="30"/>
+                    <state key="normal" title="close"/>
+                    <connections>
+                        <action selector="closeButtonTap:" destination="-1" eventType="touchUpInside" id="TVZ-v1-QQy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nFn-Mn-hWp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0ju-h1-mYL"/>
                 <constraint firstItem="JOw-IG-0Em" firstAttribute="top" secondItem="nFn-Mn-hWp" secondAttribute="bottom" id="6Qk-CR-Vp2"/>
+                <constraint firstItem="H5T-s6-rov" firstAttribute="top" secondItem="FjZ-Qi-Efy" secondAttribute="top" constant="8" id="AKM-Dl-D7P"/>
+                <constraint firstItem="FjZ-Qi-Efy" firstAttribute="trailing" secondItem="H5T-s6-rov" secondAttribute="trailing" constant="16" id="Bas-Sr-UEV"/>
                 <constraint firstAttribute="trailing" secondItem="99T-ul-d9J" secondAttribute="trailing" id="JLo-jb-jAj"/>
                 <constraint firstItem="FjZ-Qi-Efy" firstAttribute="trailing" secondItem="JOw-IG-0Em" secondAttribute="trailing" id="Z5z-eQ-37k"/>
                 <constraint firstItem="JOw-IG-0Em" firstAttribute="bottom" secondItem="FjZ-Qi-Efy" secondAttribute="bottom" id="bMe-Fl-gmH"/>

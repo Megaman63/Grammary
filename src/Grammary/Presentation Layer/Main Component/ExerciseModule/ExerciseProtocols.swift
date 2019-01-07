@@ -21,13 +21,14 @@ protocol ExercisePresenter: AnyObject {
     func didChooseAnswer(atIndex index: Int)
     func didShowAnswer()
     func didTapNextButton()
+    func didTapCloseButton()
 }
 
 // MARK: - Interactor
 
 protocol ExerciseInteractor: AnyObject {
     func loadRules(forSetWithId id: String)
-    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool)
+    func setProgress(questionId: String, isCorrectAnswer: Bool)
 }
 
 // MARK: - InteractorOutput
@@ -41,7 +42,7 @@ protocol ExerciseInteractorOutput: AnyObject {
 protocol ExerciseView: AnyObject {
     var presenter: ExercisePresenter? { get set }
     
-    func show(question: Question)
+    func show(question: QuestionItem)
     func showAnswer(animation: RuleAppearanceAnimation)
     func showExample()
 }

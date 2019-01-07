@@ -11,7 +11,7 @@ import Foundation
 protocol ExerciseFacade: AnyObject {
     func obtainRulesSet() -> [RulesSet]
     func obtainRules(forRulesSetId id: String) -> [Rule]
-    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool) 
+    func setProgress(questionId: String, isCorrectAnswer: Bool)
 }
 
 final class ExerciseFacadeImpl: ExerciseFacade {
@@ -20,14 +20,17 @@ final class ExerciseFacadeImpl: ExerciseFacade {
     
     private let ruleLocalService: RuleLocalService
     private let rulesSetLocalService: RulesSetLocalService
+    private let ruleProgressLocalService: RuleProgressLocalService
     
     // MARK: - Init
     
     init(ruleLocalService: RuleLocalService,
-         rulesSetLocalService: RulesSetLocalService) {
+         rulesSetLocalService: RulesSetLocalService,
+         ruleProgressLocalService: RuleProgressLocalService) {
         
         self.ruleLocalService = ruleLocalService
         self.rulesSetLocalService = rulesSetLocalService
+        self.ruleProgressLocalService = ruleProgressLocalService
     }
     
     // MARK: - ExerciseFacade
@@ -44,18 +47,14 @@ final class ExerciseFacadeImpl: ExerciseFacade {
         return rulesSet.progress.compactMap { $0.rule }
     }
     
-    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool) {
-        guard
-            let rulesSet = rulesSetLocalService.obtainRulesSet(forId: id),
-            let progress = rulesSet.progress.first(where: { $0.rule?.id == ruleId }) else {
-                return
-        }
+    func setProgress(questionId: String, isCorrectAnswer: Bool)  {
+        let progresses = ruleProgressLocalService.getAllProgressesFor(questionId: questionId)
         
         rulesSetLocalService.update {
             if isCorrectAnswer {
-                progress.progress = progress.progress + 1
+                progresses.forEach { $0.progress = $0.progress + 1 }
             } else {
-                progress.errorCount = progress.errorCount + 1
+                progresses.forEach { $0.errorCount = $0.errorCount + 1 }
             }
         }
     }

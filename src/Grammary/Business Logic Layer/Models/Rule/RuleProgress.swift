@@ -17,15 +17,17 @@ class RuleProgress: Object {
     @objc dynamic var rule: Rule?
     @objc dynamic var progress: Int = 0
     @objc dynamic var errorCount: Int = 0
+    @objc dynamic var reliableProgress: Int = 0
     @objc dynamic var nextExerciseDate: Date?
     
     var percentOfProgress: Double {
-        return Double(progress) / Double(RulesSetConstants.maxNumberOfExersice)
+        return Double(progress) / Double(reliableProgress)
     }
     
-    convenience init(rule: Rule?) {
+    convenience init(rule: Rule?, reliableProgress: Int) {
         self.init()
         
         self.rule = rule
+        self.reliableProgress = reliableProgress
     }
 }

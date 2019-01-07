@@ -12,7 +12,7 @@ final class ExercisePresenterImpl: ExercisePresenter {
 
     weak var view: ExerciseView?
     weak var exampleModuleInput: ExampleModuleInput?
-    var interactor: ExerciseInteractor
+    let interactor: ExerciseInteractor
     let router: ExerciseRouter
     
     // MARK: - State
@@ -40,48 +40,43 @@ final class ExercisePresenterImpl: ExercisePresenter {
     
     func didChooseAnswer(atIndex index: Int) {
         guard
-            let currentRule = state.currentRule,
-            let currentQuestion = state.currentQuestion,
-            index < currentQuestion.answers.count else {
+            let currentQuestionItem = state.currentQuestionItem,
+            index < currentQuestionItem.answers.count else {
                 return
         }
         
         let animation: RuleAppearanceAnimation
-        if currentQuestion.correctAnswer == index {
+        if currentQuestionItem.correctAnswer == index {
             animation = .correctAnswer(correctIndex: index)
         } else {
-            animation = .wrongAnswer(correctIndex: currentQuestion.correctAnswer, wrongIndex: index)
+            animation = .wrongAnswer(correctIndex: currentQuestionItem.correctAnswer, wrongIndex: index)
         }
         
-        interactor.setProgress(forRulesSetId: state.rulesSetId,
-                               ruleId: currentRule.id,
-                               isCorrectAnswer: currentQuestion.correctAnswer == index)
+        interactor.setProgress(questionId: currentQuestionItem.id,
+                               isCorrectAnswer: currentQuestionItem.correctAnswer == index)
         
         view?.showAnswer(animation: animation)
     }
     
     func didShowAnswer() {
-        guard let currentQuestion = state.currentQuestion else {
+        guard let currentQuestionItem = state.currentQuestionItem else {
             return
         }
         view?.showExample()
-        exampleModuleInput?.set(examples: currentQuestion.examples.toArray(),
-                                correctAnswer: currentQuestion.answers[currentQuestion.correctAnswer].text)
+        exampleModuleInput?.set(examples: currentQuestionItem.examples,
+                                correctAnswer: currentQuestionItem.correctAnswerText)
     }
     
     func didTapNextButton() {
-        state.currentRuleIndex = state.currentRuleIndex + 1
-        guard let nextRule = state.currentRule else {
+        state.currentQuestionItemIndex = state.currentQuestionItemIndex + 1
+        guard let nextQuestionItem = state.currentQuestionItem else {
             router.dismissView()
             return
         }
-        state.currentQuestionIndex = Int( arc4random() % UInt32(nextRule.questions.count) )
-        
-        guard let nextQuestion = state.currentQuestion else {
-            assertionFailure()
-            return
-        }
-        
-        view?.show(question: nextQuestion)
+        view?.show(question: nextQuestionItem)
+    }
+    
+    func didTapCloseButton() {
+        router.dismissView()
     }
 }

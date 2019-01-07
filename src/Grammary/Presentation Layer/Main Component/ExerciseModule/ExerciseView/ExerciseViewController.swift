@@ -35,11 +35,17 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     @IBOutlet weak var ruleLabel: UILabel!
     @IBOutlet weak var answersStackView: UIStackView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
     // MARK: - Lifecycle
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        answerButtons.forEach {
+            $0.titleLabel?.numberOfLines = 0
+            $0.titleLabel?.textAlignment = .center
+        }
+        
         presenter?.didTriggerViewReadyEvent()
     }
 
@@ -57,11 +63,15 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         presenter?.didTapNextButton()
     }
     
+    @IBAction func closeButtonTap(_ sender: Any) {
+        presenter?.didTapCloseButton()
+    }
+    
     // MARK: - ExerciseView
 
     var presenter: ExercisePresenter?
     
-    func show(question: Question) {
+    func show(question: QuestionItem) {
         if answersStackView.isHidden {
             answersStackView.isHidden = false
             nextButton.isHidden = true

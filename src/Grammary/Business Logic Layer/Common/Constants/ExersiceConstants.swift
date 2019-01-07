@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum RulesSetConstants {
-    static let maxNumberOfExersice = 6
+enum ExersiceConstants {
+    static let countOfQuestions = 15
 }

@@ -29,7 +29,7 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
         output?.didLoad(rules: rules)
     }
     
-    func setProgress(forRulesSetId id: String, ruleId: String, isCorrectAnswer: Bool) {
-        exerciseFacade.setProgress(forRulesSetId: id, ruleId: ruleId, isCorrectAnswer: isCorrectAnswer)
+    func setProgress(questionId: String, isCorrectAnswer: Bool) {
+        exerciseFacade.setProgress(questionId: questionId, isCorrectAnswer: isCorrectAnswer)
     }
 }

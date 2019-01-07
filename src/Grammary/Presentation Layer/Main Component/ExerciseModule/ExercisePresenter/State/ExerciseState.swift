@@ -16,26 +16,15 @@ enum RuleAppearanceAnimation {
 struct ExerciseState {
     let rulesSetId: String
     
-    var currentRuleIndex = 0
-    var currentQuestionIndex = 0
-    var rules: [Rule] = []
+    var questions: [QuestionItem] = []
+    var currentQuestionItemIndex = 0
     
-    var currentRule: Rule? {
-        guard currentRuleIndex < rules.count else {
+    var currentQuestionItem: QuestionItem? {
+        guard currentQuestionItemIndex < questions.count else {
             return nil
         }
         
-        return rules[currentRuleIndex]
-    }
-    
-    var currentQuestion: Question? {
-        guard
-            let currentRule = currentRule,
-            currentQuestionIndex < currentRule.questions.count else {
-            return nil
-        }
-        
-        return currentRule.questions[currentQuestionIndex]
+        return questions[currentQuestionItemIndex]
     }
     
     init(rulesSetId: String) {

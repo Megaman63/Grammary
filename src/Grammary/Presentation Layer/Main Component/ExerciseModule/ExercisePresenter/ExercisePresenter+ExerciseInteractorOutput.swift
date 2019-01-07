@@ -13,19 +13,27 @@ extension ExercisePresenterImpl: ExerciseInteractorOutput {
     // MARK: - ExerciseInteractorOutput
 
     func didLoad(rules: [Rule]) {
-        state.rules = rules
+        let questions = rules
+            .map { $0.questions }
+            .joined()
+            .shuffled()
         
-        guard let currentRule = state.rules.first else {
-            return
+        if questions.count > ExersiceConstants.countOfQuestions {
+            state.questions = questions[0..<ExersiceConstants.countOfQuestions].map { QuestionItem(question: $0) }
+        } else {
+            var items = questions.map { QuestionItem(question: $0) }
+            for _ in 0..<ExersiceConstants.countOfQuestions - questions.count {
+                let randomIndex = Int(arc4random() % UInt32(questions.count))
+                let item = QuestionItem(question: questions[randomIndex])
+                items.append(item)
+            }
+            state.questions = items
         }
-        
-        state.currentQuestionIndex = Int( arc4random() % UInt32(currentRule.questions.count) )
-        
-        guard let currentQuestion = state.currentQuestion else {
+
+        guard let currentQuestionItem = state.currentQuestionItem else {
             assertionFailure()
             return
         }
-        
-        view?.show(question: currentQuestion)
+        view?.show(question: currentQuestionItem)
     }
 }
