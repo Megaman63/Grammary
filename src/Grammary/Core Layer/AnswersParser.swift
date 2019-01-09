@@ -188,9 +188,6 @@ func parse() {
     }
 }
 
-
-
-
 func parseConditional() -> [Rule] {
     let zero = Rule(
         id: "c-z",
@@ -203,10 +200,10 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-z-0-0", text: "If clause - if + Present Simple. Main clause - Present Simple "),
-                    Answer(id: "c-z-0-1", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
-                    Answer(id: "c-z-0-2", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
-                    Answer(id: "c-z-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    Answer(id: "c-z-0-0", text: "If clause - if + Any present tense. Main clause - Present Simple "),
+                    Answer(id: "c-z-0-1", text: "If clause - if + Any present tense. Main clause - Any future form + infinitive without to"),
+                    Answer(id: "c-z-0-2", text: "If clause - if + Any past tense. Main clause - would/could/might + infinitive without to"),
+                    Answer(id: "c-z-0-3", text: "If clause - if + Past Perfect/Past Perfect Continious. Main clause - would/could/should/might have have + past participle")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "If you cut your finger with a knife, it hurts. – Если порезать палец ножом, он болит."),
@@ -239,8 +236,8 @@ func parseConditional() -> [Rule] {
                 answers: [
                     Answer(id: "c-z-2-0", text: "Present Simple"),
                     Answer(id: "c-z-2-1", text: "Past Simple"),
-                    Answer(id: "c-z-2-2", text: "Future Simple + infinitive without to"),
-                    Answer(id: "c-z-2-3", text: "would + infinitive without to")
+                    Answer(id: "c-z-2-2", text: "Any future form + infinitive without to"),
+                    Answer(id: "c-z-2-3", text: "would/could/might + infinitive without to")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "If you cut your finger with a knife, it hurts. – Если порезать палец ножом, он болит."),
@@ -257,7 +254,7 @@ func parseConditional() -> [Rule] {
                     Answer(id: "c-z-3-0", text: "Present Simple"),
                     Answer(id: "c-z-3-1", text: "Past Simple"),
                     Answer(id: "c-z-3-2", text: "Past Perfect"),
-                    Answer(id: "c-z-3-3", text: "would + infinitive without to")
+                    Answer(id: "c-z-3-3", text: "would/could/might + infinitive without to")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "If you cut your finger with a knife, it hurts. – Если порезать палец ножом, он болит."),
@@ -294,14 +291,30 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-f-0-0", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
-                    Answer(id: "c-f-0-1", text: "If clause - if + Present Simple. Main clause - Present Simple "),
-                    Answer(id: "c-f-0-2", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
-                    Answer(id: "c-f-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    Answer(id: "c-f-0-0", text: "If clause - if + Any present tense. Main clause - Any future form + infinitive without to"),
+                    Answer(id: "c-f-0-1", text: "If clause - if + Any present tense. Main clause - Present Simple "),
+                    Answer(id: "c-f-0-2", text: "If clause - if + Any past tense. Main clause - would/could/might + infinitive without to"),
+                    Answer(id: "c-f-0-3", text: "If clause - if + Past Perfect/Past Perfect Continious. Main clause - would/could/should/might have have + past participle")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "You will find a good job if you study well. – Ты найдешь хорошую работу, если будешь хорошо учиться."),
                     RuleExample(text: "If the weather is good, we’ll walk our dogs in the park. – Если погода будет хорошей, мы пойдем выгуливать собак в парке."),
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-f-0-e",
+                ruleTitle: "First Conditional sentences",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-f-0-e-0", text: "are used to talk about a possible present or future situation and its result"),
+                    Answer(id: "c-f-0-e-1", text: "are used to talk about hypothetical or improbable situations in the present or future"),
+                    Answer(id: "c-f-0-e-2", text: "are used to talk about a hypothetical situation in the past")
+                    ].toRealmList(),
+                examples: [
+                    RuleExample(text: "They won’t get a table unless they’ve already booked."),
+                    RuleExample(text: "Can I borrow your dictionary for a moment if you’re not using it?"),
                     ].toRealmList()
             ),
             Question(
@@ -328,10 +341,10 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-f-2-0", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-f-2-0", text: "Any future form + infinitive without to"),
                     Answer(id: "c-f-2-1", text: "Present Simple"),
                     Answer(id: "c-f-2-2", text: "Past Simple"),
-                    Answer(id: "c-f-2-3", text: "would + infinitive without to")
+                    Answer(id: "c-f-2-3", text: "would/could/might + infinitive without to")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "You will find a good job if you study well. – Ты найдешь хорошую работу, если будешь хорошо учиться."),
@@ -387,14 +400,30 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-s-0-0", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
-                    Answer(id: "c-s-0-1", text: "If clause - if + Present Simple. Main clause - Present Simple "),
-                    Answer(id: "c-s-0-1", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to"),
-                    Answer(id: "c-s-0-3", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle")
+                    Answer(id: "c-s-0-0", text: "If clause - if + Any past tense. Main clause - would/could/might + infinitive without to"),
+                    Answer(id: "c-s-0-1", text: "If clause - if + Any present tense. Main clause - Present Simple "),
+                    Answer(id: "c-s-0-1", text: "If clause - if + Any present tense. Main clause - Any future form + infinitive without to"),
+                    Answer(id: "c-s-0-3", text: "If clause - if + Past Perfect/Past Perfect Continious. Main clause - would/could/should/might have have + past participle")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "If I were a billionaire, I would buy an island. – Если бы я был миллиардером, я бы купил остров."),
                     RuleExample(text: "If I lived in the countryside, I would walk in the forest every day. – Если бы я жил за городом, я бы гулял в лесу каждый день.")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-s-0-e",
+                ruleTitle: "Second Conditional sentences",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-s-0-e-0", text: "are used to talk about hypothetical or improbable situations in the present or future"),
+                    Answer(id: "c-s-0-e-1", text: "are used to talk about a possible present or future situation and its result"),
+                    Answer(id: "c-s-0-e-2", text: "are used to talk about a hypothetical situation in the past")
+                    ].toRealmList(),
+                examples: [
+                    RuleExample(text: "If he were taller, he'd be accepted into the team."),
+                    RuleExample(text: "She would still be correcting my grammar if she were alive.")
                     ].toRealmList()
             ),
             Question(
@@ -421,8 +450,8 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-s-2-0", text: "would + infinitive without to"),
-                    Answer(id: "c-s-2-1", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-s-2-0", text: "would/could/might + infinitive without to"),
+                    Answer(id: "c-s-2-1", text: "Any future form + infinitive without to"),
                     Answer(id: "c-s-2-2", text: "Present Simple"),
                     Answer(id: "c-s-2-3", text: "Past Simple")
                     ].toRealmList(),
@@ -479,14 +508,30 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-t-0-0", text: "If clause - if + Past Perfect. Main clause - would (could, should, might) have + past participle"),
-                    Answer(id: "c-t-0-1", text: "If clause - if + Past Simple. Main clause - would + infinitive without to"),
-                    Answer(id: "c-t-0-2", text: "If clause - if + Present Simple. Main clause - Present Simple "),
-                    Answer(id: "c-t-0-3", text: "If clause - if + Present Simple. Main clause - Future Simple + infinitive without to")
+                    Answer(id: "c-t-0-0", text: "If clause - if + Past Perfect/Past Perfect Continious. Main clause - would/could/should/might have have + past participle"),
+                    Answer(id: "c-t-0-1", text: "If clause - if + Any past tense. Main clause - would/could/might + infinitive without to"),
+                    Answer(id: "c-t-0-2", text: "If clause - if + Any present tense. Main clause - Present Simple "),
+                    Answer(id: "c-t-0-3", text: "If clause - if + Any present tense. Main clause - Any future form + infinitive without to")
                     ].toRealmList(),
                 examples: [
                     RuleExample(text: "If I hadn’t missed the bus, I wouldn’t have been late for work. – Если бы я не опоздал на автобус, я бы не опоздал на работу."),
                     RuleExample(text: "If he had been more diligent, he would have been promoted long time ago. – Если бы он был более ответственный, его бы давно повысили.")
+                    ].toRealmList()
+            ),
+            Question(
+                id: "c-t-0-e",
+                ruleTitle: "Third Conditional sentences",
+                ruleSubject: "",
+                correctAnswer: 0,
+                shuffleAnswers: true,
+                answers: [
+                    Answer(id: "c-t-0-e-0", text: "are used to talk about a hypothetical situation in the past"),
+                    Answer(id: "c-t-0-e-1", text: "are used to talk about hypothetical or improbable situations in the present or future"),
+                    Answer(id: "c-t-0-e-2", text: "are used to talk about a possible present or future situation and its result"),
+                    ].toRealmList(),
+                examples: [
+                    RuleExample(text: "I would have bought it if they’d had it in my size."),
+                    RuleExample(text: "If you’d been looking where you were going, you wouldn’t have tripped.")
                     ].toRealmList()
             ),
             Question(
@@ -513,8 +558,8 @@ func parseConditional() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "c-s-2-0", text: "would + infinitive without to"),
-                    Answer(id: "c-s-2-1", text: "Future Simple + infinitive without to"),
+                    Answer(id: "c-s-2-0", text: "would/could/might + infinitive without to"),
+                    Answer(id: "c-s-2-1", text: "Any future form + infinitive without to"),
                     Answer(id: "c-s-2-2", text: "Present Simple"),
                     Answer(id: "c-s-2-3", text: "Past Simple")
                     ].toRealmList(),
