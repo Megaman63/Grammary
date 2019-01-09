@@ -50,6 +50,21 @@
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
 		A52855F221DE409100228F0E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52855F121DE409100228F0E /* Question.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
+		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
+		A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */; };
+		A55FCB5521E2F60C009932A2 /* RulesSetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4C21E2F60C009932A2 /* RulesSetInfoViewController.swift */; };
+		A55FCB5621E2F60C009932A2 /* RulesSetInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4D21E2F60C009932A2 /* RulesSetInfoProtocols.swift */; };
+		A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4E21E2F60C009932A2 /* RulesSetInfoAssembly.swift */; };
+		A55FCB5821E2F60C009932A2 /* RulesSetInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4F21E2F60C009932A2 /* RulesSetInfoInteractor.swift */; };
+		A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB5021E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift */; };
+		A55FCB5A21E2F60C009932A2 /* RulesSetInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */; };
+		A55FCB5B21E2F60C009932A2 /* RulesSetInfoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB5221E2F60C009932A2 /* RulesSetInfoState.swift */; };
+		A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB5F21E2F7EC009932A2 /* RulesSetHeaderItem.swift */; };
+		A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */; };
+		A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */; };
+		A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */; };
+		A55FCB6D21E2FBA0009932A2 /* RuleProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */; };
+		A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6E21E2FCC1009932A2 /* RuleProgressItem.swift */; };
 		A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */; };
 		A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* RuleLocalService.swift */; };
 		A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */; };
@@ -140,6 +155,21 @@
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		A52855F121DE409100228F0E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
+		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
+		A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoRouter.swift; sourceTree = "<group>"; };
+		A55FCB4C21E2F60C009932A2 /* RulesSetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoViewController.swift; sourceTree = "<group>"; };
+		A55FCB4D21E2F60C009932A2 /* RulesSetInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoProtocols.swift; sourceTree = "<group>"; };
+		A55FCB4E21E2F60C009932A2 /* RulesSetInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoAssembly.swift; sourceTree = "<group>"; };
+		A55FCB4F21E2F60C009932A2 /* RulesSetInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoInteractor.swift; sourceTree = "<group>"; };
+		A55FCB5021E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift"; sourceTree = "<group>"; };
+		A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetInfoViewController.xib; sourceTree = "<group>"; };
+		A55FCB5221E2F60C009932A2 /* RulesSetInfoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoState.swift; sourceTree = "<group>"; };
+		A55FCB5F21E2F7EC009932A2 /* RulesSetHeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetHeaderItem.swift; sourceTree = "<group>"; };
+		A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressTableViewCell.swift; sourceTree = "<group>"; };
+		A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleProgressTableViewCell.xib; sourceTree = "<group>"; };
+		A55FCB6E21E2FCC1009932A2 /* RuleProgressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressItem.swift; sourceTree = "<group>"; };
 		A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFacade.swift; sourceTree = "<group>"; };
 		A5737A8721DCF4270037AAFD /* RuleLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleLocalService.swift; sourceTree = "<group>"; };
 		A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNetworkService.swift; sourceTree = "<group>"; };
@@ -540,8 +570,87 @@
 		A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */ = {
 			isa = PBXGroup;
 			children = (
+				A55FCB4E21E2F60C009932A2 /* RulesSetInfoAssembly.swift */,
+				A55FCB4F21E2F60C009932A2 /* RulesSetInfoInteractor.swift */,
+				A55FCB5C21E2F61B009932A2 /* RulesSetInfoPresenter */,
+				A55FCB4D21E2F60C009932A2 /* RulesSetInfoProtocols.swift */,
+				A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */,
+				A55FCB5D21E2F63A009932A2 /* RulesSetInfoView */,
 			);
 			path = RulesSetInfoModule;
+			sourceTree = "<group>";
+		};
+		A55FCB5C21E2F61B009932A2 /* RulesSetInfoPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB5E21E2F64A009932A2 /* State */,
+				A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */,
+				A55FCB5021E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift */,
+			);
+			path = RulesSetInfoPresenter;
+			sourceTree = "<group>";
+		};
+		A55FCB5D21E2F63A009932A2 /* RulesSetInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6221E2F944009932A2 /* TableView */,
+				A55FCB4C21E2F60C009932A2 /* RulesSetInfoViewController.swift */,
+				A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */,
+			);
+			path = RulesSetInfoView;
+			sourceTree = "<group>";
+		};
+		A55FCB5E21E2F64A009932A2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6121E2F7F9009932A2 /* Items */,
+				A55FCB5221E2F60C009932A2 /* RulesSetInfoState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A55FCB6121E2F7F9009932A2 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB5F21E2F7EC009932A2 /* RulesSetHeaderItem.swift */,
+				A55FCB6E21E2FCC1009932A2 /* RuleProgressItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		A55FCB6221E2F944009932A2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6321E2F94D009932A2 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A55FCB6321E2F94D009932A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6921E2FB87009932A2 /* RuleProgressTableViewCell */,
+				A55FCB6821E2FB81009932A2 /* RulesSetHeaderTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A55FCB6821E2FB81009932A2 /* RulesSetHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */,
+				A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */,
+			);
+			path = RulesSetHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		A55FCB6921E2FB87009932A2 /* RuleProgressTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */,
+				A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */,
+			);
+			path = RuleProgressTableViewCell;
 			sourceTree = "<group>";
 		};
 		A5737A7F21DCF18C0037AAFD /* Services */ = {
@@ -752,7 +861,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */,
+				A55FCB5A21E2F60C009932A2 /* RulesSetInfoViewController.xib in Resources */,
+				A55FCB6D21E2FBA0009932A2 /* RuleProgressTableViewCell.xib in Resources */,
 				1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */,
+				A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */,
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				1CFCD68021D3F16B00F9D5A8 /* ExerciseViewController.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
@@ -856,6 +968,7 @@
 			files = (
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
+				A55FCB5521E2F60C009932A2 /* RulesSetInfoViewController.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
@@ -865,33 +978,42 @@
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
+				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
+				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
+				A55FCB5621E2F60C009932A2 /* RulesSetInfoProtocols.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
+				A55FCB5821E2F60C009932A2 /* RulesSetInfoInteractor.swift in Sources */,
+				A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
 				A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */,
 				1CEC0CF521D90E6D003C9C7A /* RulesSetsProtocols.swift in Sources */,
 				A5737AAD21DD533A0037AAFD /* ExampleState.swift in Sources */,
+				A55FCB5B21E2F60C009932A2 /* RulesSetInfoState.swift in Sources */,
 				A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
 				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
+				A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */,
 				A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */,
 				1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */,
 				A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
+				A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */,
 				1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */,
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
 				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
+				A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
 				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
 				1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */,
@@ -904,9 +1026,11 @@
 				A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
+				A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,
+				A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

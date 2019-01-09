@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RulesSetHeaderTableViewCell" rowHeight="137" id="KGk-i7-Jjw" customClass="RulesSetHeaderTableViewCell" customModule="Grammary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="136.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-eM-RrV">
+                        <rect key="frame" x="16" y="16" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-Jf-cHp">
+                        <rect key="frame" x="16" y="53" width="288" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SZ-Zo-kWH">
+                        <rect key="frame" x="16" y="86" width="288" height="34.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Study">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="studyButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PNI-8V-zzr"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PAz-eM-RrV" secondAttribute="trailing" constant="16" id="4KA-dS-kpN"/>
+                    <constraint firstAttribute="trailing" secondItem="9Y5-Jf-cHp" secondAttribute="trailing" constant="16" id="9rY-Nj-peG"/>
+                    <constraint firstItem="2SZ-Zo-kWH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KUf-c4-IKi"/>
+                    <constraint firstAttribute="bottom" secondItem="2SZ-Zo-kWH" secondAttribute="bottom" constant="16" id="NVK-c1-ka2"/>
+                    <constraint firstItem="9Y5-Jf-cHp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Oil-AZ-EuV"/>
+                    <constraint firstAttribute="trailing" secondItem="2SZ-Zo-kWH" secondAttribute="trailing" constant="16" id="S0V-Wt-MBc"/>
+                    <constraint firstItem="9Y5-Jf-cHp" firstAttribute="top" secondItem="PAz-eM-RrV" secondAttribute="bottom" constant="16" id="Tv9-B2-glL"/>
+                    <constraint firstItem="PAz-eM-RrV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Xfb-iQ-YTE"/>
+                    <constraint firstItem="9Y5-Jf-cHp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="aUg-zr-omQ"/>
+                    <constraint firstItem="PAz-eM-RrV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dDY-xl-AZI"/>
+                    <constraint firstItem="PAz-eM-RrV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="daF-WK-KmN"/>
+                    <constraint firstItem="2SZ-Zo-kWH" firstAttribute="top" secondItem="9Y5-Jf-cHp" secondAttribute="bottom" constant="16" id="kh2-mp-cLK"/>
+                    <constraint firstItem="2SZ-Zo-kWH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kmC-3L-vqe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="progressLabel" destination="9Y5-Jf-cHp" id="0Uj-ZH-IMW"/>
+                <outlet property="studyButton" destination="2SZ-Zo-kWH" id="EWp-Cg-56Y"/>
+                <outlet property="titleLabel" destination="PAz-eM-RrV" id="LoJ-qL-eln"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="189.3553223388306"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -20,8 +20,8 @@ final class RulesSetsRouterImpl: RulesSetsRouter {
 
     // MARK: - RulesSetsRouter
 
-    func showExercise(rulesSetId: String) {
-        let vc = ExerciseAssembly.createModule(serviceAssembly: serviceAssembly, rulesSetId: rulesSetId)
-        viewController?.present(vc, animated: true, completion: nil)
+    func showRulesSetInfo(rulesSet: RulesSet) {
+        let vc = RulesSetInfoAssembly.createModule(serviceAssembly: serviceAssembly, rulesSet: rulesSet)
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

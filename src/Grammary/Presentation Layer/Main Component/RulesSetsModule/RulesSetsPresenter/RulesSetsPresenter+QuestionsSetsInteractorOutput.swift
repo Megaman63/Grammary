@@ -20,12 +20,8 @@ extension RulesSetsPresenterImpl: RulesSetsInteractorOutput {
             return RulesSetItem(id: set.id, name: set.name, totalProgress: totalProgress)
         }
         
-        let section = CommonSection(items: items) { [weak self] index in
-            guard let item = self?.state.sections.first?.items[index] as? RulesSetItem else {
-                return
-            }
-            
-            self?.router.showExercise(rulesSetId: item.id)
+        let section = CommonSection(items: items) { [weak router] index in
+            router?.showRulesSetInfo(rulesSet: sets[index])
         }
         
         state.sections = [section]

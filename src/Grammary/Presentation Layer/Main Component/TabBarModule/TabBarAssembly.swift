@@ -15,7 +15,7 @@ final class TabBarAssembly {
         
         let rulesSetsController = RulesSetsAssembly.createModule(serviceAssembly: serviceAssembly)
         view.viewControllers = [
-            rulesSetsController
+            UINavigationController(rootViewController: rulesSetsController)
         ]
 
         return view
