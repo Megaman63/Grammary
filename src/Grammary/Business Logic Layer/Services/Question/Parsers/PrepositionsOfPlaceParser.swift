@@ -8,7 +8,7 @@
 
 import Foundation
 
-func placePrepositions() -> [Rule] {
+func parsePlacePrepositions() -> [Rule] {
     let placePrepositions = Rule(
         id: "p-p-all",
         ruleDescription: "Prepositions of place",

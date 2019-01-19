@@ -8,7 +8,7 @@
 
 import Foundation
 
-func timePrepositions() -> [Rule] {
+func parseTimePrepositions() -> [Rule] {
     
     let inPreposition = Rule(
         id: "p-t-in",
@@ -22,7 +22,7 @@ func timePrepositions() -> [Rule] {
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-0-0", text: "с месяцами (в январе)"),
-                    Answer(id: "p-t-in-0-1", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-in-0-1", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-in-0-2", text: "с конкретным временем (в 5 часов, в полночь, в полдень)"),
                     Answer(id: "p-t-in-0-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
@@ -38,7 +38,7 @@ func timePrepositions() -> [Rule] {
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-1-0", text: "с с временами года (летом)"),
-                    Answer(id: "p-t-in-1-1", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-in-1-1", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-in-1-2", text: "с конкретным временем (в 5 часов, в полночь, в полдень)"),
                     Answer(id: "p-t-in-1-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
@@ -54,7 +54,7 @@ func timePrepositions() -> [Rule] {
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-2-0", text: "с годами (в 1999 году)"),
-                    Answer(id: "p-t-in-2-1", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-in-2-1", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-in-2-2", text: "с праздниками (на Рождество)"),
                     Answer(id: "p-t-in-2-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
@@ -70,7 +70,7 @@ func timePrepositions() -> [Rule] {
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-3-0", text: "с веками (в 21 веке)"),
-                    Answer(id: "p-t-in-3-1", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-in-3-1", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-in-3-2", text: "с праздниками (на Рождество)"),
                     Answer(id: "p-t-in-3-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
@@ -94,7 +94,7 @@ func timePrepositions() -> [Rule] {
                 answers: [
                     Answer(id: "p-t-at-0-0", text: "с конкретным временем (в 5 часов, в полночь, в полдень)"),
                     Answer(id: "p-t-at-0-1", text: "с месяцами (в январе)"),
-                    Answer(id: "p-t-at-0-2", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-at-0-2", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-at-0-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
                 examples: [
@@ -111,7 +111,7 @@ func timePrepositions() -> [Rule] {
                 answers: [
                     Answer(id: "p-t-at-1-0", text: "с праздниками (на Рождество)"),
                     Answer(id: "p-t-at-1-1", text: "с временами года (летом)"),
-                    Answer(id: "p-t-at-1-2", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-at-1-2", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-at-1-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
                 examples: [
@@ -128,7 +128,7 @@ func timePrepositions() -> [Rule] {
                 answers: [
                     Answer(id: "p-t-at-2-0", text: "с выражениями в настоящий момент/ночью/в полдень/в полуденное время"),
                     Answer(id: "p-t-at-2-1", text: "с годами (в 1999 году)"),
-                    Answer(id: "p-t-at-2-2", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-at-2-2", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-at-2-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
                 examples: [
@@ -145,7 +145,7 @@ func timePrepositions() -> [Rule] {
                 answers: [
                     Answer(id: "p-t-at-3-0", text: "Когда говорим о начале и конце периода: в начале/в конце"),
                     Answer(id: "p-t-at-3-1", text: "с годами (в 1999 году)"),
-                    Answer(id: "p-t-at-3-2", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-at-3-2", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-at-3-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
                 examples: [
@@ -161,7 +161,7 @@ func timePrepositions() -> [Rule] {
                 answers: [
                     Answer(id: "p-t-at-4-0", text: "cо словами, обозначающими время принятия пищи: за завтраком/за обедом/за ужином."),
                     Answer(id: "p-t-at-4-1", text: "с годами (в 1999 году)"),
-                    Answer(id: "p-t-at-4-2", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-at-4-2", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-at-4-3", text: "с датами (29-ого мая)")
                     ].toRealmList(),
                 examples: [
@@ -200,7 +200,7 @@ func timePrepositions() -> [Rule] {
                 correctAnswer: 0,
                 shuffleAnswers: true,
                 answers: [
-                    Answer(id: "p-t-on-1-0", text: "с днями недели (в пятницу"),
+                    Answer(id: "p-t-on-1-0", text: "с днями недели (в пятницу)"),
                     Answer(id: "p-t-on-1-1", text: "с праздниками (на Рождество)"),
                     Answer(id: "p-t-on-1-2", text: "с с временами года (летом)"),
                     Answer(id: "p-t-on-1-3", text: "с годами (в 1999 году)"),

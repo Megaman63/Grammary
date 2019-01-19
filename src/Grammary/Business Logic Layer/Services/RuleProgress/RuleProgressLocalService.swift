@@ -11,6 +11,7 @@ import UIKit
 protocol RuleProgressLocalService: PersistenceService {
     func getAllProgressesFor(questionId: String) -> [RuleProgress]
     func getAllProgresses() -> [RuleProgress]
+    func getProgress(forRule rule: Rule) -> RuleProgress?
 }
 
 final class RuleProgressLocalServiceImpl: RuleProgressLocalService {
@@ -38,5 +39,13 @@ final class RuleProgressLocalServiceImpl: RuleProgressLocalService {
         return getRealm()
             .objects(RuleProgress.self)
             .map { $0 }
+    }
+    
+    func getProgress(forRule rule: Rule) -> RuleProgress? {
+        let predicate = NSPredicate(format: "\(#keyPath(RuleProgress.rule.id)) == \"\(rule.id)\"")
+        return getRealm()
+            .objects(RuleProgress.self)
+            .filter(predicate)
+            .first
     }
 }
