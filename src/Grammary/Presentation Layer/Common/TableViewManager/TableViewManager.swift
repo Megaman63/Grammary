@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct TableViewManagerOptions: OptionSet {
+    let rawValue: Int
+    
+    static let withoutBottomSeparators = TableViewManagerOptions(rawValue: 1 << 0)
+}
+
 final class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     private weak var tableView: UITableView?
@@ -20,7 +26,8 @@ final class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelega
 
     init(tableView: UITableView,
          estimatedRowHeight: CGFloat = 44.0,
-         rowHeight: CGFloat = UITableView.automaticDimension) {
+         rowHeight: CGFloat = UITableView.automaticDimension,
+         options: TableViewManagerOptions = []) {
         
         self.tableView = tableView
 
@@ -31,6 +38,10 @@ final class TableViewManager: NSObject, UITableViewDataSource, UITableViewDelega
         
         tableView.estimatedRowHeight = estimatedRowHeight
         tableView.rowHeight = rowHeight
+        
+        if options.contains(.withoutBottomSeparators) {
+            tableView.tableFooterView = UIView()
+        }
     }
 
     // MARK: - UITableViewDataSource

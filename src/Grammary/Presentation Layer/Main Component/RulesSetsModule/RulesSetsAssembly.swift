@@ -12,7 +12,10 @@ final class RulesSetsAssembly {
 
     static func createModule(serviceAssembly: ServiceAssembly) -> UIViewController {
         let view = RulesSetsViewController()
-        let interactor = RulesSetsInteractorImpl(exerciseFacade: serviceAssembly.getExerciseFacade())
+        let interactor = RulesSetsInteractorImpl(
+            exerciseFacade: serviceAssembly.getExerciseFacade(),
+            rulesSetNotificationCenter: serviceAssembly.rulesSetNotificationCenter
+        )
         let router = RulesSetsRouterImpl(serviceAssembly: serviceAssembly)
         let state = RulesSetsState()
         let presenter = RulesSetsPresenterImpl(view: view,

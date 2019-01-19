@@ -11,9 +11,9 @@ import UIKit
 struct RulesSetHeaderItem: TableViewItem {
     let name: String
     var totalProgress: Double
-    var onStudyTap: (() -> Void)?
+    var onStudyTap: (CommonBlock)?
     
     // MARK: - TableViewItem
     
-    static let cellClass: UITableViewCell.Type = RulesSetHeaderTableViewCell.self
+    static let cellClass: TableViewCellConformable.Type = RulesSetHeaderTableViewCell.self
 }

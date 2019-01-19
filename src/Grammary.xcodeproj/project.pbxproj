@@ -48,6 +48,27 @@
 		1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */; };
 		1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */; };
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
+		A50BD87621E5A11C0080D1C0 /* ReportedSpeechParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50BD87521E5A11C0080D1C0 /* ReportedSpeechParser.swift */; };
+		A50CBE3621F30A90009FDFFD /* GerundParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3521F30A90009FDFFD /* GerundParser.swift */; };
+		A50CBE4421F30C49009FDFFD /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3A21F30C49009FDFFD /* SettingsPresenter.swift */; };
+		A50CBE4521F30C49009FDFFD /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3B21F30C49009FDFFD /* SettingsRouter.swift */; };
+		A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3C21F30C49009FDFFD /* SettingsViewController.swift */; };
+		A50CBE4721F30C49009FDFFD /* SettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3D21F30C49009FDFFD /* SettingsProtocols.swift */; };
+		A50CBE4821F30C49009FDFFD /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3E21F30C49009FDFFD /* SettingsAssembly.swift */; };
+		A50CBE4921F30C49009FDFFD /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE3F21F30C49009FDFFD /* SettingsInteractor.swift */; };
+		A50CBE4A21F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE4021F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift */; };
+		A50CBE4C21F30C49009FDFFD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50CBE4221F30C49009FDFFD /* SettingsViewController.xib */; };
+		A50CBE4D21F30C49009FDFFD /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE4321F30C49009FDFFD /* SettingsState.swift */; };
+		A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE5321F30F9B009FDFFD /* CommonButtonItem.swift */; };
+		A50CBE5721F30FB6009FDFFD /* CommonButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE5521F30FB6009FDFFD /* CommonButtonTableViewCell.swift */; };
+		A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50CBE5621F30FB6009FDFFD /* CommonButtonTableViewCell.xib */; };
+		A50CBE5E21F3100D009FDFFD /* CommonBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE5D21F3100D009FDFFD /* CommonBlocks.swift */; };
+		A50CBE6021F31329009FDFFD /* ProgressFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE5F21F31329009FDFFD /* ProgressFacade.swift */; };
+		A50CBE6521F31A36009FDFFD /* RulesSetNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE6421F31A36009FDFFD /* RulesSetNotificationCenter.swift */; };
+		A50CBE6821F31AFC009FDFFD /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE6721F31AFC009FDFFD /* MulticastDelegate.swift */; };
+		A50CBE6B21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE6A21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift */; };
+		A50CBE6D21F31F10009FDFFD /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE6C21F31F10009FDFFD /* QueueManager.swift */; };
+		A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE6E21F31F99009FDFFD /* Logger.swift */; };
 		A52855F221DE409100228F0E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52855F121DE409100228F0E /* Question.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
@@ -84,6 +105,7 @@
 		A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */; };
 		A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */; };
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
+		A5E6836421EA1BE70083789E /* PrepositionsrParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +175,27 @@
 		1E6E41E56F37D17CE5FB39A2 /* Pods-Grammary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.debug.xcconfig"; sourceTree = "<group>"; };
 		9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		A50BD87521E5A11C0080D1C0 /* ReportedSpeechParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportedSpeechParser.swift; sourceTree = "<group>"; };
+		A50CBE3521F30A90009FDFFD /* GerundParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerundParser.swift; sourceTree = "<group>"; };
+		A50CBE3A21F30C49009FDFFD /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		A50CBE3B21F30C49009FDFFD /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		A50CBE3C21F30C49009FDFFD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A50CBE3D21F30C49009FDFFD /* SettingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocols.swift; sourceTree = "<group>"; };
+		A50CBE3E21F30C49009FDFFD /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		A50CBE3F21F30C49009FDFFD /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		A50CBE4021F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsPresenter+SettingsInteractorOutput.swift"; sourceTree = "<group>"; };
+		A50CBE4221F30C49009FDFFD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		A50CBE4321F30C49009FDFFD /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
+		A50CBE5321F30F9B009FDFFD /* CommonButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonItem.swift; sourceTree = "<group>"; };
+		A50CBE5521F30FB6009FDFFD /* CommonButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonTableViewCell.swift; sourceTree = "<group>"; };
+		A50CBE5621F30FB6009FDFFD /* CommonButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonButtonTableViewCell.xib; sourceTree = "<group>"; };
+		A50CBE5D21F3100D009FDFFD /* CommonBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBlocks.swift; sourceTree = "<group>"; };
+		A50CBE5F21F31329009FDFFD /* ProgressFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressFacade.swift; sourceTree = "<group>"; };
+		A50CBE6421F31A36009FDFFD /* RulesSetNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetNotificationCenter.swift; sourceTree = "<group>"; };
+		A50CBE6721F31AFC009FDFFD /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		A50CBE6A21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift"; sourceTree = "<group>"; };
+		A50CBE6C21F31F10009FDFFD /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
+		A50CBE6E21F31F99009FDFFD /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A52855F121DE409100228F0E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
@@ -189,6 +232,7 @@
 		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
+		A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrParser.swift; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0CEC21D90E6D003C9C7A /* RulesSetsAssembly.swift */,
-				1CEC0CED21D90E6D003C9C7A /* RulesSetsInteractor.swift */,
+				A50CBE6921F31E5D009FDFFD /* RulesSetsInteractor */,
 				1CEC0CFC21D90E79003C9C7A /* RulesSetsPresenter */,
 				1CEC0CEB21D90E6D003C9C7A /* RulesSetsProtocols.swift */,
 				1CEC0CE921D90E6D003C9C7A /* RulesSetsRouter.swift */,
@@ -381,6 +425,8 @@
 		1CEC0D2721DA29C9003C9C7A /* TableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				A50CBE5221F30F88009FDFFD /* CommonCells */,
+				A50CBE5121F30F76009FDFFD /* CommonItems */,
 				1CEC0D0C21D9464E003C9C7A /* Protocols */,
 				1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */,
 			);
@@ -452,6 +498,7 @@
 				1CEC0CE721D90E49003C9C7A /* RulesSetsModule */,
 				A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */,
 				1CFCD68221D3F16F00F9D5A8 /* ExerciseModule */,
+				A50CBE3921F30C33009FDFFD /* SettingsModule */,
 			);
 			path = "Main Component";
 			sourceTree = "<group>";
@@ -469,8 +516,9 @@
 		1CFCD66B21D3F00300F9D5A8 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
+				A50CBE6621F31AE8009FDFFD /* Misk */,
+				A50CBE5B21F30FF3009FDFFD /* Common */,
 				A5737A8B21DCFB520037AAFD /* Extensions */,
-				1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */,
 				1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */,
 				A5737A8E21DD0C530037AAFD /* PersistenceService.swift */,
 			);
@@ -491,6 +539,7 @@
 		1CFCD66D21D3F03100F9D5A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A50BD87421E5A1070080D1C0 /* Parsers */,
 				1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */,
 				1CFCD64321D3EA8700F9D5A8 /* LaunchScreen.storyboard */,
 				1CFCD68C21D3F63300F9D5A8 /* Questions.json */,
@@ -565,6 +614,135 @@
 				A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A50BD87421E5A1070080D1C0 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */,
+				A50CBE3521F30A90009FDFFD /* GerundParser.swift */,
+				A50BD87521E5A11C0080D1C0 /* ReportedSpeechParser.swift */,
+				A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		A50CBE3921F30C33009FDFFD /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE3E21F30C49009FDFFD /* SettingsAssembly.swift */,
+				A50CBE3F21F30C49009FDFFD /* SettingsInteractor.swift */,
+				A50CBE4E21F30C54009FDFFD /* SettingsPresenter */,
+				A50CBE3D21F30C49009FDFFD /* SettingsProtocols.swift */,
+				A50CBE3B21F30C49009FDFFD /* SettingsRouter.swift */,
+				A50CBE4F21F30C6B009FDFFD /* SettingsView */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		A50CBE4E21F30C54009FDFFD /* SettingsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE5021F30C72009FDFFD /* State */,
+				A50CBE3A21F30C49009FDFFD /* SettingsPresenter.swift */,
+				A50CBE4021F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift */,
+			);
+			path = SettingsPresenter;
+			sourceTree = "<group>";
+		};
+		A50CBE4F21F30C6B009FDFFD /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE3C21F30C49009FDFFD /* SettingsViewController.swift */,
+				A50CBE4221F30C49009FDFFD /* SettingsViewController.xib */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		A50CBE5021F30C72009FDFFD /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE4321F30C49009FDFFD /* SettingsState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A50CBE5121F30F76009FDFFD /* CommonItems */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE5321F30F9B009FDFFD /* CommonButtonItem.swift */,
+			);
+			path = CommonItems;
+			sourceTree = "<group>";
+		};
+		A50CBE5221F30F88009FDFFD /* CommonCells */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE5A21F30FBE009FDFFD /* CommonButtonTableViewCell */,
+			);
+			path = CommonCells;
+			sourceTree = "<group>";
+		};
+		A50CBE5A21F30FBE009FDFFD /* CommonButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE5521F30FB6009FDFFD /* CommonButtonTableViewCell.swift */,
+				A50CBE5621F30FB6009FDFFD /* CommonButtonTableViewCell.xib */,
+			);
+			path = CommonButtonTableViewCell;
+			sourceTree = "<group>";
+		};
+		A50CBE5B21F30FF3009FDFFD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE5D21F3100D009FDFFD /* CommonBlocks.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A50CBE6121F319E8009FDFFD /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A8721DCF4270037AAFD /* RuleLocalService.swift */,
+				A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */,
+			);
+			path = Rule;
+			sourceTree = "<group>";
+		};
+		A50CBE6221F319F0009FDFFD /* RulesSet */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A9021DD0CF80037AAFD /* RulesSetLocalService.swift */,
+				A50CBE6421F31A36009FDFFD /* RulesSetNotificationCenter.swift */,
+			);
+			path = RulesSet;
+			sourceTree = "<group>";
+		};
+		A50CBE6321F31A01009FDFFD /* RuleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */,
+			);
+			path = RuleProgress;
+			sourceTree = "<group>";
+		};
+		A50CBE6621F31AE8009FDFFD /* Misk */ = {
+			isa = PBXGroup;
+			children = (
+				A50CBE6721F31AFC009FDFFD /* MulticastDelegate.swift */,
+				A50CBE6C21F31F10009FDFFD /* QueueManager.swift */,
+				A50CBE6E21F31F99009FDFFD /* Logger.swift */,
+			);
+			path = Misk;
+			sourceTree = "<group>";
+		};
+		A50CBE6921F31E5D009FDFFD /* RulesSetsInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC0CED21D90E6D003C9C7A /* RulesSetsInteractor.swift */,
+				A50CBE6A21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift */,
+			);
+			path = RulesSetsInteractor;
 			sourceTree = "<group>";
 		};
 		A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */ = {
@@ -656,10 +834,9 @@
 		A5737A7F21DCF18C0037AAFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A5737A8721DCF4270037AAFD /* RuleLocalService.swift */,
-				A5737A8921DCF4B50037AAFD /* RuleNetworkService.swift */,
-				A5737A9021DD0CF80037AAFD /* RulesSetLocalService.swift */,
-				A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */,
+				A50CBE6121F319E8009FDFFD /* Rule */,
+				A50CBE6221F319F0009FDFFD /* RulesSet */,
+				A50CBE6321F31A01009FDFFD /* RuleProgress */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -668,6 +845,7 @@
 			isa = PBXGroup;
 			children = (
 				A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */,
+				A50CBE5F21F31329009FDFFD /* ProgressFacade.swift */,
 			);
 			path = Facades;
 			sourceTree = "<group>";
@@ -867,8 +1045,10 @@
 				A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */,
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				1CFCD68021D3F16B00F9D5A8 /* ExerciseViewController.xib in Resources */,
+				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
+				A50CBE4C21F30C49009FDFFD /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,29 +1148,40 @@
 			files = (
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
+				A50CBE5721F30FB6009FDFFD /* CommonButtonTableViewCell.swift in Sources */,
 				A55FCB5521E2F60C009932A2 /* RulesSetInfoViewController.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
+				A50CBE4821F30C49009FDFFD /* SettingsAssembly.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
 				1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */,
 				A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */,
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
+				A50CBE6521F31A36009FDFFD /* RulesSetNotificationCenter.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
 				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
+				A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
+				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
+				A5E6836421EA1BE70083789E /* PrepositionsrParser.swift in Sources */,
+				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
+				A50CBE6821F31AFC009FDFFD /* MulticastDelegate.swift in Sources */,
+				A50CBE4D21F30C49009FDFFD /* SettingsState.swift in Sources */,
 				A55FCB5621E2F60C009932A2 /* RulesSetInfoProtocols.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
+				A50CBE4921F30C49009FDFFD /* SettingsInteractor.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
+				A50BD87621E5A11C0080D1C0 /* ReportedSpeechParser.swift in Sources */,
 				A55FCB5821E2F60C009932A2 /* RulesSetInfoInteractor.swift in Sources */,
 				A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
@@ -1003,9 +1194,14 @@
 				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
 				A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */,
+				A50CBE5E21F3100D009FDFFD /* CommonBlocks.swift in Sources */,
+				A50CBE4721F30C49009FDFFD /* SettingsProtocols.swift in Sources */,
+				A50CBE3621F30A90009FDFFD /* GerundParser.swift in Sources */,
+				A50CBE6021F31329009FDFFD /* ProgressFacade.swift in Sources */,
 				A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */,
 				1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */,
 				A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */,
+				A50CBE4A21F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
 				A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */,
@@ -1020,14 +1216,18 @@
 				A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */,
 				1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */,
 				1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */,
+				A50CBE6D21F31F10009FDFFD /* QueueManager.swift in Sources */,
 				1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */,
 				A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */,
+				A50CBE4521F30C49009FDFFD /* SettingsRouter.swift in Sources */,
 				1CEC0CF321D90E6D003C9C7A /* RulesSetsRouter.swift in Sources */,
 				A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
+				A50CBE6B21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
 				A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */,
+				A50CBE4421F30C49009FDFFD /* SettingsPresenter.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,
 				A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */,

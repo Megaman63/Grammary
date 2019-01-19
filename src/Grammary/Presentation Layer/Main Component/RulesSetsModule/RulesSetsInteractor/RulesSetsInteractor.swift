@@ -15,17 +15,20 @@ final class RulesSetsInteractorImpl: RulesSetsInteractor {
     // MARK: - Private functions
     
     private let exerciseFacade: ExerciseFacade
-    
+    private let rulesSetNotificationCenter: RulesSetNotificationCenter
     // MARK: - Init
     
-    init(exerciseFacade: ExerciseFacade) {
+    init(exerciseFacade: ExerciseFacade,
+         rulesSetNotificationCenter: RulesSetNotificationCenter) {
+        
         self.exerciseFacade = exerciseFacade
+        self.rulesSetNotificationCenter = rulesSetNotificationCenter
     }
+    
     // MARK: - RulesSetsInteractor
     
-    func requestRulesSets() {
-        let rulesSets = exerciseFacade.obtainRulesSet()
-        output?.didLoadRulesSets(rulesSets)
+    func subscribeOnAllRulesSets() {
+        rulesSetNotificationCenter.subscribeOnAllRulesSets(subscriber: self)
     }
     
 }

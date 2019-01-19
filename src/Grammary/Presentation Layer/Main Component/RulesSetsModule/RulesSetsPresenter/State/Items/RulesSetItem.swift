@@ -15,5 +15,5 @@ struct RulesSetItem: TableViewItem {
     
     // MARK: - TableViewItem
     
-    static let cellClass: UITableViewCell.Type = RulesSetTableViewCell.self
+    static let cellClass: TableViewCellConformable.Type = RulesSetTableViewCell.self
 }

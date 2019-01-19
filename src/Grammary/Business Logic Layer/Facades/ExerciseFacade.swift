@@ -11,7 +11,6 @@ import Foundation
 protocol ExerciseFacade: AnyObject {
     func obtainRulesSet() -> [RulesSet]
     func obtainRules(forRulesSetId id: String) -> [Rule]
-    func setProgress(questionId: String, isCorrectAnswer: Bool)
 }
 
 final class ExerciseFacadeImpl: ExerciseFacade {
@@ -45,17 +44,5 @@ final class ExerciseFacadeImpl: ExerciseFacade {
         }
         
         return rulesSet.progress.compactMap { $0.rule }
-    }
-    
-    func setProgress(questionId: String, isCorrectAnswer: Bool)  {
-        let progresses = ruleProgressLocalService.getAllProgressesFor(questionId: questionId)
-        
-        rulesSetLocalService.update {
-            if isCorrectAnswer {
-                progresses.forEach { $0.progress = $0.progress + 1 }
-            } else {
-                progresses.forEach { $0.errorCount = $0.errorCount + 1 }
-            }
-        }
     }
 }

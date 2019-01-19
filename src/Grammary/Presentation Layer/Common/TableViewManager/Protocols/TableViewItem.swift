@@ -8,8 +8,10 @@
 
 import UIKit
 
+typealias TableViewCellConformable = UITableViewCell & TableViewCell
+
 protocol TableViewItem {
-    static var cellClass: UITableViewCell.Type { get }
+    static var cellClass: TableViewCellConformable.Type { get }
 }
 
 extension TableViewItem {

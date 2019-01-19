@@ -14,8 +14,14 @@ final class TabBarAssembly {
         let view = UITabBarController()
         
         let rulesSetsController = RulesSetsAssembly.createModule(serviceAssembly: serviceAssembly)
+        rulesSetsController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        
+        let settingsController = SettingsAssembly.createModule(serviceAssembly: serviceAssembly)
+        settingsController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+
         view.viewControllers = [
-            UINavigationController(rootViewController: rulesSetsController)
+            UINavigationController(rootViewController: rulesSetsController),
+            UINavigationController(rootViewController: settingsController)
         ]
 
         return view

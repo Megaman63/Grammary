@@ -41,9 +41,8 @@ final class RulesSetInfoViewController: UIViewController, RulesSetInfoView {
     // MARK: - Private functions
     
     private func configureTableView() {
-        tableViewManager = TableViewManager(tableView: tableView)
+        tableViewManager = TableViewManager(tableView: tableView, options: .withoutBottomSeparators)
         tableView.registerWithNib(cellClass: RuleProgressTableViewCell.self)
         tableView.registerWithNib(cellClass: RulesSetHeaderTableViewCell.self)
-        tableView.tableFooterView = UIView()
     }
 }

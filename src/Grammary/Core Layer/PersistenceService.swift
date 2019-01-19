@@ -22,7 +22,7 @@ extension PersistenceService {
         }
     }
     
-    func write(_ block: () -> Void) {
+    func write(_ block: CommonBlock) {
         do {
             let realm = try Realm()
             try realm.write(block)

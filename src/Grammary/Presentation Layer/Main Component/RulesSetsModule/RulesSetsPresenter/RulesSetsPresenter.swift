@@ -34,6 +34,6 @@ final class RulesSetsPresenterImpl: RulesSetsPresenter {
     // MARK: - RulesSetsPresenter
     
     func didTriggerViewReadyEvent() {
-        interactor.requestRulesSets()
+        interactor.subscribeOnAllRulesSets()
     }
 }

@@ -23,13 +23,13 @@ protocol RulesSetsPresenter: AnyObject {
 // MARK: - Interactor
 
 protocol RulesSetsInteractor: AnyObject {
-    func requestRulesSets()
+    func subscribeOnAllRulesSets()
 }
 
 // MARK: - InteractorOutput
 
 protocol RulesSetsInteractorOutput: AnyObject {
-    func didLoadRulesSets(_ sets: [RulesSet])
+    func didChangeRulesSets(changes: RulesSetNotification)
 }
 
 // MARK: - View

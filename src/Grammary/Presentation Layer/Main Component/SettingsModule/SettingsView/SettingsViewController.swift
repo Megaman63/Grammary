@@ -1,38 +1,38 @@
 //
-//  RulesSetsViewController.swift
+//  SettingsViewController.swift
 //  Grammary
 //
-//  Created Сергей Гребеножко on 30/12/2018.
-//  Copyright © 2018 Сергей Гребеножко. All rights reserved.
+//  Created Sergey Grebenozhko on 1/19/19.
+//  Copyright © 2019 Сергей Гребеножко. All rights reserved.
 //
 
 import UIKit
 
-final class RulesSetsViewController: UIViewController, RulesSetsView {
+final class SettingsViewController: UIViewController, SettingsView {
 
     // MARK: - Private properties
 
     private var tableViewManager: TableViewManager!
-
+    
     // MARK: - Outlets
 
     @IBOutlet private var tableView: UITableView!
 
     // MARK: - Lifecycle
-
-	override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         tableViewManager = TableViewManager(tableView: tableView, options: .withoutBottomSeparators)
-        tableView.registerWithNib(cellClass: RulesSetTableViewCell.self)
-        presenter?.didTriggerViewReadyEvent() 
+        tableView.registerWithNib(cellClass: CommonButtonTableViewCell.self)
+        presenter?.didTriggerViewReadyEvent()
     }
-
+    
     // MARK: - Actions
-
-    // MARK: - RulesSetsView
-
-    var presenter: RulesSetsPresenter?
-
+    
+    // MARK: - SettingsView
+    
+    var presenter: SettingsPresenter?
+    
     func setDataSource(_ dataSource: [TableViewSection]) {
         tableViewManager.dataSource = dataSource
     }

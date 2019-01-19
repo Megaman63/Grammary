@@ -10,6 +10,7 @@ import UIKit
 
 protocol RuleProgressLocalService: AnyObject {
     func getAllProgressesFor(questionId: String) -> [RuleProgress]
+    func getAllProgresses() -> [RuleProgress]
 }
 
 final class RuleProgressLocalServiceImpl: PersistenceService, RuleProgressLocalService {
@@ -32,6 +33,12 @@ final class RuleProgressLocalServiceImpl: PersistenceService, RuleProgressLocalS
             .filter { progress -> Bool in
                 return progress.rule?.questions.contains(where: { $0.id == questionId } ) ?? false
             }
+            .map { $0 }
+    }
+    
+    func getAllProgresses() -> [RuleProgress] {
+        return getRealm()
+            .objects(RuleProgress.self)
             .map { $0 }
     }
 }

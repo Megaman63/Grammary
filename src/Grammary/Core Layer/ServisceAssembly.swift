@@ -10,6 +10,9 @@ import Foundation
 
 protocol ServiceAssembly: AnyObject {
     func getExerciseFacade() -> ExerciseFacade
+    func getProgressFacade() -> ProgressFacade
+    
+    var rulesSetNotificationCenter: RulesSetNotificationCenter { get }
 }
 
 final class ServiceAssemblyImpl: ServiceAssembly {
@@ -21,4 +24,12 @@ final class ServiceAssemblyImpl: ServiceAssembly {
                                   rulesSetLocalService: RulesSetLocalServiceImpl(),
                                   ruleProgressLocalService: RuleProgressLocalServiceImpl())
     }
+    
+    func getProgressFacade() -> ProgressFacade {
+        return ProgressFacadeImpl(ruleLocalService: RuleLocalServiceImpl(),
+                                  rulesSetLocalService: RulesSetLocalServiceImpl(),
+                                  ruleProgressLocalService: RuleProgressLocalServiceImpl())
+    }
+    
+    lazy var rulesSetNotificationCenter: RulesSetNotificationCenter = RulesSetNotificationCenterImpl()
 }

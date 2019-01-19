@@ -20,7 +20,6 @@ final class ExampleViewImpl: UIView, ExampleView {
         
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsets(top: 236, left: 0, bottom: 0, right: 0)
-        tableView.tableFooterView = UIView()
         tableView.registerWithNib(cellClass: ExampleTableViewCell.self)
         tableView.snp.makeConstraints { $0.edges.equalToSuperview() }
         
@@ -28,7 +27,7 @@ final class ExampleViewImpl: UIView, ExampleView {
     }()
     
     private lazy var tableViewManager: TableViewManager = {
-        let tableViewManager = TableViewManager(tableView: tableView)
+        let tableViewManager = TableViewManager(tableView: tableView, options: .withoutBottomSeparators)
         return tableViewManager
     }()
     

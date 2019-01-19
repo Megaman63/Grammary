@@ -15,5 +15,5 @@ struct RuleProgressItem: TableViewItem {
     
     // MARK: - TableViewItem
     
-    static let cellClass: UITableViewCell.Type = RuleProgressTableViewCell.self
+    static let cellClass: TableViewCellConformable.Type = RuleProgressTableViewCell.self
 }

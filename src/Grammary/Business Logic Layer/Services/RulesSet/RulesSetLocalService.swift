@@ -11,7 +11,7 @@ import UIKit
 protocol RulesSetLocalService: AnyObject {
     func obtainRulesSet(forId id: String) -> RulesSet?
     func obtainRulesSet() -> [RulesSet]
-    func update(block: () -> Void)
+    func update(block: CommonBlock)
 }
 
 final class RulesSetLocalServiceImpl: PersistenceService, RulesSetLocalService {
@@ -36,7 +36,7 @@ final class RulesSetLocalServiceImpl: PersistenceService, RulesSetLocalService {
             .toArray()
     }
     
-    func update(block: () -> Void) {
+    func update(block: CommonBlock) {
         write(block)
     }
 }

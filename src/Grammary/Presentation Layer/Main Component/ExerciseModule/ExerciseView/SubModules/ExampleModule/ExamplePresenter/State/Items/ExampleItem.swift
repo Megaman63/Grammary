@@ -14,5 +14,5 @@ struct ExampleItem: TableViewItem {
     
     // MARK: - TableViewItem
     
-    static var cellClass: UITableViewCell.Type = ExampleTableViewCell.self
+    static var cellClass: TableViewCellConformable.Type = ExampleTableViewCell.self
 }

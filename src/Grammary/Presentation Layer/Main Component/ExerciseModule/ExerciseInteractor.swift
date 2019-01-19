@@ -15,11 +15,14 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     // MARK: - Private properties
     
     private let exerciseFacade: ExerciseFacade
+    private let progressFacade: ProgressFacade
     
     // MARK: - Init
     
-    init(exerciseFacade: ExerciseFacade) {
+    init(exerciseFacade: ExerciseFacade,
+         progressFacade: ProgressFacade) {
         self.exerciseFacade = exerciseFacade
+        self.progressFacade = progressFacade
     }
     
     // MARK: - ExerciseInteractor
@@ -30,6 +33,6 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     }
     
     func setProgress(questionId: String, isCorrectAnswer: Bool) {
-        exerciseFacade.setProgress(questionId: questionId, isCorrectAnswer: isCorrectAnswer)
+        progressFacade.setProgress(questionId: questionId, isCorrectAnswer: isCorrectAnswer)
     }
 }
