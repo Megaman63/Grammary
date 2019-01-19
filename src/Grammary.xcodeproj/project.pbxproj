@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07DCEF0B6E4AB4534D627D95 /* Pods_Grammary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */; };
-		1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */; };
+		1CEC0CD821D4007D003C9C7A /* ConditionalParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CD721D4007D003C9C7A /* ConditionalParser.swift */; };
 		1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDA21D4015D003C9C7A /* Rule.swift */; };
 		1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDD21D402A1003C9C7A /* RuleExample.swift */; };
 		1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0CDF21D402AD003C9C7A /* Answer.swift */; };
@@ -72,6 +72,8 @@
 		A50CBE7121F3299E009FDFFD /* UpdatesFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7021F3299E009FDFFD /* UpdatesFacade.swift */; };
 		A50CBE7421F329EA009FDFFD /* QuestionLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7321F329EA009FDFFD /* QuestionLocalService.swift */; };
 		A50CBE7721F3327B009FDFFD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7621F3327B009FDFFD /* Application.swift */; };
+		A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7A21F33C6C009FDFFD /* ArticleParser.swift */; };
+		A50CBE7D21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */; };
 		A52855F221DE409100228F0E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52855F121DE409100228F0E /* Question.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
@@ -108,7 +110,7 @@
 		A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */; };
 		A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */; };
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
-		A5E6836421EA1BE70083789E /* PrepositionsrParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */; };
+		A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,7 +132,7 @@
 
 /* Begin PBXFileReference section */
 		016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrammaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersParser.swift; sourceTree = "<group>"; };
+		1CEC0CD721D4007D003C9C7A /* ConditionalParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalParser.swift; sourceTree = "<group>"; };
 		1CEC0CDA21D4015D003C9C7A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		1CEC0CDD21D402A1003C9C7A /* RuleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExample.swift; sourceTree = "<group>"; };
 		1CEC0CDF21D402AD003C9C7A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -174,7 +176,6 @@
 		1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseViewController.xib; sourceTree = "<group>"; };
 		1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseState.swift; sourceTree = "<group>"; };
 		1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServisceAssembly.swift; sourceTree = "<group>"; };
-		1CFCD68C21D3F63300F9D5A8 /* Questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		1E6E41E56F37D17CE5FB39A2 /* Pods-Grammary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.debug.xcconfig"; sourceTree = "<group>"; };
 		9E00FFCF37E7F3D65289CCD6 /* Pods_Grammary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29495C259F55D7AFCD5604C /* Pods-GrammaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +203,8 @@
 		A50CBE7021F3299E009FDFFD /* UpdatesFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesFacade.swift; sourceTree = "<group>"; };
 		A50CBE7321F329EA009FDFFD /* QuestionLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLocalService.swift; sourceTree = "<group>"; };
 		A50CBE7621F3327B009FDFFD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A50CBE7A21F33C6C009FDFFD /* ArticleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleParser.swift; sourceTree = "<group>"; };
+		A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsOfPlaceParser.swift; sourceTree = "<group>"; };
 		A52855F121DE409100228F0E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
@@ -238,7 +241,7 @@
 		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
-		A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrParser.swift; sourceTree = "<group>"; };
+		A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrOfTimeParser.swift; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -547,7 +550,6 @@
 			children = (
 				1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */,
 				1CFCD64321D3EA8700F9D5A8 /* LaunchScreen.storyboard */,
-				1CFCD68C21D3F63300F9D5A8 /* Questions.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -625,10 +627,12 @@
 		A50BD87421E5A1070080D1C0 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0CD721D4007D003C9C7A /* AnswersParser.swift */,
+				1CEC0CD721D4007D003C9C7A /* ConditionalParser.swift */,
+				A50CBE7A21F33C6C009FDFFD /* ArticleParser.swift */,
 				A50CBE3521F30A90009FDFFD /* GerundParser.swift */,
 				A50BD87521E5A11C0080D1C0 /* ReportedSpeechParser.swift */,
-				A5E6836321EA1BE70083789E /* PrepositionsrParser.swift */,
+				A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */,
+				A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -1183,6 +1187,7 @@
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
 				A50CBE5721F30FB6009FDFFD /* CommonButtonTableViewCell.swift in Sources */,
 				A55FCB5521E2F60C009932A2 /* RulesSetInfoViewController.swift in Sources */,
+				A50CBE7D21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
@@ -1197,6 +1202,7 @@
 				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
 				A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */,
+				A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
@@ -1204,7 +1210,7 @@
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
 				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
-				A5E6836421EA1BE70083789E /* PrepositionsrParser.swift in Sources */,
+				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
 				A50CBE7121F3299E009FDFFD /* UpdatesFacade.swift in Sources */,
 				A50CBE6821F31AFC009FDFFD /* MulticastDelegate.swift in Sources */,
@@ -1240,7 +1246,7 @@
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
 				A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */,
-				1CEC0CD821D4007D003C9C7A /* AnswersParser.swift in Sources */,
+				1CEC0CD821D4007D003C9C7A /* ConditionalParser.swift in Sources */,
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
 				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,

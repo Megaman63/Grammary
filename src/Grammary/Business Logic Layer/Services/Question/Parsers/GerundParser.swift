@@ -108,7 +108,7 @@ func parseGerund() -> [Rule] {
             i = i + 1
             return Rule(
                 id: "\(i)",
-                ruleDescription: "",
+                ruleDescription: row[0],
                 questions: [
                     Question(
                         id: "\(i)-\(0)",
@@ -133,7 +133,7 @@ func parseGerund() -> [Rule] {
             i = i + 1
             return Rule(
                 id: "\(i)",
-                ruleDescription: "",
+                ruleDescription: row[0],
                 questions: [
                     Question(
                         id: "\(i)-\(0)",
