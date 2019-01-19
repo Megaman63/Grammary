@@ -8,13 +8,12 @@
 
 import UIKit
 
-protocol RulesSetLocalService: AnyObject {
+protocol RulesSetLocalService: PersistenceService {
     func obtainRulesSet(forId id: String) -> RulesSet?
     func obtainRulesSet() -> [RulesSet]
-    func update(block: CommonBlock)
 }
 
-final class RulesSetLocalServiceImpl: PersistenceService, RulesSetLocalService {
+final class RulesSetLocalServiceImpl: RulesSetLocalService {
     
     // MARK: - Private properties
     
@@ -34,9 +33,5 @@ final class RulesSetLocalServiceImpl: PersistenceService, RulesSetLocalService {
         return getRealm()
             .objects(RulesSet.self)
             .toArray()
-    }
-    
-    func update(block: CommonBlock) {
-        write(block)
     }
 }

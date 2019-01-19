@@ -8,7 +8,7 @@
 
 import Foundation
 
-func timePrepositins() -> [Rule] {
+func timePrepositions() -> [Rule] {
     
     let inPreposition = Rule(
         id: "p-t-in",

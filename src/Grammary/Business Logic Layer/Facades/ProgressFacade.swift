@@ -37,7 +37,7 @@ final class ProgressFacadeImpl: ProgressFacade {
     func setProgress(questionId: String, isCorrectAnswer: Bool)  {
         let progresses = ruleProgressLocalService.getAllProgressesFor(questionId: questionId)
         
-        rulesSetLocalService.update {
+        rulesSetLocalService.update(progresses) { progresses in
             if isCorrectAnswer {
                 progresses.forEach { $0.progress = $0.progress + 1 }
             } else {
@@ -49,8 +49,8 @@ final class ProgressFacadeImpl: ProgressFacade {
     func resetAllProgresses() {
         let progresses = ruleProgressLocalService.getAllProgresses()
         
-        rulesSetLocalService.update {
-            progresses.forEach { $0.progress = 0 }
+        rulesSetLocalService.update(progresses) { progresses in
+            progresses.forEach { $0.progress = 0; $0.errorCount = 0 }
         }
     }
 }

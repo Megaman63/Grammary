@@ -8,16 +8,14 @@
 
 import UIKit
 
-protocol RuleProgressLocalService: AnyObject {
+protocol RuleProgressLocalService: PersistenceService {
     func getAllProgressesFor(questionId: String) -> [RuleProgress]
     func getAllProgresses() -> [RuleProgress]
 }
 
-final class RuleProgressLocalServiceImpl: PersistenceService, RuleProgressLocalService {
+final class RuleProgressLocalServiceImpl: RuleProgressLocalService {
     
     // MARK: - Private properties
-    
-    
     
     // MARK: - Init
     

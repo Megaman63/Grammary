@@ -12,17 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var serviceAssembly: ServiceAssembly!
-
+    var app: Application!
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //parse()
-        serviceAssembly = ServiceAssemblyImpl()
-        window?.rootViewController = TabBarAssembly.createModule(serviceAssembly: serviceAssembly)
-        
-        let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first?.absoluteString ?? "nil"
-        print(url)
+        app = Application(window: window, serviceAssembly: ServiceAssemblyImpl())
+        app.startApplication()
+
         return true
     }
 }

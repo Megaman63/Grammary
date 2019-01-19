@@ -20,7 +20,7 @@ protocol RulesSetNotificationCenter: AnyObject {
     func unsubscribeFromAllRulesSets(subscriber: RulesSetNotificationCenterDelegate)
 }
 
-final class RulesSetNotificationCenterImpl: PersistenceService, RulesSetNotificationCenter {
+final class RulesSetNotificationCenterImpl: PersistenceAgent, RulesSetNotificationCenter {
     
     // MARK: - Private properties
     

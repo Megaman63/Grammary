@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ServiceAssembly: AnyObject {
+    func getUpdateFacade() -> UpdatesFacade
     func getExerciseFacade() -> ExerciseFacade
     func getProgressFacade() -> ProgressFacade
     
@@ -18,6 +19,11 @@ protocol ServiceAssembly: AnyObject {
 final class ServiceAssemblyImpl: ServiceAssembly {
     
     // MARK: - ServiceAssembly
+    
+    func getUpdateFacade() -> UpdatesFacade {
+        return UpdatesFacadeImpl(ruleLocalService: RuleLocalServiceImpl(),
+                                 rulesSetLocalService: RulesSetLocalServiceImpl())
+    }
     
     func getExerciseFacade() -> ExerciseFacade {
         return ExerciseFacadeImpl(ruleLocalService: RuleLocalServiceImpl(),

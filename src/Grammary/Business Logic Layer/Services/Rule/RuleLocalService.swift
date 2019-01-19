@@ -8,12 +8,11 @@
 
 import UIKit
 
-protocol RuleLocalService: AnyObject {
+protocol RuleLocalService: PersistenceService {
     func obtainRules(ids: [String]) -> [Rule]
-    func update(_ block: () -> (Rule))
 }
 
-final class RuleLocalServiceImpl: PersistenceService, RuleLocalService {
+final class RuleLocalServiceImpl: RuleLocalService {
     
     // MARK: - Private properties
     
@@ -33,13 +32,5 @@ final class RuleLocalServiceImpl: PersistenceService, RuleLocalService {
                 .filter(predicate)
                 .toArray()
                 .shuffled()
-    }
-    
-    func update(_ block: () -> (Rule)) {
-        let realm = getRealm()
-        try? realm.write {
-            let rule = block()
-            realm.add(rule, update: true)
-        }
     }
 }

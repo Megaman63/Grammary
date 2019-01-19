@@ -9,41 +9,6 @@
 import Foundation
 import RealmSwift
 
-func parse() {
-    guard let realm = try? Realm(), realm.objects(RulesSet.self).count == 0 else {
-        return
-    }
-    
-    let gerundRules = parseGerund().shuffled()
-    let partCount = gerundRules.count / 10
-    for i in 0..<partCount {
-        let lastIndex = i * 10 + 10 < gerundRules.count ? i * 10 + 10 :  gerundRules.count
-        let progress = gerundRules[i * 10..<lastIndex].map { RuleProgress(rule: $0, reliableProgress: 6) }
-        let set = RulesSet(id: "\(i)",
-                               name: "Gerund or Infinitive. Part \(i+1)",
-                               progress: progress.toRealmList())
-        
-        try? realm.write {
-            realm.add(set, update: true)
-        }
-    }
-    
-    let conditionalProgress = parseConditional().map { RuleProgress(rule: $0, reliableProgress: 15)}
-    let conditionalSet = RulesSet(id: "c-1",
-                       name: "Conditional clauses",
-                       progress: conditionalProgress.toRealmList())
-
-    let articlesProgress = parseArticles().map { RuleProgress(rule: $0, reliableProgress: 15)}
-    let articlesSet = RulesSet(id: "a-1",
-                       name: "Articles",
-                       progress: articlesProgress.toRealmList())
-    
-    try? realm.write {
-        realm.add(articlesSet, update: true)
-        realm.add(conditionalSet, update: true)
-    }
-}
-
 func parseConditional() -> [Rule] {
     let zero = Rule(
         id: "c-z",
