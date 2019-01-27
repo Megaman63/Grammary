@@ -46,4 +46,12 @@ struct NotificationCenterTokenCollection<T> {
             self[id] = nil
         }
     }
+    
+    mutating func checkSubscribers(forId id: String) {
+        guard let token = self[id], token.delegates.isEmpty else {
+            return
+        }
+        token.token.invalidate()
+        self[id] = nil
+    }
 }

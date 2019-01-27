@@ -65,17 +65,26 @@ final class RulesSetNotificationCenterImpl: PersistenceAgent, PrimaryKeyObservab
     
     func subscribeOnOneRulesSet(withId id: String, subscriber: RulesSetNotificationCenterDelegate) {
         if let token = oneSetTokens[id] {
+            if let object = getRealm().object(ofType: RulesSet.self, forPrimaryKey: id) {
+                subscriber.rulesSetNotificationCenter(self, didChangeRulesSet: .initial(object))
+            }
             token.delegates.register(subscriber)
             return
         }
         
         let token = observe(id: id) { [weak self] changes in
-            guard let `self` = self, let delegates = self.oneSetTokens[id]?.delegates else {
+            guard let `self` = self else {
                 return
             }
-            delegates.invoke { $0.rulesSetNotificationCenter(self, didChangeRulesSet: changes)}
+            self.oneSetTokens.checkSubscribers(forId: id)
+            guard let token = self.oneSetTokens[id] else {
+                return
+            }
+            token.delegates.invoke { $0.rulesSetNotificationCenter(self, didChangeRulesSet: changes)}
         }
-        oneSetTokens[id] = NotificationCenterToken(id: id, token: token)
+        let notificationCenterToken = NotificationCenterToken<RulesSetNotificationCenterDelegate>(id: id, token: token)
+        notificationCenterToken.delegates.register(subscriber)
+        oneSetTokens[id] = notificationCenterToken
     }
     
     func unsubscribeFromOneRulesSet(ruleSetId: String, subscriber: RulesSetNotificationCenterDelegate) {
@@ -85,9 +94,4 @@ final class RulesSetNotificationCenterImpl: PersistenceAgent, PrimaryKeyObservab
     // MARK: - PrimaryKeyObservable
     
     typealias ObjectType = RulesSet
-    
-    func switchToken(_ token: NotificationToken, forId id: String) {
-        oneSetTokens[id]?.token.invalidate()
-        oneSetTokens[id]?.token = token
-    }
 }

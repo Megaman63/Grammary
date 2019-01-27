@@ -27,7 +27,7 @@ open class MulticastDelegate<T> {
     public var isEmpty: Bool {
         let result: Bool
         lock.lock()
-        result = delegates.count == 0
+        result = delegates.allObjects.isEmpty
         defer {
             lock.unlock()
         }
@@ -120,7 +120,7 @@ open class MulticastDelegate<T> {
     public var count: Int {
         let result: Int
         lock.lock()
-        result = delegates.count
+        result = delegates.allObjects.count
         defer {
             lock.unlock()
         }

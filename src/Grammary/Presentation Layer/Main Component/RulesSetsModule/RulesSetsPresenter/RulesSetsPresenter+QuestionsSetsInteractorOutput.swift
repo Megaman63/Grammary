@@ -24,7 +24,7 @@ extension RulesSetsPresenterImpl: RulesSetsInteractorOutput {
                 return RulesSetItem(id: set.id, name: set.name, totalProgress: totalProgress)
             }
             let section = CommonSection(items: items) { [weak router] index in
-                router?.showRulesSetInfo(rulesSet: sets[index])
+                router?.showRulesSetInfo(rulesSetId: sets[index].id)
             }
             
             state.sections = [section]

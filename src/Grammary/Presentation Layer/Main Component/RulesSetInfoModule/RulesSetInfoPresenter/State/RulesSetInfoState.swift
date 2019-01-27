@@ -9,5 +9,10 @@
 import UIKit
 
 struct RulesSetInfoState {
-    let rulesSet: RulesSet
+    let rulesSetId: String
+    var sections: [CommonAnyTypeSection] = []
+    
+    init(rulesSetId: String) {
+        self.rulesSetId = rulesSetId
+    }
 }

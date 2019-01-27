@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Router
 
 protocol RulesSetsRouter: AnyObject {
-    func showRulesSetInfo(rulesSet: RulesSet)
+    func showRulesSetInfo(rulesSetId: String)
 }
 
 // MARK: - Presenter

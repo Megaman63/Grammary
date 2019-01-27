@@ -24,13 +24,13 @@ protocol RulesSetInfoPresenter: AnyObject {
 // MARK: - Interactor
 
 protocol RulesSetInfoInteractor: AnyObject {
-
+    func subscribeOnRuleSet(withId id: String)
 }
 
 // MARK: - InteractorOutput
 
 protocol RulesSetInfoInteractorOutput: AnyObject {
-
+    func didChangeRulesSet(changes: PrimaryKeyObserverNotification<RulesSet>)
 }
 
 // MARK: - View

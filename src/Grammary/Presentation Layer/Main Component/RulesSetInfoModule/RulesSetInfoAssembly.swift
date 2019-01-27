@@ -10,11 +10,13 @@ import UIKit
 
 final class RulesSetInfoAssembly {
 
-    static func createModule(serviceAssembly: ServiceAssembly, rulesSet: RulesSet) -> UIViewController {
+    static func createModule(serviceAssembly: ServiceAssembly, rulesSetId: String) -> UIViewController {
         let view = RulesSetInfoViewController()
-        let interactor = RulesSetInfoInteractorImpl()
+        let interactor = RulesSetInfoInteractorImpl(
+            rulesSetNotificationCenter: serviceAssembly.rulesSetNotificationCenter
+        )
         let router = RulesSetInfoRouterImpl(serviceAssembly: serviceAssembly)
-        let state = RulesSetInfoState(rulesSet: rulesSet)
+        let state = RulesSetInfoState(rulesSetId: rulesSetId)
         let presenter = RulesSetInfoPresenterImpl(view: view,
                                                   interactor: interactor,
                                                   router: router,

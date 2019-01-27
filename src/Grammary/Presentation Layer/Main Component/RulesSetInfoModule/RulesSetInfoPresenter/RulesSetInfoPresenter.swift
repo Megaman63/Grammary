@@ -34,27 +34,7 @@ final class RulesSetInfoPresenterImpl: RulesSetInfoPresenter {
     // MARK: - RulesSetInfoPresenter
 
     func didTriggerViewReadyEvent() {
-        
-        var totalProgress = 0.0
-        state.rulesSet.progress.forEach { totalProgress = totalProgress + $0.percentOfProgress }
-        totalProgress = totalProgress / Double(state.rulesSet.progress.count)
-        
-        let rulesSetId = state.rulesSet.id
-        let headerItem = RulesSetHeaderItem(
-            name: state.rulesSet.name,
-            totalProgress: totalProgress) { [weak router] in
-                router?.showExercise(rulesSetId: rulesSetId)
-        }
-        
-        
-        let ruleItems: [RuleProgressItem] = state.rulesSet.progress.map {
-            RuleProgressItem(name: $0.rule?.ruleDescription ?? "",
-                             errorCount: $0.errorCount,
-                             correctAnswers: $0.progress)
-        }
-        
-        let items: [TableViewItem] = [headerItem] + ruleItems
-        let section = CommonAnyTypeSection(items: items, didSelectItem: nil)
-        view?.setDataSource([section])
+        interactor.subscribeOnRuleSet(withId: state.rulesSetId)
     }
 }
+ 

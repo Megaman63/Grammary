@@ -14,7 +14,9 @@ extension RulesSetsInteractorImpl: RulesSetNotificationCenterDelegate {
     
     func rulesSetNotificationCenter(_ center: RulesSetNotificationCenter,
                                     didChangeRulesSets changes: RulesSetNotification) {
-
         output?.didChangeRulesSets(changes: changes)
     }
+
+    func rulesSetNotificationCenter(_ center: RulesSetNotificationCenter,
+                                    didChangeRulesSet changes: PrimaryKeyObserverNotification<RulesSet>) {}
 }

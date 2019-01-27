@@ -21,7 +21,7 @@ final class RulesSetInfoRouterImpl: RulesSetInfoRouter {
     // MARK: - RulesSetInfoRouter
 
     func dismissView() {
-
+        viewController?.dismiss(animated: true, completion: nil)
     }
     
     func showExercise(rulesSetId: String) {
