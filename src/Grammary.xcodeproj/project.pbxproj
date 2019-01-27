@@ -110,6 +110,8 @@
 		A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */; };
 		A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */; };
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
+		A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */; };
+		A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */; };
 		A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +243,8 @@
 		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
+		A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterToken.swift; sourceTree = "<group>"; };
+		A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryKeyObservable.swift; sourceTree = "<group>"; };
 		A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrOfTimeParser.swift; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
@@ -775,7 +779,7 @@
 		A50CBE7921F334DD009FDFFD /* Core Services */ = {
 			isa = PBXGroup;
 			children = (
-				A5737A8E21DD0C530037AAFD /* PersistenceService.swift */,
+				A5B8306321FD9FE600627023 /* PersistenceService */,
 			);
 			path = "Core Services";
 			sourceTree = "<group>";
@@ -966,6 +970,16 @@
 				A5737AB421DDE02F0037AAFD /* Cells */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		A5B8306321FD9FE600627023 /* PersistenceService */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A8E21DD0C530037AAFD /* PersistenceService.swift */,
+				A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */,
+				A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */,
+			);
+			path = PersistenceService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1210,6 +1224,7 @@
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
 				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
+				A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */,
 				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
 				A50CBE7121F3299E009FDFFD /* UpdatesFacade.swift in Sources */,
@@ -1253,6 +1268,7 @@
 				A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
 				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
+				A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */,
 				1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */,
 				A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */,
 				1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */,
@@ -1440,6 +1456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7LG5ESE33;
 				INFOPLIST_FILE = "$(SRCROOT)/Grammary/Application Layer/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1458,6 +1475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7LG5ESE33;
 				INFOPLIST_FILE = "$(SRCROOT)/Grammary/Application Layer/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

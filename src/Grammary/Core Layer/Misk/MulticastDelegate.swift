@@ -116,6 +116,16 @@ open class MulticastDelegate<T> {
         }
         return result
     }
+    
+    public var count: Int {
+        let result: Int
+        lock.lock()
+        result = delegates.count
+        defer {
+            lock.unlock()
+        }
+        return result
+    }
 }
 
 /**
