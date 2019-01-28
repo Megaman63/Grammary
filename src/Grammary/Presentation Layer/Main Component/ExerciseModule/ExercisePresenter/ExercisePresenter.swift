@@ -71,6 +71,7 @@ final class ExercisePresenterImpl: ExercisePresenter {
         state.currentQuestionItemIndex = state.currentQuestionItemIndex + 1
         guard let nextQuestionItem = state.currentQuestionItem else {
             router.dismissView()
+            interactor.finishExercies(ruleSetId: state.rulesSetId)
             return
         }
         view?.show(question: nextQuestionItem)

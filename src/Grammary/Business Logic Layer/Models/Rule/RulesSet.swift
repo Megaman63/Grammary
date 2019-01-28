@@ -14,7 +14,15 @@ class RulesSet: Object {
     
     @objc dynamic var id: String = ""
     @objc dynamic var name: String = ""
+    @objc dynamic var nextReviseRecommendedDate: Date = Date()
+    
     var progress = List<RuleProgress>()
+    
+    var totalProgress: Double {
+        var sumOfProgresses = 0.0
+        progress.forEach { sumOfProgresses = sumOfProgresses + $0.percentOfProgress }
+        return sumOfProgresses / Double(progress.count)
+    }
     
     convenience init(id: String,
                      name: String,

@@ -18,10 +18,7 @@ extension RulesSetsPresenterImpl: RulesSetsInteractorOutput {
             printError(error)
         case .initial(let sets), .update(let sets, _, _, _):
              let items: [RulesSetItem] = sets.map { set -> RulesSetItem in
-                var sumOfProgresses = 0.0
-                set.progress.forEach { sumOfProgresses = sumOfProgresses + $0.percentOfProgress }
-                let totalProgress = sumOfProgresses / Double(set.progress.count)
-                return RulesSetItem(id: set.id, name: set.name, totalProgress: totalProgress)
+                return RulesSetItem(id: set.id, name: set.name, totalProgress: set.totalProgress)
             }
             let section = CommonSection(items: items) { [weak router] index in
                 router?.showRulesSetInfo(rulesSetId: sets[index].id)

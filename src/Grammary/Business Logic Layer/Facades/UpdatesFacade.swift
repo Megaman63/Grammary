@@ -41,6 +41,15 @@ final class UpdatesFacadeImpl: UpdatesFacade {
             getPlacePrepositionsRulesSet() +
             getTimePrepositionsRulesSet()
         
+        for set in sets {
+            if let existedRuleSet = rulesSetLocalService.obtainRulesSet(forId: set.id) {
+                set.nextReviseRecommendedDate = existedRuleSet.nextReviseRecommendedDate
+            } else {
+                let characteristic = RulesSetProgressCharacteristic(totalProgress: set.totalProgress)
+                set.nextReviseRecommendedDate = characteristic.evaluateNextReviseRecommendedDate()
+            }
+        }
+        
         rulesSetLocalService.update(sets)
     }
     

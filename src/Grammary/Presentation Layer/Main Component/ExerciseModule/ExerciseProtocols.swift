@@ -28,6 +28,7 @@ protocol ExercisePresenter: AnyObject {
 
 protocol ExerciseInteractor: AnyObject {
     func loadRules(forSetWithId id: String)
+    func finishExercies(ruleSetId: String)
     func setProgress(questionId: String, isCorrectAnswer: Bool)
 }
 

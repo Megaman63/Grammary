@@ -35,4 +35,8 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     func setProgress(questionId: String, isCorrectAnswer: Bool) {
         progressFacade.setProgress(questionId: questionId, isCorrectAnswer: isCorrectAnswer)
     }
+    
+    func finishExercies(ruleSetId: String) {
+        progressFacade.setNewNextReviseRecommendedDate(forRulesSetId: ruleSetId)
+    }
 }
