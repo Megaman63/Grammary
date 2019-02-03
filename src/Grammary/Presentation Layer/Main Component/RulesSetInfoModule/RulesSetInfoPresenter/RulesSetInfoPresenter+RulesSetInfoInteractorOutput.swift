@@ -35,10 +35,11 @@ extension RulesSetInfoPresenterImpl: RulesSetInfoInteractorOutput {
         let rulesSetId = rulesSet.id
         let headerItem = RulesSetHeaderItem(
             name: rulesSet.name,
-            totalProgress: totalProgress) { [weak router] in
-                router?.showExercise(rulesSetId: rulesSetId)
+            totalProgress: totalProgress,
+            nextReviseRecommendedDateString: "\(rulesSet.nextReviseRecommendedDate)"
+        ) { [weak router] in
+            router?.showExercise(rulesSetId: rulesSetId)
         }
-        
         
         let ruleItems: [RuleProgressItem] = rulesSet.progress.map {
             RuleProgressItem(name: $0.rule?.ruleDescription ?? "",

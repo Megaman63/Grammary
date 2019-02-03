@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol RuleLocalService: PersistenceService {
+protocol RuleLocalService {
     func obtainRules(ids: [String]) -> [Rule]
 }
 
-final class RuleLocalServiceImpl: RuleLocalService {
+final class RuleLocalServiceImpl: RuleLocalService, PersistenceService {
     
     // MARK: - Private properties
     
@@ -33,4 +33,8 @@ final class RuleLocalServiceImpl: RuleLocalService {
                 .toArray()
                 .shuffled()
     }
+    
+    // MARK: - PersistenceService
+    
+    typealias RealmObject = Rule
 }

@@ -49,8 +49,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
                 set.nextReviseRecommendedDate = characteristic.evaluateNextReviseRecommendedDate()
             }
         }
-        
-        rulesSetLocalService.update(sets)
+        rulesSetLocalService.update(sets, nil)
     }
     
     // MARK: - Private functions
@@ -60,7 +59,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
             return progress
         } else {
             let progress = RuleProgress(rule: rule, reliableProgress: reliableProgress)
-            ruleProgressLocalService.update(progress)
+            ruleProgressLocalService.update(progress, nil)
             return progress
         }
     }

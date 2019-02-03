@@ -10,8 +10,9 @@ import Foundation
 import RealmSwift
 
 protocol PersistenceService: PersistenceAgent {
-    func update<T: Object>(_ object: T, _ block: ((T) -> Void)?)
-    func update<T: Object>(_ objects: [T], _ block: (([T]) -> Void)?)
+    associatedtype RealmObject: Object
+    func update(_ object: RealmObject, _ block: ((RealmObject) -> Void)?)
+    func update(_ objects: [RealmObject], _ block: (([RealmObject]) -> Void)?)
 }
 
 protocol PersistenceAgent: AnyObject {

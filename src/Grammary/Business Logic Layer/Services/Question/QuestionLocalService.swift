@@ -8,10 +8,12 @@
 
 import UIKit
 
-protocol QuestionLocalService: PersistenceService {
+protocol QuestionLocalService {
+    func update(_ object: Question, _ block: ((Question) -> Void)?)
+    func update(_ objects: [Question], _ block: (([Question]) -> Void)?)
 }
 
-final class QuestionLocalServiceImpl: QuestionLocalService {
+final class QuestionLocalServiceImpl: QuestionLocalService, PersistenceService {
     
     // MARK: - Private properties
     
@@ -23,4 +25,7 @@ final class QuestionLocalServiceImpl: QuestionLocalService {
     
     // MARK: - QuestionLocalService
 
+    // MARK: - PersistenceService
+    
+    typealias RealmObject = Question
 }

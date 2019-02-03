@@ -48,7 +48,7 @@ final class RulesSetNotificationCenterImpl: PersistenceAgent, PrimaryKeyObservab
             return
         }
         allSetsToken = getRealm().objects(RulesSet.self).observe { [weak self] changes in
-            guard let `self` = self else {
+            guard let self = self else {
                 return
             }
             self.allSetsDelegates.invoke { $0.rulesSetNotificationCenter(self, didChangeRulesSets: changes)}
@@ -73,7 +73,7 @@ final class RulesSetNotificationCenterImpl: PersistenceAgent, PrimaryKeyObservab
         }
         
         let token = observe(id: id) { [weak self] changes in
-            guard let `self` = self else {
+            guard let self = self else {
                 return
             }
             self.oneSetTokens.checkSubscribers(forId: id)

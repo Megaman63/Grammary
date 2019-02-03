@@ -43,6 +43,11 @@ class RulesSetHeaderTableViewCell: UITableViewCell, TableViewCell {
         self.item = item
         titleLabel.text = item.name
         let percents = (item.totalProgress * 100).rounded(.toNearestOrEven)
-        progressLabel.text = "Выучено на \(Int(percents)) %"
+        
+        var progressText = "Выучено на \(Int(percents)) %"
+        if let dateString = item.nextReviseRecommendedDateString {
+            progressText = progressText + "\nСледующая тренировка: " + dateString
+        }
+        progressLabel.text = progressText
     }
 }

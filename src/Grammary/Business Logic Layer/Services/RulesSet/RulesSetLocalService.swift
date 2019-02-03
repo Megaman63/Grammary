@@ -8,12 +8,15 @@
 
 import UIKit
 
-protocol RulesSetLocalService: PersistenceService {
+protocol RulesSetLocalService {
     func obtainRulesSet(forId id: String) -> RulesSet?
     func obtainRulesSet() -> [RulesSet]
+    
+    func update(_ object: RulesSet, _ block: ((RulesSet) -> Void)?)
+    func update(_ objects: [RulesSet], _ block: (([RulesSet]) -> Void)?)
 }
 
-final class RulesSetLocalServiceImpl: RulesSetLocalService {
+final class RulesSetLocalServiceImpl: RulesSetLocalService, PersistenceService {
     
     // MARK: - Private properties
     
@@ -34,4 +37,8 @@ final class RulesSetLocalServiceImpl: RulesSetLocalService {
             .objects(RulesSet.self)
             .toArray()
     }
+    
+    // MARK: - PersistenceService
+    
+    typealias RealmObject = RulesSet
 }

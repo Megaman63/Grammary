@@ -8,13 +8,16 @@
 
 import UIKit
 
-protocol RuleProgressLocalService: PersistenceService {
+protocol RuleProgressLocalService {
     func getAllProgressesFor(questionId: String) -> [RuleProgress]
     func getAllProgresses() -> [RuleProgress]
     func getProgress(forRule rule: Rule) -> RuleProgress?
+    
+    func update(_ object: RuleProgress, _ block: ((RuleProgress) -> Void)?)
+    func update(_ objects: [RuleProgress], _ block: (([RuleProgress]) -> Void)?)
 }
 
-final class RuleProgressLocalServiceImpl: RuleProgressLocalService {
+final class RuleProgressLocalServiceImpl: RuleProgressLocalService, PersistenceService {
     
     // MARK: - Private properties
     
@@ -48,4 +51,8 @@ final class RuleProgressLocalServiceImpl: RuleProgressLocalService {
             .filter(predicate)
             .first
     }
+    
+    // MARK: - PersistenceService
+    
+    typealias RealmObject = RuleProgress
 }

@@ -11,6 +11,7 @@ import UIKit
 struct RulesSetHeaderItem: TableViewItem {
     let name: String
     var totalProgress: Double
+    var nextReviseRecommendedDateString: String?
     var onStudyTap: (CommonBlock)?
     
     // MARK: - TableViewItem
