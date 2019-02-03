@@ -18,7 +18,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-in-0",
                 ruleTitle: "Предлог in уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-0-0", text: "с месяцами (в январе)"),
@@ -34,7 +34,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-in-1",
                 ruleTitle: "Предлог in уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-1-0", text: "с с временами года (летом)"),
@@ -50,7 +50,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-in-2",
                 ruleTitle: "Предлог in уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-2-0", text: "с годами (в 1999 году)"),
@@ -66,7 +66,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-in-3",
                 ruleTitle: "Предлог in уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-in-3-0", text: "с веками (в 21 веке)"),
@@ -89,7 +89,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-at-0",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-at-0-0", text: "с конкретным временем (в 5 часов, в полночь, в полдень)"),
@@ -106,7 +106,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-at-1",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-at-1-0", text: "с праздниками (на Рождество)"),
@@ -123,7 +123,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-at-2",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-at-2-0", text: "с выражениями в настоящий момент/ночью/в полдень/в полуденное время"),
@@ -140,7 +140,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-at-3",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-at-3-0", text: "Когда говорим о начале и конце периода: в начале/в конце"),
@@ -156,7 +156,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-at-4",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-at-4-0", text: "cо словами, обозначающими время принятия пищи: за завтраком/за обедом/за ужином."),
@@ -181,7 +181,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-on-0",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-on-0-0", text: "с датами (29-ого мая)"),
@@ -197,7 +197,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-on-1",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-on-1-0", text: "с днями недели (в пятницу)"),
@@ -213,7 +213,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-on-2",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-on-2-0", text: "с прилагательным + day"),
@@ -230,7 +230,7 @@ func parseTimePrepositions() -> [Rule] {
                 id: "p-t-on-2",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-t-on-2-0", text: "с с определенной частью дня"),

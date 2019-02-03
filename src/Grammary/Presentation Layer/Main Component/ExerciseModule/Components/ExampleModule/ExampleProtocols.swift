@@ -17,20 +17,23 @@ protocol ExampleRouter: AnyObject {
 // MARK: - Presenter
 
 protocol ExamplePresenter: AnyObject {
-    func didTapClearProgressButton()
-    func didTapAlreadyKnowButton()
 }
 
 // MARK: - ExampleModuleInput
 
 protocol ExampleModuleInput: AnyObject {
-    func set(examples: [RuleExample], correctAnswer: String)
+    func set(currentQuestionId: String)
 }
 
 // MARK: - Interactor
 
 protocol ExampleInteractor: AnyObject {
-
+    func obtainQuestion(withId id: String) -> Question?
+    func obtainProgresses(forRulesSetId id: String) -> [RuleProgress] 
+    func excludeRuleFromRulesSet(whichHasQuestionWithId questionId: String)
+    func resetProgress(forQuestionId questionId: String)
+    func setMaximumProgress(forQuestionId questionId: String)
+    func reportError(questionId: String)
 }
 
 // MARK: - InteractorOutput

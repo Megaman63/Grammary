@@ -17,7 +17,7 @@ func parseArticles() -> [Rule] {
                 id: "a-i-0",
                 ruleTitle: "Неопределенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-i-0-0", text: "когда речь идет о чем-то общем (какой-то, некоторый, один из группы таких же людей или предметов), а не о конкретном."),
@@ -35,7 +35,7 @@ func parseArticles() -> [Rule] {
                 id: "a-i-2",
                 ruleTitle: "Неопределенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-i-1-0", text: "когда существительное выступает в роли представителя группы предметов, лиц, явлений, то есть своего рода обобщающим понятием для всей группы"),
@@ -52,7 +52,7 @@ func parseArticles() -> [Rule] {
                 id: "a-i-3",
                 ruleTitle: "Неопределенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-i-2-0", text: "когда впервые говорим о каком-нибудь предмете, лице, явлении"),
@@ -69,7 +69,7 @@ func parseArticles() -> [Rule] {
                 id: "a-i-4",
                 ruleTitle: "Неопределенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-i-3-0", text: "в таких фразах, как \"раз в месяц (каждый месяц)\", \"дважды в год (каждый год)\", \"три раза в неделю (каждую неделю)\""),
@@ -93,7 +93,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-0",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-0-0", text: "когда говорим о чем-то, что есть только в одном экземпляре в мире, об уникальном явлении."),
@@ -109,7 +109,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-1",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-1-0", text: "когда мы говорим о том, что уже упоминалось в речи/тексте"),
@@ -126,7 +126,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-2",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-2-0", text: "перед порядковыми числительными: первый, двадцать пятый и т. д"),
@@ -143,7 +143,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-3",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-3-0", text: "перед прилагательными в превосходной степени: самый какой-то (самый умный, самый смелый и т. д.)."),
@@ -160,7 +160,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-4",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-4-0", text: "перед такими существительными, как cinema (кинотеатр), theater (театр), а также словами, которые обозначают место, где происходит действие"),
@@ -177,7 +177,7 @@ func parseArticles() -> [Rule] {
                 id: "a-d-5",
                 ruleTitle: "Определенный артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-d-5-0", text: "с названиями стран во множественном числе или состоящие более чем из одного слова."),
@@ -200,7 +200,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-0",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-0-0", text: "c неисчисляемыми существительными, обозначающими вещества, жидкости, газы и абстрактные понятия."),
@@ -217,7 +217,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-1",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-1-0", text: "c исчисляемыми существительными во множественном числе, если речь идет о группе людей, предметов или обо всех представителях некоторого класса в общем значении."),
@@ -234,7 +234,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-2",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-2-0", text: "со словами, означающими приемы пищи"),
@@ -250,7 +250,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-3",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-3-0", text: "со словами school, church, bed, hospital, college, university, court, prison, home, когда речь идет об их прямом назначении"),
@@ -267,7 +267,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-4",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-4-0", text: "перед названиями Городов и того, что в них находится: улиц, парков, скверов, железнодорожных станций, мостов, заведений, магазинов, банков и отелей, названных в честь своих основателей."),
@@ -286,7 +286,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-5",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-5-0", text: "названиями стран, состоящих из одного слова."),
@@ -303,7 +303,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-6",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-6-0", text: "с названиями континентов и гор"),
@@ -320,7 +320,7 @@ func parseArticles() -> [Rule] {
                 id: "a-za-7",
                 ruleTitle: "Нулевой артикль используется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "a-za-7-0", text: "с названиями озер и одиночных островов"),

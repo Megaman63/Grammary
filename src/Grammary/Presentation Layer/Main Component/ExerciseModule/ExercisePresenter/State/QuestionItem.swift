@@ -20,7 +20,7 @@ struct QuestionItem {
         self.id = question.id
         self.ruleTitle = question.ruleTitle
         self.ruleSubject = question.ruleSubject
-        self.correctAnswerId = question.answers[question.correctAnswer].id
+        self.correctAnswerId = question.answers[question.correctAnswerIndex].id
         self.answers = question.shuffleAnswers ? question.answers.toArray().shuffled() : question.answers.toArray()
         self.examples = question.examples.toArray()
     }

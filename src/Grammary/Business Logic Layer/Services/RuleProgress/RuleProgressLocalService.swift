@@ -12,6 +12,7 @@ protocol RuleProgressLocalService {
     func getAllProgressesFor(questionId: String) -> [RuleProgress]
     func getAllProgresses() -> [RuleProgress]
     func getProgress(forRule rule: Rule) -> RuleProgress?
+    func delete(progresses: [RuleProgress]) throws
     
     func update(_ object: RuleProgress, _ block: ((RuleProgress) -> Void)?)
     func update(_ objects: [RuleProgress], _ block: (([RuleProgress]) -> Void)?)
@@ -50,6 +51,13 @@ final class RuleProgressLocalServiceImpl: RuleProgressLocalService, PersistenceS
             .objects(RuleProgress.self)
             .filter(predicate)
             .first
+    }
+    
+    func delete(progresses: [RuleProgress]) throws {
+        let realm = getRealm()
+        try realm.write {
+            realm.delete(progresses)
+        }
     }
     
     // MARK: - PersistenceService

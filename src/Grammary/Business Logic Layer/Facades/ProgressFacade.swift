@@ -11,6 +11,8 @@ import UIKit
 protocol ProgressFacade: AnyObject {
     func setProgress(questionId: String, isCorrectAnswer: Bool)
     func resetAllProgresses()
+    func resetProgress(forQuestionId questionId: String)
+    func setMaximumProgress(forQuestionId questionId: String)
     func setNewNextReviseRecommendedDate(forRulesSetId id: String)
 }
 
@@ -51,6 +53,22 @@ final class ProgressFacadeImpl: ProgressFacade {
         let progresses = ruleProgressLocalService.getAllProgresses()
         ruleProgressLocalService.update(progresses) { progresses in
             progresses.forEach { $0.progress = 0; $0.errorCount = 0 }
+        }
+    }
+    
+    func resetProgress(forQuestionId questionId: String) {
+        let progresses = ruleProgressLocalService.getAllProgressesFor(questionId: questionId)
+        
+        ruleProgressLocalService.update(progresses) { progresses in
+            progresses.forEach { $0.progress = 0 }
+        }
+    }
+    
+    func setMaximumProgress(forQuestionId questionId: String) {
+        let progresses = ruleProgressLocalService.getAllProgressesFor(questionId: questionId)
+        
+        ruleProgressLocalService.update(progresses) { progresses in
+            progresses.forEach { $0.progress = $0.reliableProgress }
         }
     }
     

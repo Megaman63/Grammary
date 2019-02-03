@@ -15,16 +15,24 @@ class Question: Object {
     @objc dynamic var id: String = ""
     @objc dynamic var ruleTitle: String = ""
     @objc dynamic var ruleSubject: String = ""
-    @objc dynamic var correctAnswer: Int = -1
+    @objc dynamic var correctAnswerIndex: Int = -1
     @objc dynamic var shuffleAnswers: Bool = false
     
     var answers = List<Answer>()
     var examples = List<RuleExample>()
     
+    var correctAnswer: Answer? {
+        guard correctAnswerIndex < answers.count, correctAnswerIndex >= 0 else {
+            assertionFailure()
+            return nil
+        }
+        return answers[correctAnswerIndex]
+    }
+    
     convenience init(id: String,
                      ruleTitle: String,
                      ruleSubject: String,
-                     correctAnswer: Int,
+                     correctAnswerIndex: Int,
                      shuffleAnswers: Bool,
                      answers: List<Answer>,
                      examples: List<RuleExample>) {
@@ -33,7 +41,7 @@ class Question: Object {
         self.id = id
         self.ruleTitle = ruleTitle
         self.ruleSubject = ruleSubject
-        self.correctAnswer = correctAnswer
+        self.correctAnswerIndex = correctAnswerIndex
         self.shuffleAnswers = shuffleAnswers
         self.answers = answers
         self.examples = examples

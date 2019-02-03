@@ -18,7 +18,7 @@ func parseConditional() -> [Rule] {
                 id: "c-z-0",
                 ruleTitle: "Zero conditional construction",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-z-0-0", text: "If clause - if + Any present tense. Main clause - Present Simple "),
@@ -35,7 +35,7 @@ func parseConditional() -> [Rule] {
                 id: "c-z-1",
                 ruleTitle: "Выберите правильное суждение",
                 ruleSubject: "Условные предложения Zero Conditional...",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-z-1-0", text: "всегда являются 100% истинной"),
@@ -52,7 +52,7 @@ func parseConditional() -> [Rule] {
                 id: "c-z-2",
                 ruleTitle: "Какая форма используется в Main clause конуструкции Zero Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-z-2-0", text: "Present Simple"),
@@ -69,7 +69,7 @@ func parseConditional() -> [Rule] {
                 id: "c-z-3",
                 ruleTitle: "Какая форма используется в If clause конуструкции Zero Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-z-3-0", text: "Present Simple"),
@@ -86,7 +86,7 @@ func parseConditional() -> [Rule] {
                 id: "c-z-4",
                 ruleTitle: "Какой Conditional также используется для того, чтобы дать указания или инструкции?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-z-4-0", text: "Zero conditional"),
@@ -109,7 +109,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-0",
                 ruleTitle: "First conditional construction",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-0-0", text: "If clause - if + Any present tense. Main clause - Any future form + infinitive without to"),
@@ -126,7 +126,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-0-e",
                 ruleTitle: "First Conditional sentences",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-0-e-0", text: "are used to talk about a possible present or future situation and its result"),
@@ -142,7 +142,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-1",
                 ruleTitle: "Выберите правильное суждение",
                 ruleSubject: "Условные предложения First Conditional...",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-1-0", text: "выражают реальные, возможные ситуации в настоящем или будущем"),
@@ -159,7 +159,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-2",
                 ruleTitle: "Какая форма используется в Main clause конуструкции First Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-2-0", text: "Any future form + infinitive without to"),
@@ -176,7 +176,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-3",
                 ruleTitle: "Какая форма используется в If clause конуструкции First Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-3-0", text: "Present Simple"),
@@ -193,7 +193,7 @@ func parseConditional() -> [Rule] {
                 id: "c-f-4",
                 ruleTitle: "Какой Conditional часто используется, если мы хотим предупредить или предостеречь от чего-либо?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-f-4-0", text: "First conditional"),
@@ -218,7 +218,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-0",
                 ruleTitle: "Second conditional construction",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-0-0", text: "If clause - if + Any past tense. Main clause - would/could/might + infinitive without to"),
@@ -235,7 +235,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-0-e",
                 ruleTitle: "Second Conditional sentences",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-0-e-0", text: "are used to talk about hypothetical or improbable situations in the present or future"),
@@ -251,7 +251,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-1",
                 ruleTitle: "Выберите правильное суждение",
                 ruleSubject: "Условные предложения Second Conditional...",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-1-0", text: "выражают действия, совершение которых в определенных ситуациях в настоящем и будущем оказывается нереальным"),
@@ -268,7 +268,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-2",
                 ruleTitle: "Какая форма используется в Main clause конуструкции Second Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-2-0", text: "would/could/might + infinitive without to"),
@@ -285,7 +285,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-3",
                 ruleTitle: "Какая форма используется в If clause конуструкции Second Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-3-0", text: "Past Simple"),
@@ -302,7 +302,7 @@ func parseConditional() -> [Rule] {
                 id: "c-s-4",
                 ruleTitle: "Какой Conditional используется для того чтобы дать совет",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-4-0", text: "Second conditional"),
@@ -326,7 +326,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-0",
                 ruleTitle: "Third conditional construction",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-0-0", text: "If clause - if + Past Perfect/Past Perfect Continious. Main clause - would/could/might/should/ have + past participle"),
@@ -343,7 +343,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-0-e",
                 ruleTitle: "Third Conditional sentences",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-0-e-0", text: "are used to talk about a hypothetical situation in the past"),
@@ -359,7 +359,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-1",
                 ruleTitle: "Выберите правильное суждение",
                 ruleSubject: "Условные предложения Third Conditional...",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-1-0", text: "выражают воображаемые ситуации, относящиеся к прошлому"),
@@ -376,7 +376,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-2",
                 ruleTitle: "Какая форма используется в Main clause конуструкции Third Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-s-2-0", text: "would/could/might + infinitive without to"),
@@ -393,7 +393,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-3",
                 ruleTitle: "Какая форма используется в If clause конуструкции Third Conditional?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-3-0", text: "Past Perfect"),
@@ -410,7 +410,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-4",
                 ruleTitle: "Какой Conditional используется когда мы критикуем какие-то действия, которые произошли в прошлом и которые мы не можем уже изменить?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-4-0", text: "Third conditional"),
@@ -427,7 +427,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-5",
                 ruleTitle: "Какой Conditional используется когда хотим сообщить о хороших событиях, которые произошли в прошлом и положительно повлияли на наше настоящее.?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-4-0", text: "Third conditional"),
@@ -444,7 +444,7 @@ func parseConditional() -> [Rule] {
                 id: "c-t-6",
                 ruleTitle: "Какой Conditional используется в случае когда-то в прошлом что-то произошло, мы об этом сожалеем, но изменить событие уже не можем?",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "c-t-4-0", text: "Third conditional"),

@@ -10,10 +10,11 @@ import UIKit
 
 final class ExampleAssembly {
 
-    static func createModule(serviceAssembly: ServiceAssembly) -> (ExampleModuleInput, UIView) {
+    static func createModule(serviceAssembly: ServiceAssembly, rulesSetId: String) -> (ExampleModuleInput, UIView) {
         let view = ExampleViewImpl()
-        let interactor = ExampleInteractorImpl()
-        let state = ExampleState()
+        let interactor = ExampleInteractorImpl(progressFacade: serviceAssembly.getProgressFacade(),
+                                               exerciseFacade: serviceAssembly.getExerciseFacade())
+        let state = ExampleState(rulesSetId: rulesSetId)
         let presenter = ExamplePresenterImpl(view: view,
                                              interactor: interactor,
                                              state: state)

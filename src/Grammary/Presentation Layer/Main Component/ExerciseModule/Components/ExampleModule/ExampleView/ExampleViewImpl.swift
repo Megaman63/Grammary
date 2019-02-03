@@ -21,6 +21,7 @@ final class ExampleViewImpl: UIView, ExampleView {
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsets(top: 236, left: 0, bottom: 0, right: 0)
         tableView.registerWithNib(cellClass: ExampleTableViewCell.self)
+        tableView.registerWithNib(cellClass: CommonButtonTableViewCell.self)
         tableView.snp.makeConstraints { $0.edges.equalToSuperview() }
         
         return tableView

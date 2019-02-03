@@ -114,7 +114,7 @@ func parseGerund() -> [Rule] {
                         id: "\(i)-\(0)",
                         ruleTitle: "Following a verb (gerund or infinitive)",
                         ruleSubject: row[0],
-                        correctAnswer: 1,
+                        correctAnswerIndex: 1,
                         shuffleAnswers: false,
                         answers: [
                             Answer(id: "\(i)-0", text: "Infinitive with to"),
@@ -139,7 +139,7 @@ func parseGerund() -> [Rule] {
                         id: "\(i)-\(0)",
                         ruleTitle: "Following a verb (gerund or infinitive)",
                         ruleSubject: row[0],
-                        correctAnswer: 0,
+                        correctAnswerIndex: 0,
                         shuffleAnswers: false,
                         answers: [
                             Answer(id: "\(i)-0", text: "Infinitive with to"),

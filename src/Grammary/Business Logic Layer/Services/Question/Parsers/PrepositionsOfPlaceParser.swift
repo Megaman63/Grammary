@@ -17,7 +17,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-in-0",
                 ruleTitle: "Предлог in уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-in-0-0", text: "когда мы хотим указать, что объект находится внутри другого, большего объекта"),
@@ -33,7 +33,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-at-0",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-at-0-0", text: "когда мы говорим о каком-либо конкретном месте, пункте или ориентире, а не о территории либо площади в целом"),
@@ -49,7 +49,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-at-1",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-at-1-0", text: "когда говорите о зданиях как об определенных пунктах или ориентирах"),
@@ -64,7 +64,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-at-1",
                 ruleTitle: "Предлог at уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-at-1-0", text: "перед адресами"),
@@ -79,7 +79,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-on-0",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-on-0-0", text: "когда предмет соприкасается с плоской поверхностью"),
@@ -94,7 +94,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-on-1",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-on-1-0", text: "когда говорим о реке или о дороге"),
@@ -109,7 +109,7 @@ func parsePlacePrepositions() -> [Rule] {
                 id: "p-p-on-2",
                 ruleTitle: "Предлог on уоптребляется",
                 ruleSubject: "",
-                correctAnswer: 0,
+                correctAnswerIndex: 0,
                 shuffleAnswers: true,
                 answers: [
                     Answer(id: "p-p-on-2-0", text: "когда говорим о передвижениях на автобусе, поезде, самолете"),

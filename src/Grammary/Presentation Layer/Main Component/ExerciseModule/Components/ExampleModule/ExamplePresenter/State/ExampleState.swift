@@ -9,6 +9,12 @@
 import UIKit
 
 struct ExampleState {
+    var rulesSetId: String
     var examples: [RuleExample] = []
-    var sections: [CommonSection<ExampleItem>] = []
+    var sections: [CommonAnyTypeSection] = []
+    var currentQuestion: Question?
+    
+    init(rulesSetId: String) {
+        self.rulesSetId = rulesSetId
+    }
 }

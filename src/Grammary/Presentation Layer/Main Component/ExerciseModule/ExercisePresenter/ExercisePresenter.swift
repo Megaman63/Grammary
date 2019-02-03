@@ -63,8 +63,7 @@ final class ExercisePresenterImpl: ExercisePresenter {
             return
         }
         view?.showExample()
-        exampleModuleInput?.set(examples: currentQuestionItem.examples,
-                                correctAnswer: currentQuestionItem.correctAnswerText)
+        exampleModuleInput?.set(currentQuestionId: currentQuestionItem.id)
     }
     
     func didTapNextButton() {

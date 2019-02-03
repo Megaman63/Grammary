@@ -580,6 +580,7 @@
 		1CFCD68221D3F16F00F9D5A8 /* ExerciseModule */ = {
 			isa = PBXGroup;
 			children = (
+				A59C0B082206E34F00B07D65 /* Components */,
 				1CFCD67421D3F16B00F9D5A8 /* ExerciseAssembly.swift */,
 				1CFCD67521D3F16B00F9D5A8 /* ExerciseInteractor.swift */,
 				1CFCD68321D3F18B00F9D5A8 /* ExercisePresenter */,
@@ -603,7 +604,6 @@
 		1CFCD68421D3F1A000F9D5A8 /* ExerciseView */ = {
 			isa = PBXGroup;
 			children = (
-				A5737A9421DD4F280037AAFD /* SubModules */,
 				1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */,
 				1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */,
 			);
@@ -902,14 +902,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A5737A9421DD4F280037AAFD /* SubModules */ = {
-			isa = PBXGroup;
-			children = (
-				A5737A9921DD53070037AAFD /* ExampleModule */,
-			);
-			path = SubModules;
-			sourceTree = "<group>";
-		};
 		A5737A9921DD53070037AAFD /* ExampleModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,6 +973,14 @@
 				A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A59C0B082206E34F00B07D65 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A5737A9921DD53070037AAFD /* ExampleModule */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A5B8306321FD9FE600627023 /* PersistenceService */ = {

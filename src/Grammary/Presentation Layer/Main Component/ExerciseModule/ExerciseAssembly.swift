@@ -23,7 +23,8 @@ final class ExerciseAssembly {
 
         view.presenter = presenter
         view.exampleViewFactory = { [weak presenter] in
-            let (moduleInput, view) = ExampleAssembly.createModule(serviceAssembly: serviceAssembly)
+            let (moduleInput, view) = ExampleAssembly.createModule(serviceAssembly: serviceAssembly,
+                                                                   rulesSetId: rulesSetId)
             presenter?.exampleModuleInput = moduleInput
             return view
         }
