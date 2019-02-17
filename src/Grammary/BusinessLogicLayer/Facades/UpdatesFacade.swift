@@ -33,13 +33,14 @@ final class UpdatesFacadeImpl: UpdatesFacade {
     // MARK: - UpdatesFacade
     
     func updateQuestionAndAddRulesSetsIfNeeded() {
-        let sets =
-            getGerundRulesSet() +
-            getArticleRulesSet() +
-            getConditionalRulesSet() +
-            getArticleRulesSet() +
-            getPlacePrepositionsRulesSet() +
-            getTimePrepositionsRulesSet()
+        var sets = getGerundRulesSet()
+        sets += getArticleRulesSet()
+        sets += getConditionalRulesSet()
+        sets += getArticleRulesSet()
+        sets += getPlacePrepositionsRulesSet()
+        sets += getTimePrepositionsRulesSet()
+        sets += getPresentTensesRulesSet()
+        sets += getPastTensesRulesSet()
         
         for set in sets {
             if let existedRuleSet = rulesSetLocalService.obtainRulesSet(forId: set.id) {
@@ -114,5 +115,23 @@ final class UpdatesFacadeImpl: UpdatesFacade {
                                            name: "Prepositions of place",
                                            progress: placePrepositionsProgress.toRealmList())
         return [placePrepositionsSet]
+    }
+    
+    private func getPresentTensesRulesSet() -> [RulesSet] {
+        let rules = parsePresentSimple() + parsePresentPerfect()
+        let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
+        let set = RulesSet(id: "PresentTenses",
+                           name: "Present tenses",
+                           progress: progress.toRealmList())
+        return [set]
+    }
+    
+    private func getPastTensesRulesSet() -> [RulesSet] {
+        let rules = parsePastSimple() + parsePastPerfect() + parsePastContinuous()
+        let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
+        let set = RulesSet(id: "PastTenses",
+                           name: "Past tenses",
+                           progress: progress.toRealmList())
+        return [set]
     }
 }

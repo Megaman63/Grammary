@@ -55,7 +55,6 @@ final class ExamplePresenterImpl: ExamplePresenter, ExampleModuleInput {
         
         state.examples = question.examples.map { $0 }
         let header = ExampleHeaderItem(caption: "Примеры использования")
-        let correctItem = ExampleItem(text: question.correctAnswer?.text ?? "")
         let exampleItems: [TableViewItem] = state.examples.map { ExampleItem(text: $0.text ) }
         
         var buttonItems: [TableViewItem] = []
@@ -94,7 +93,7 @@ final class ExamplePresenterImpl: ExamplePresenter, ExampleModuleInput {
         }
         buttonItems.append(reportItem)
         
-        let headerItems: [TableViewItem] = [header, correctItem]
+        let headerItems: [TableViewItem] = [header]
         let items: [TableViewItem] = headerItems + exampleItems + buttonItems
         state.sections = [CommonAnyTypeSection(items: items, didSelectItem: nil)]
         view?.set(dataSource: state.sections)

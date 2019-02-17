@@ -107,6 +107,11 @@
 		A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB221DDDFF50037AAFD /* ExampleItem.swift */; };
 		A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */; };
 		A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */; };
+		A58639272219938B00CDC204 /* PresentSimpleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58639262219938B00CDC204 /* PresentSimpleParser.swift */; };
+		A5863929221993F700CDC204 /* PastSimpleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5863928221993F600CDC204 /* PastSimpleParser.swift */; };
+		A586392B221994B800CDC204 /* PastContinuousParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392A221994B800CDC204 /* PastContinuousParser.swift */; };
+		A586392D221995A900CDC204 /* PresentPerfectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392C221995A900CDC204 /* PresentPerfectParser.swift */; };
+		A586392F221996AE00CDC204 /* PastPerfectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392E221996AE00CDC204 /* PastPerfectParser.swift */; };
 		A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */; };
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
 		A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */; };
@@ -250,6 +255,11 @@
 		A5737AB221DDDFF50037AAFD /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
+		A58639262219938B00CDC204 /* PresentSimpleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSimpleParser.swift; sourceTree = "<group>"; };
+		A5863928221993F600CDC204 /* PastSimpleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSimpleParser.swift; sourceTree = "<group>"; };
+		A586392A221994B800CDC204 /* PastContinuousParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastContinuousParser.swift; sourceTree = "<group>"; };
+		A586392C221995A900CDC204 /* PresentPerfectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentPerfectParser.swift; sourceTree = "<group>"; };
+		A586392E221996AE00CDC204 /* PastPerfectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPerfectParser.swift; sourceTree = "<group>"; };
 		A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressUtil.swift; sourceTree = "<group>"; };
 		A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
@@ -332,7 +342,6 @@
 		1CEC0CE121D905A3003C9C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A5FC1669220DD7B200194793 /* ProgressView.swift */,
 				A5FC166B220DD93400194793 /* GradientView.swift */,
 				A5FC165C220DC68E00194793 /* Pulley */,
 				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
@@ -629,9 +638,9 @@
 		1CFCD68421D3F1A000F9D5A8 /* ExerciseView */ = {
 			isa = PBXGroup;
 			children = (
+				A58639232219921000CDC204 /* Helpers */,
+				A58639222219920400CDC204 /* Views */,
 				1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */,
-				A5FC166D220EBB6B00194793 /* AnswerView.swift */,
-				A5FC1673221001B400194793 /* AnswersAnimation.swift */,
 			);
 			path = ExerciseView;
 			sourceTree = "<group>";
@@ -665,6 +674,7 @@
 				A50BD87521E5A11C0080D1C0 /* ReportedSpeechParser.swift */,
 				A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */,
 				A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */,
+				A58639252219935E00CDC204 /* Tenses */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -962,9 +972,9 @@
 		A5737AB021DD53660037AAFD /* ExampleView */ = {
 			isa = PBXGroup;
 			children = (
+				A58639242219922D00CDC204 /* Views */,
 				A5737AB521DDE04F0037AAFD /* TableView */,
 				A5737A9C21DD533A0037AAFD /* ExampleViewController.swift */,
-				A5FC168D2210C61900194793 /* NextButton.swift */,
 			);
 			path = ExampleView;
 			sourceTree = "<group>";
@@ -995,6 +1005,43 @@
 				A5737AB421DDE02F0037AAFD /* Cells */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		A58639222219920400CDC204 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC166D220EBB6B00194793 /* AnswerView.swift */,
+				A5FC1669220DD7B200194793 /* ProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A58639232219921000CDC204 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC1673221001B400194793 /* AnswersAnimation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A58639242219922D00CDC204 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC168D2210C61900194793 /* NextButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A58639252219935E00CDC204 /* Tenses */ = {
+			isa = PBXGroup;
+			children = (
+				A58639262219938B00CDC204 /* PresentSimpleParser.swift */,
+				A5863928221993F600CDC204 /* PastSimpleParser.swift */,
+				A586392A221994B800CDC204 /* PastContinuousParser.swift */,
+				A586392C221995A900CDC204 /* PresentPerfectParser.swift */,
+				A586392E221996AE00CDC204 /* PastPerfectParser.swift */,
+			);
+			path = Tenses;
 			sourceTree = "<group>";
 		};
 		A59C0B052206D5DF00B07D65 /* Common */ = {
@@ -1309,6 +1356,7 @@
 				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
 				A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */,
+				A586392B221994B800CDC204 /* PastContinuousParser.swift in Sources */,
 				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
 				A5FC1664220DC8BC00194793 /* UIView+constrainToParent.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
@@ -1341,6 +1389,7 @@
 				A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */,
 				A5FC168E2210C61900194793 /* NextButton.swift in Sources */,
 				A50CBE5E21F3100D009FDFFD /* CommonBlocks.swift in Sources */,
+				A586392D221995A900CDC204 /* PresentPerfectParser.swift in Sources */,
 				A50CBE4721F30C49009FDFFD /* SettingsProtocols.swift in Sources */,
 				A50CBE3621F30A90009FDFFD /* GerundParser.swift in Sources */,
 				A50CBE6021F31329009FDFFD /* ProgressFacade.swift in Sources */,
@@ -1357,6 +1406,7 @@
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
 				A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
+				A5863929221993F700CDC204 /* PastSimpleParser.swift in Sources */,
 				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
 				A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */,
 				A5FC1661220DC69B00194793 /* PulleyPassthroughScrollView.swift in Sources */,
@@ -1376,6 +1426,7 @@
 				A5FC166E220EBB6B00194793 /* AnswerView.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				A50CBE6B21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift in Sources */,
+				A58639272219938B00CDC204 /* PresentSimpleParser.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
 				A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */,
@@ -1384,6 +1435,7 @@
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,
 				A5FC16792210971B00194793 /* ExampleHeaderTableViewCell.swift in Sources */,
 				A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */,
+				A586392F221996AE00CDC204 /* PastPerfectParser.swift in Sources */,
 				A5FC167E2210976100194793 /* ExampleHeaderItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
