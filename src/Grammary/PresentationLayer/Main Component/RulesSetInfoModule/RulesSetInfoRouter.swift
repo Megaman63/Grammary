@@ -26,6 +26,6 @@ final class RulesSetInfoRouterImpl: RulesSetInfoRouter {
     
     func showExercise(rulesSetId: String) {
         let vc = ExerciseAssembly.createModule(serviceAssembly: serviceAssembly, rulesSetId: rulesSetId)
-        viewController?.present(vc, animated: true, completion: nil)
+        viewController?.show(vc, sender: self)
     }
 }

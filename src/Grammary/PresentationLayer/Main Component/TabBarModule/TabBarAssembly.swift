@@ -19,8 +19,13 @@ final class TabBarAssembly {
         let settingsController = SettingsAssembly.createModule(serviceAssembly: serviceAssembly)
         settingsController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
 
+        let rulesSetsNavigationController = UINavigationController(rootViewController: rulesSetsController)
+        rulesSetsNavigationController.navigationBar.barTintColor = .dark
+        rulesSetsNavigationController.navigationBar.isTranslucent = false
+        rulesSetsNavigationController.navigationBar.tintColor = UIColor.white.withAlphaComponent(0.5)
+        
         view.viewControllers = [
-            UINavigationController(rootViewController: rulesSetsController),
+            rulesSetsNavigationController,
             UINavigationController(rootViewController: settingsController)
         ]
 

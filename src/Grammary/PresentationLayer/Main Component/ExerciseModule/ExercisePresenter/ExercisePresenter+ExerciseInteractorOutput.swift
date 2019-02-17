@@ -35,5 +35,6 @@ extension ExercisePresenterImpl: ExerciseInteractorOutput {
             return
         }
         view?.show(question: currentQuestionItem)
+        view?.set(progress: 0)
     }
 }

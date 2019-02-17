@@ -37,7 +37,8 @@ final class ExerciseAssembly {
         pulley.delegates.register(exampleView)
         pulley.initialDrawerPosition = .closed
         pulley.drawerCornerRadius = 30
-
+        pulley.hidesBottomBarWhenPushed = true
+        
         return pulley
     }
 }

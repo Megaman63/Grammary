@@ -34,7 +34,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     private var questionState = QuestionState.awaitingAnswer
     private var answersAnimation = AnswersAnimation()
     
-    // MARK: - Lifecycle
+    // MARK: - UIViewController
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,10 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         presenter?.didTriggerViewReadyEvent()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Actions
 
     @objc func answerLabelTap(_ sender: UITapGestureRecognizer) {
@@ -100,6 +104,11 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 self.calculateScrollViewContentHeight()
             }
         }
+    }
+    
+    func set(progress: CGFloat) {
+        print("progress \(progress)")
+        progressView.set(progress: progress, animated: true)
     }
     
     func showAnswer(animation: RuleAppearanceAnimation) {
@@ -240,7 +249,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         progressView.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-16)
             $0.leading.equalToSuperview().offset(16)
-            $0.top.equalToSuperview().offset(70)
+            $0.top.equalToSuperview().offset(5)
             $0.height.equalTo(ProgressView.Constants.progressGradientViewHeight)
         }
         progressView.set(progress: 0.5, animated: true)
@@ -313,13 +322,8 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     }
 
     func setAlphaToDissappearingAnswerViews(alpha: CGFloat) {
-        for (index, animation) in answersAnimation.animations.enumerated() {
-            switch animation {
-            case .shouldDissappear:
-                answerViews[index].alpha = alpha
-            default:
-                break
-            }
+        for (index, animation) in answersAnimation.animations.enumerated() where animation == .shouldDissappear {
+            answerViews[index].alpha = alpha
         }
     }
     

@@ -111,7 +111,7 @@ extension ExampleViewController: PulleyDrawerViewControllerDelegate {
     // MARK: - PulleyDelegate
     
     func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
-        let offset = UIScreen.main.bounds.height - distance
+        let offset = view.frame.height - distance
         nextButton?.snp.updateConstraints {
             $0.bottom.equalTo(-offset)
         }

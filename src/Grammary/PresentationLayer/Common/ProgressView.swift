@@ -61,9 +61,10 @@ class ProgressView: UIView {
     // MARK: - UIView
     
     override func layoutSubviews() {
+        let width = max(frame.width * progress, Constants.progressGradientViewHeight)
         progressGradientView.frame = CGRect(x: 0,
                                             y: frame.height/2 - Constants.progressGradientViewHeight / 2,
-                                            width: frame.width * progress,
+                                            width: width,
                                             height: Constants.progressGradientViewHeight)
         
         stripView.frame = CGRect(x: 0,
@@ -77,7 +78,7 @@ class ProgressView: UIView {
     func set(progress: CGFloat, animated: Bool) {
         let progressDelta = abs(self.progress - progress)
         self.progress = progress
-        
+        setNeedsLayout()
         let animations = {
             self.layoutIfNeeded()
         }

@@ -44,5 +44,6 @@ protocol ExerciseView: AnyObject {
     
     func show(question: QuestionItem)
     func showAnswer(animation: RuleAppearanceAnimation)
+    func set(progress: CGFloat)
     func showExample()
 }
