@@ -1,0 +1,95 @@
+disabled_rules:
+- void_return
+- trailing_whitespace
+- todo
+
+excluded:
+- Pods
+- Tests/UITests
+
+type_name:
+  max_length: 45
+
+type_body_length:
+- 400 # warning
+- 450 # error
+
+function_body_length:
+- 50 # warning
+- 70 # error
+
+file_length:
+- 500 # warning
+- 1200 # error
+
+warning_threshold: 1
+
+vertical_whitespace:
+  severity: error # explicitly
+
+comma:
+  severity: error # explicitly
+
+colon:
+  severity: error # explicitly
+
+trailing_newline:
+  severity: error # explicitly
+
+redundant_optional_initialization:
+  severity: error # explicitly
+
+unused_closure_parameter:
+  severity: error # explicitly
+
+line_length:
+ error: 120
+ ignores_comments: true
+ ignores_interpolated_strings: true
+ ignores_function_declarations: false
+ ignores_urls: true
+ #severity: error # explicitly
+
+function_parameter_count:
+ warning: 10
+ error: 15
+
+identifier_name:
+  min_length: 1
+  max_length: 50
+
+custom_rules:
+  deny_print:
+      included: ".*.swift"
+      regex: '(\s+)print(\s+)?\('
+      name: "print denied"
+      message: "You must use printDebug, etc for debugging"
+      severity: error
+
+  deny_debug_print:
+      included: ".*.swift"
+      regex: '(\s+)debugPrint(\s+)?\('
+      name: "debugPrint denied"
+      message: "You must use printDebug, etc for debugging"
+      severity: error
+
+  empty_endings:
+      included: ".*.swift"
+      regex: '[\n\r][ \t]+[\n\r]+([ \t\r\n]+)?}'
+      name: "empty lines prohibited"
+      message: "Empty lines before } are prohibited"
+      severity: error
+
+  short_invocation:
+      included: ".*.swift"
+      regex: 'invoke(\s+)?{(\s+)?\(?delegate\)?'
+      name: "Use short access with $0"
+      message: "Invocation of delegates must be made with $0.someClassDidCallSomeFunction(self)"
+      severity: error
+
+  app_open_url:
+      included: ".*.swift"
+      regex: 'UIApplication.shared.open('
+      name: "Use `UIApplication.openURL()` instead"
+      message: "Use `UIApplication.openURL()` instead"
+      severity: error

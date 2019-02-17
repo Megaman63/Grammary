@@ -36,7 +36,6 @@
 		1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD63A21D3EA8600F9D5A8 /* AppDelegate.swift */; };
 		1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */; };
 		1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD64321D3EA8700F9D5A8 /* LaunchScreen.storyboard */; };
-		1CFCD65021D3EA8700F9D5A8 /* GrammaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD64F21D3EA8700F9D5A8 /* GrammaryTests.swift */; };
 		1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67021D3F16B00F9D5A8 /* ExercisePresenter.swift */; };
 		1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67121D3F16B00F9D5A8 /* ExerciseRouter.swift */; };
 		1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */; };
@@ -44,7 +43,6 @@
 		1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67421D3F16B00F9D5A8 /* ExerciseAssembly.swift */; };
 		1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67521D3F16B00F9D5A8 /* ExerciseInteractor.swift */; };
 		1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67621D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift */; };
-		1CFCD68021D3F16B00F9D5A8 /* ExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */; };
 		1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */; };
 		1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */; };
 		767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016CD9D33B14FC8A3318145C /* Pods_GrammaryTests.framework */; };
@@ -100,7 +98,7 @@
 		A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9221DD0E980037AAFD /* RuleProgress.swift */; };
 		A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */; };
 		A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9A21DD533A0037AAFD /* ExamplePresenter.swift */; };
-		A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */; };
+		A5737AA621DD533A0037AAFD /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9C21DD533A0037AAFD /* ExampleViewController.swift */; };
 		A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9D21DD533A0037AAFD /* ExampleProtocols.swift */; };
 		A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9E21DD533A0037AAFD /* ExampleAssembly.swift */; };
 		A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A9F21DD533A0037AAFD /* ExampleInteractor.swift */; };
@@ -114,17 +112,29 @@
 		A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */; };
 		A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */; };
 		A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */; };
+		A5FC1660220DC69B00194793 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC165D220DC69A00194793 /* PulleyViewController.swift */; };
+		A5FC1661220DC69B00194793 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC165E220DC69B00194793 /* PulleyPassthroughScrollView.swift */; };
+		A5FC1662220DC69B00194793 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC165F220DC69B00194793 /* UIViewController+PulleyViewController.swift */; };
+		A5FC1664220DC8BC00194793 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC1663220DC8BC00194793 /* UIView+constrainToParent.swift */; };
+		A5FC1666220DD63B00194793 /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC1665220DD63B00194793 /* UIColor+colors.swift */; };
+		A5FC1668220DD64900194793 /* UIFont+fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC1667220DD64900194793 /* UIFont+fonts.swift */; };
+		A5FC166A220DD7B200194793 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC1669220DD7B200194793 /* ProgressView.swift */; };
+		A5FC166C220DD93500194793 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC166B220DD93400194793 /* GradientView.swift */; };
+		A5FC166E220EBB6B00194793 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC166D220EBB6B00194793 /* AnswerView.swift */; };
+		A5FC1674221001B400194793 /* AnswersAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC1673221001B400194793 /* AnswersAnimation.swift */; };
+		A5FC16762210020000194793 /* AnswersAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC16752210020000194793 /* AnswersAnimationTests.swift */; };
+		A5FC16792210971B00194793 /* ExampleHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC16772210971B00194793 /* ExampleHeaderTableViewCell.swift */; };
+		A5FC167A2210971B00194793 /* ExampleHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FC16782210971B00194793 /* ExampleHeaderTableViewCell.xib */; };
+		A5FC167E2210976100194793 /* ExampleHeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC167D2210976100194793 /* ExampleHeaderItem.swift */; };
+		A5FC168122109F9600194793 /* ExampleActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC167F22109F9600194793 /* ExampleActionButtonTableViewCell.swift */; };
+		A5FC168222109F9600194793 /* ExampleActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FC168022109F9600194793 /* ExampleActionButtonTableViewCell.xib */; };
+		A5FC168522109FE600194793 /* ExampleActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC168422109FE600194793 /* ExampleActionButtonItem.swift */; };
+		A5FC168C2210C35D00194793 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC168B2210C35D00194793 /* Assets.swift */; };
+		A5FC168E2210C61900194793 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC168D2210C61900194793 /* NextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1CFCD64C21D3EA8700F9D5A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1CFCD62F21D3EA8600F9D5A8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1CFCD63621D3EA8600F9D5A8;
-			remoteInfo = Grammary;
-		};
-		1CFCD65721D3EA8700F9D5A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1CFCD62F21D3EA8600F9D5A8 /* Project object */;
 			proxyType = 1;
@@ -166,9 +176,7 @@
 		1CFCD64421D3EA8700F9D5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CFCD64621D3EA8700F9D5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CFCD64B21D3EA8700F9D5A8 /* GrammaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrammaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CFCD64F21D3EA8700F9D5A8 /* GrammaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammaryTests.swift; sourceTree = "<group>"; };
 		1CFCD65121D3EA8700F9D5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CFCD65621D3EA8700F9D5A8 /* GrammaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrammaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFCD67021D3F16B00F9D5A8 /* ExercisePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePresenter.swift; sourceTree = "<group>"; };
 		1CFCD67121D3F16B00F9D5A8 /* ExerciseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRouter.swift; sourceTree = "<group>"; };
 		1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +184,6 @@
 		1CFCD67421D3F16B00F9D5A8 /* ExerciseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAssembly.swift; sourceTree = "<group>"; };
 		1CFCD67521D3F16B00F9D5A8 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
 		1CFCD67621D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisePresenter+ExerciseInteractorOutput.swift"; sourceTree = "<group>"; };
-		1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseViewController.xib; sourceTree = "<group>"; };
 		1CFCD67821D3F16B00F9D5A8 /* ExerciseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseState.swift; sourceTree = "<group>"; };
 		1CFCD68621D3F22400F9D5A8 /* ServisceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServisceAssembly.swift; sourceTree = "<group>"; };
 		1E6E41E56F37D17CE5FB39A2 /* Pods-Grammary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,7 +241,7 @@
 		A5737A9221DD0E980037AAFD /* RuleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgress.swift; sourceTree = "<group>"; };
 		A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A5737A9A21DD533A0037AAFD /* ExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresenter.swift; sourceTree = "<group>"; };
-		A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewImpl.swift; sourceTree = "<group>"; };
+		A5737A9C21DD533A0037AAFD /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		A5737A9D21DD533A0037AAFD /* ExampleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProtocols.swift; sourceTree = "<group>"; };
 		A5737A9E21DD533A0037AAFD /* ExampleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAssembly.swift; sourceTree = "<group>"; };
 		A5737A9F21DD533A0037AAFD /* ExampleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleInteractor.swift; sourceTree = "<group>"; };
@@ -244,10 +251,30 @@
 		A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressUtil.swift; sourceTree = "<group>"; };
+		A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
 		A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterToken.swift; sourceTree = "<group>"; };
 		A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryKeyObservable.swift; sourceTree = "<group>"; };
 		A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrOfTimeParser.swift; sourceTree = "<group>"; };
+		A5FC165D220DC69A00194793 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
+		A5FC165E220DC69B00194793 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		A5FC165F220DC69B00194793 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
+		A5FC1663220DC8BC00194793 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		A5FC1665220DD63B00194793 /* UIColor+colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
+		A5FC1667220DD64900194793 /* UIFont+fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+fonts.swift"; sourceTree = "<group>"; };
+		A5FC1669220DD7B200194793 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		A5FC166B220DD93400194793 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A5FC166D220EBB6B00194793 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		A5FC1673221001B400194793 /* AnswersAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersAnimation.swift; sourceTree = "<group>"; };
+		A5FC16752210020000194793 /* AnswersAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersAnimationTests.swift; sourceTree = "<group>"; };
+		A5FC16772210971B00194793 /* ExampleHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A5FC16782210971B00194793 /* ExampleHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A5FC167D2210976100194793 /* ExampleHeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeaderItem.swift; sourceTree = "<group>"; };
+		A5FC167F22109F9600194793 /* ExampleActionButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleActionButtonTableViewCell.swift; sourceTree = "<group>"; };
+		A5FC168022109F9600194793 /* ExampleActionButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleActionButtonTableViewCell.xib; sourceTree = "<group>"; };
+		A5FC168422109FE600194793 /* ExampleActionButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleActionButtonItem.swift; sourceTree = "<group>"; };
+		A5FC168B2210C35D00194793 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A5FC168D2210C61900194793 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		E7B6580EFD1D79AA24C365E4 /* Pods-GrammaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammaryTests/Pods-GrammaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C03043C60CC1AB618903F7 /* Pods-Grammary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammary/Pods-Grammary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,13 +293,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				767BDCACCB3E33D4190B72B9 /* Pods_GrammaryTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CFCD65321D3EA8700F9D5A8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +332,9 @@
 		1CEC0CE121D905A3003C9C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A5FC1669220DD7B200194793 /* ProgressView.swift */,
+				A5FC166B220DD93400194793 /* GradientView.swift */,
+				A5FC165C220DC68E00194793 /* Pulley */,
 				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
 				1CEC0D0B21D94579003C9C7A /* Extensions */,
 				1CEC0D0A21D9456E003C9C7A /* Constants */,
@@ -382,6 +405,9 @@
 			children = (
 				1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */,
 				A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */,
+				A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */,
+				A5FC1665220DD63B00194793 /* UIColor+colors.swift */,
+				A5FC1667220DD64900194793 /* UIFont+fonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -472,7 +498,6 @@
 			children = (
 				1CFCD63721D3EA8600F9D5A8 /* Grammary.app */,
 				1CFCD64B21D3EA8700F9D5A8 /* GrammaryTests.xctest */,
-				1CFCD65621D3EA8700F9D5A8 /* GrammaryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,10 +505,10 @@
 		1CFCD63921D3EA8600F9D5A8 /* Grammary */ = {
 			isa = PBXGroup;
 			children = (
-				1CFCD66A21D3EFF500F9D5A8 /* Application Layer */,
-				1CFCD66B21D3F00300F9D5A8 /* Core Layer */,
-				1CFCD66C21D3F00F00F9D5A8 /* Business Logic Layer */,
-				1CFCD66821D3EFD100F9D5A8 /* Presentation Layer */,
+				1CFCD66A21D3EFF500F9D5A8 /* ApplicationLayer */,
+				1CFCD66B21D3F00300F9D5A8 /* CoreLayer */,
+				1CFCD66C21D3F00F00F9D5A8 /* BusinessLogicLayer */,
+				1CFCD66821D3EFD100F9D5A8 /* PresentationLayer */,
 			);
 			path = Grammary;
 			sourceTree = "<group>";
@@ -491,19 +516,19 @@
 		1CFCD64E21D3EA8700F9D5A8 /* GrammaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				1CFCD64F21D3EA8700F9D5A8 /* GrammaryTests.swift */,
+				A5FC16752210020000194793 /* AnswersAnimationTests.swift */,
 				1CFCD65121D3EA8700F9D5A8 /* Info.plist */,
 			);
 			path = GrammaryTests;
 			sourceTree = "<group>";
 		};
-		1CFCD66821D3EFD100F9D5A8 /* Presentation Layer */ = {
+		1CFCD66821D3EFD100F9D5A8 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0CE121D905A3003C9C7A /* Common */,
 				1CFCD66921D3EFE000F9D5A8 /* Main Component */,
 			);
-			path = "Presentation Layer";
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 		1CFCD66921D3EFE000F9D5A8 /* Main Component */ = {
@@ -518,17 +543,17 @@
 			path = "Main Component";
 			sourceTree = "<group>";
 		};
-		1CFCD66A21D3EFF500F9D5A8 /* Application Layer */ = {
+		1CFCD66A21D3EFF500F9D5A8 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
 				1CFCD66F21D3F04400F9D5A8 /* Application */,
 				1CFCD66E21D3F03D00F9D5A8 /* Plists */,
 				1CFCD66D21D3F03100F9D5A8 /* Resources */,
 			);
-			path = "Application Layer";
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
-		1CFCD66B21D3F00300F9D5A8 /* Core Layer */ = {
+		1CFCD66B21D3F00300F9D5A8 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
 				A50CBE6621F31AE8009FDFFD /* Misk */,
@@ -537,10 +562,10 @@
 				A50CBE7821F334D4009FDFFD /* Assembly */,
 				A50CBE7921F334DD009FDFFD /* Core Services */,
 			);
-			path = "Core Layer";
+			path = CoreLayer;
 			sourceTree = "<group>";
 		};
-		1CFCD66C21D3F00F00F9D5A8 /* Business Logic Layer */ = {
+		1CFCD66C21D3F00F00F9D5A8 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
 				A5737A8021DCF19A0037AAFD /* Facades */,
@@ -548,13 +573,13 @@
 				1CEC0CD921D40151003C9C7A /* Models */,
 				1CEC0D2021DA1F0E003C9C7A /* Common */,
 			);
-			path = "Business Logic Layer";
+			path = BusinessLogicLayer;
 			sourceTree = "<group>";
 		};
 		1CFCD66D21D3F03100F9D5A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */,
+				A5FC168A2210C17800194793 /* Assets */,
 				1CFCD64321D3EA8700F9D5A8 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -605,7 +630,8 @@
 			isa = PBXGroup;
 			children = (
 				1CFCD67221D3F16B00F9D5A8 /* ExerciseViewController.swift */,
-				1CFCD67721D3F16B00F9D5A8 /* ExerciseViewController.xib */,
+				A5FC166D220EBB6B00194793 /* AnswerView.swift */,
+				A5FC1673221001B400194793 /* AnswersAnimation.swift */,
 			);
 			path = ExerciseView;
 			sourceTree = "<group>";
@@ -937,7 +963,8 @@
 			isa = PBXGroup;
 			children = (
 				A5737AB521DDE04F0037AAFD /* TableView */,
-				A5737A9C21DD533A0037AAFD /* ExampleViewImpl.swift */,
+				A5737A9C21DD533A0037AAFD /* ExampleViewController.swift */,
+				A5FC168D2210C61900194793 /* NextButton.swift */,
 			);
 			path = ExampleView;
 			sourceTree = "<group>";
@@ -945,6 +972,8 @@
 		A5737AB121DDDFCF0037AAFD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				A5FC168422109FE600194793 /* ExampleActionButtonItem.swift */,
+				A5FC167D2210976100194793 /* ExampleHeaderItem.swift */,
 				A5737AB221DDDFF50037AAFD /* ExampleItem.swift */,
 			);
 			path = Items;
@@ -953,8 +982,9 @@
 		A5737AB421DDE02F0037AAFD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */,
-				A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */,
+				A5FC168322109FA500194793 /* ExampleActionButtonTableViewCell */,
+				A5FC167B2210973300194793 /* ExampleHeaderTableViewCell */,
+				A5FC167C2210973C00194793 /* ExampleTableViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -993,6 +1023,53 @@
 			path = PersistenceService;
 			sourceTree = "<group>";
 		};
+		A5FC165C220DC68E00194793 /* Pulley */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC165E220DC69B00194793 /* PulleyPassthroughScrollView.swift */,
+				A5FC165D220DC69A00194793 /* PulleyViewController.swift */,
+				A5FC1663220DC8BC00194793 /* UIView+constrainToParent.swift */,
+				A5FC165F220DC69B00194793 /* UIViewController+PulleyViewController.swift */,
+			);
+			path = Pulley;
+			sourceTree = "<group>";
+		};
+		A5FC167B2210973300194793 /* ExampleHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC16772210971B00194793 /* ExampleHeaderTableViewCell.swift */,
+				A5FC16782210971B00194793 /* ExampleHeaderTableViewCell.xib */,
+			);
+			path = ExampleHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5FC167C2210973C00194793 /* ExampleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5737AB621DDE07E0037AAFD /* ExampleTableViewCell.swift */,
+				A5737AB721DDE07E0037AAFD /* ExampleTableViewCell.xib */,
+			);
+			path = ExampleTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5FC168322109FA500194793 /* ExampleActionButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC167F22109F9600194793 /* ExampleActionButtonTableViewCell.swift */,
+				A5FC168022109F9600194793 /* ExampleActionButtonTableViewCell.xib */,
+			);
+			path = ExampleActionButtonTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5FC168A2210C17800194793 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC168B2210C35D00194793 /* Assets.swift */,
+				1CFCD64121D3EA8700F9D5A8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1001,6 +1078,7 @@
 			buildConfigurationList = 1CFCD65F21D3EA8700F9D5A8 /* Build configuration list for PBXNativeTarget "Grammary" */;
 			buildPhases = (
 				3CFAC73EC5C433D2AD99054F /* [CP] Check Pods Manifest.lock */,
+				A5FC16892210A88C00194793 /* SwiftGen */,
 				1CFCD63321D3EA8600F9D5A8 /* Sources */,
 				1CFCD63421D3EA8600F9D5A8 /* Frameworks */,
 				1CFCD63521D3EA8600F9D5A8 /* Resources */,
@@ -1034,24 +1112,6 @@
 			productReference = 1CFCD64B21D3EA8700F9D5A8 /* GrammaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1CFCD65521D3EA8700F9D5A8 /* GrammaryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1CFCD66521D3EA8700F9D5A8 /* Build configuration list for PBXNativeTarget "GrammaryUITests" */;
-			buildPhases = (
-				1CFCD65221D3EA8700F9D5A8 /* Sources */,
-				1CFCD65321D3EA8700F9D5A8 /* Frameworks */,
-				1CFCD65421D3EA8700F9D5A8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1CFCD65821D3EA8700F9D5A8 /* PBXTargetDependency */,
-			);
-			name = GrammaryUITests;
-			productName = GrammaryUITests;
-			productReference = 1CFCD65621D3EA8700F9D5A8 /* GrammaryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1066,10 +1126,6 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					1CFCD64A21D3EA8700F9D5A8 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 1CFCD63621D3EA8600F9D5A8;
-					};
-					1CFCD65521D3EA8700F9D5A8 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 1CFCD63621D3EA8600F9D5A8;
 					};
@@ -1090,7 +1146,6 @@
 			targets = (
 				1CFCD63621D3EA8600F9D5A8 /* Grammary */,
 				1CFCD64A21D3EA8700F9D5A8 /* GrammaryTests */,
-				1CFCD65521D3EA8700F9D5A8 /* GrammaryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1106,22 +1161,16 @@
 				1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */,
 				A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */,
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
-				1CFCD68021D3F16B00F9D5A8 /* ExerciseViewController.xib in Resources */,
+				A5FC168222109F9600194793 /* ExampleActionButtonTableViewCell.xib in Resources */,
 				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
+				A5FC167A2210971B00194793 /* ExampleHeaderTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
 				A50CBE4C21F30C49009FDFFD /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1CFCD64921D3EA8700F9D5A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CFCD65421D3EA8700F9D5A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1175,6 +1224,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5FC16892210A88C00194793 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Grammary/ApplicationLayer/Resources/Assets/Assets.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen xcassets -t swift4 -o ${SRCROOT}/Grammary/ApplicationLayer/Resources/Assets/Assets.swift ${SRCROOT}/Grammary/ApplicationLayer/Resources/Assets/Assets.xcassets\n";
+		};
 		EEB493EBCE1015B66619A7F5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1208,6 +1276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FC166A220DD7B200194793 /* ProgressView.swift in Sources */,
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
 				A50CBE5721F30FB6009FDFFD /* CommonButtonTableViewCell.swift in Sources */,
@@ -1222,15 +1291,18 @@
 				A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */,
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
+				A5FC1668220DD64900194793 /* UIFont+fonts.swift in Sources */,
 				A50CBE6521F31A36009FDFFD /* RulesSetNotificationCenter.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
 				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
+				A5FC168522109FE600194793 /* ExampleActionButtonItem.swift in Sources */,
 				A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */,
 				A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
+				A5FC168C2210C35D00194793 /* Assets.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
@@ -1238,6 +1310,7 @@
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
 				A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */,
 				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
+				A5FC1664220DC8BC00194793 /* UIView+constrainToParent.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
 				A50CBE7121F3299E009FDFFD /* UpdatesFacade.swift in Sources */,
 				A50CBE6821F31AFC009FDFFD /* MulticastDelegate.swift in Sources */,
@@ -1249,19 +1322,24 @@
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				A50CBE4921F30C49009FDFFD /* SettingsInteractor.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
+				A5FC166C220DD93500194793 /* GradientView.swift in Sources */,
 				A50BD87621E5A11C0080D1C0 /* ReportedSpeechParser.swift in Sources */,
 				A55FCB5821E2F60C009932A2 /* RulesSetInfoInteractor.swift in Sources */,
 				A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */,
+				A5FC168122109F9600194793 /* ExampleActionButtonTableViewCell.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
 				A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */,
 				1CEC0CF521D90E6D003C9C7A /* RulesSetsProtocols.swift in Sources */,
+				A5FC1662220DC69B00194793 /* UIViewController+PulleyViewController.swift in Sources */,
 				A5737AAD21DD533A0037AAFD /* ExampleState.swift in Sources */,
 				A55FCB5B21E2F60C009932A2 /* RulesSetInfoState.swift in Sources */,
 				A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */,
+				A5FC1660220DC69B00194793 /* PulleyViewController.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
 				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
 				A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */,
+				A5FC168E2210C61900194793 /* NextButton.swift in Sources */,
 				A50CBE5E21F3100D009FDFFD /* CommonBlocks.swift in Sources */,
 				A50CBE4721F30C49009FDFFD /* SettingsProtocols.swift in Sources */,
 				A50CBE3621F30A90009FDFFD /* GerundParser.swift in Sources */,
@@ -1281,17 +1359,21 @@
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
 				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
 				A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */,
+				A5FC1661220DC69B00194793 /* PulleyPassthroughScrollView.swift in Sources */,
 				1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */,
-				A5737AA621DD533A0037AAFD /* ExampleViewImpl.swift in Sources */,
+				A5737AA621DD533A0037AAFD /* ExampleViewController.swift in Sources */,
 				1CFCD67E21D3F16B00F9D5A8 /* ExerciseInteractor.swift in Sources */,
 				1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */,
+				A5FC1666220DD63B00194793 /* UIColor+colors.swift in Sources */,
 				A50CBE6D21F31F10009FDFFD /* QueueManager.swift in Sources */,
 				1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */,
 				A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */,
 				A50CBE4521F30C49009FDFFD /* SettingsRouter.swift in Sources */,
 				1CEC0CF321D90E6D003C9C7A /* RulesSetsRouter.swift in Sources */,
 				A50CBE7421F329EA009FDFFD /* QuestionLocalService.swift in Sources */,
+				A5FC1674221001B400194793 /* AnswersAnimation.swift in Sources */,
 				A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */,
+				A5FC166E220EBB6B00194793 /* AnswerView.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				A50CBE6B21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
@@ -1300,7 +1382,9 @@
 				A50CBE4421F30C49009FDFFD /* SettingsPresenter.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,
 				1CFCD68721D3F22400F9D5A8 /* ServisceAssembly.swift in Sources */,
+				A5FC16792210971B00194793 /* ExampleHeaderTableViewCell.swift in Sources */,
 				A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */,
+				A5FC167E2210976100194793 /* ExampleHeaderItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,14 +1392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CFCD65021D3EA8700F9D5A8 /* GrammaryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CFCD65221D3EA8700F9D5A8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A5FC16762210020000194793 /* AnswersAnimationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1326,11 +1403,6 @@
 			isa = PBXTargetDependency;
 			target = 1CFCD63621D3EA8600F9D5A8 /* Grammary */;
 			targetProxy = 1CFCD64C21D3EA8700F9D5A8 /* PBXContainerItemProxy */;
-		};
-		1CFCD65821D3EA8700F9D5A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1CFCD63621D3EA8600F9D5A8 /* Grammary */;
-			targetProxy = 1CFCD65721D3EA8700F9D5A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1469,7 +1541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7LG5ESE33;
-				INFOPLIST_FILE = "$(SRCROOT)/Grammary/Application Layer/Plists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Grammary/ApplicationLayer/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1488,7 +1560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7LG5ESE33;
-				INFOPLIST_FILE = "$(SRCROOT)/Grammary/Application Layer/Plists/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Grammary/ApplicationLayer/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1542,44 +1614,6 @@
 			};
 			name = Release;
 		};
-		1CFCD66621D3EA8700F9D5A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GrammaryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BTSDigital.GrammaryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Grammary;
-			};
-			name = Debug;
-		};
-		1CFCD66721D3EA8700F9D5A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GrammaryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BTSDigital.GrammaryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Grammary;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1606,15 +1640,6 @@
 			buildConfigurations = (
 				1CFCD66321D3EA8700F9D5A8 /* Debug */,
 				1CFCD66421D3EA8700F9D5A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1CFCD66521D3EA8700F9D5A8 /* Build configuration list for PBXNativeTarget "GrammaryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1CFCD66621D3EA8700F9D5A8 /* Debug */,
-				1CFCD66721D3EA8700F9D5A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

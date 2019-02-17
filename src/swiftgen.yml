@@ -1,0 +1,6 @@
+xcassets:
+  inputs:
+    - Grammary/Application Layer/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: Grammary/Application Layer/Resources/assets-images.swift
