@@ -30,9 +30,9 @@ enum AnswersAnimationType: Equatable {
 struct AnswersAnimation {
     var animations: [AnswersAnimationType] = []
     
-    mutating func calculateAnimations(animation: RuleAppearanceAnimation) {
+    mutating func calculateAnimations(appearance: RuleAppearance) {
         animations = []
-        switch animation {
+        switch appearance {
         case .correctAnswer(let correctIndex):
             for i in 0..<4 {
                 if i < correctIndex {

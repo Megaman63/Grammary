@@ -9,6 +9,8 @@
 import Foundation
 
 struct QuestionItem {
+    
+    let shouldShowExampleFirst: Bool
     let id: String
     let ruleTitle: String
     let ruleSubject: String
@@ -16,13 +18,14 @@ struct QuestionItem {
     let answers: [Answer]
     let examples: [RuleExample]
     
-    init(question: Question) {
+    init(question: Question, shouldShowExampleFirst: Bool) {
         self.id = question.id
         self.ruleTitle = question.ruleTitle
         self.ruleSubject = question.ruleSubject
         self.correctAnswerId = question.answers[question.correctAnswerIndex].id
         self.answers = question.shuffleAnswers ? question.answers.toArray().shuffled() : question.answers.toArray()
         self.examples = question.examples.toArray()
+        self.shouldShowExampleFirst = shouldShowExampleFirst
     }
     
     var correctAnswer: Int {

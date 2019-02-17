@@ -46,17 +46,17 @@ final class ExercisePresenterImpl: ExercisePresenter {
             return
         }
         
-        let animation: RuleAppearanceAnimation
+        let ruleAppearance: RuleAppearance
         if currentQuestionItem.correctAnswer == index {
-            animation = .correctAnswer(correctIndex: index)
+            ruleAppearance = .correctAnswer(correctIndex: index)
         } else {
-            animation = .wrongAnswer(correctIndex: currentQuestionItem.correctAnswer, wrongIndex: index)
+            ruleAppearance = .wrongAnswer(correctIndex: currentQuestionItem.correctAnswer, wrongIndex: index)
         }
         
         interactor.setProgress(questionId: currentQuestionItem.id,
                                isCorrectAnswer: currentQuestionItem.correctAnswer == index)
         
-        view?.showAnswer(animation: animation)
+        view?.showAnswer(ruleAppearance: ruleAppearance, animated: !currentQuestionItem.shouldShowExampleFirst)
     }
     
     func didShowAnswer(partialRevealDrawerHeight: CGFloat) {
@@ -65,11 +65,22 @@ final class ExercisePresenterImpl: ExercisePresenter {
         }
         exampleModuleInput?.set(currentQuestionId: currentQuestionItem.id,
                                 partialRevealDrawerHeight: partialRevealDrawerHeight)
-        view?.showExample()
+        view?.showExample(animated: !currentQuestionItem.shouldShowExampleFirst)
     }
     
     func didTapCloseButton() {
         router.dismissView()
+    }
+    
+    // MARK: - Public functions
+    
+    func show(question: QuestionItem) {
+        view?.show(question: question)
+        let progress = CGFloat(state.currentQuestionItemIndex) / CGFloat(state.questions.count)
+        view?.set(progress: progress)
+        if question.shouldShowExampleFirst {
+            didChooseAnswer(atIndex: question.correctAnswer)
+        }
     }
 }
 
@@ -84,8 +95,6 @@ extension ExercisePresenterImpl: ExampleModuleOutput {
             interactor.finishExercies(ruleSetId: state.rulesSetId)
             return
         }
-        view?.show(question: nextQuestionItem)
-        let progress = CGFloat(state.currentQuestionItemIndex) / CGFloat(state.questions.count)
-        view?.set(progress: progress)
+        show(question: nextQuestionItem)
     }
 }

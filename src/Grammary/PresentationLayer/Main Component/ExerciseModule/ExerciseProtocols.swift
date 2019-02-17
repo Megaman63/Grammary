@@ -34,7 +34,7 @@ protocol ExerciseInteractor: AnyObject {
 // MARK: - InteractorOutput
 
 protocol ExerciseInteractorOutput: AnyObject {
-    func didLoad(rules: [Rule])
+    func didLoad(progress: [RuleProgress])
 }
 
 // MARK: - View
@@ -43,7 +43,7 @@ protocol ExerciseView: AnyObject {
     var presenter: ExercisePresenter? { get set }
     
     func show(question: QuestionItem)
-    func showAnswer(animation: RuleAppearanceAnimation)
+    func showAnswer(ruleAppearance: RuleAppearance, animated: Bool)
     func set(progress: CGFloat)
-    func showExample()
+    func showExample(animated: Bool)
 }

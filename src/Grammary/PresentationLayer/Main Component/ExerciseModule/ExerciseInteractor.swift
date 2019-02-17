@@ -29,8 +29,8 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     
     func loadRules(forSetWithId id: String) {
         DispatchQueue.main.async { [weak self] in
-            let rules = self?.exerciseFacade.obtainRules(forRulesSetId: id) ?? []
-            self?.output?.didLoad(rules: rules)
+            let progress = self?.exerciseFacade.obtainProgresses(forRulesSetId: id) ?? []
+            self?.output?.didLoad(progress: progress)
         }
     }
     

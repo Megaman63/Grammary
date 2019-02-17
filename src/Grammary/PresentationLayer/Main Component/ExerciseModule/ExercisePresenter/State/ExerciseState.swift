@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum RuleAppearanceAnimation {
+enum RuleAppearance {
     case wrongAnswer(correctIndex: Int, wrongIndex: Int)
     case correctAnswer(correctIndex: Int)
 }

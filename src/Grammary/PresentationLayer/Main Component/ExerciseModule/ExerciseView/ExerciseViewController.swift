@@ -38,13 +38,14 @@ final class ExerciseViewController: UIViewController, ExerciseView {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .dark
-
         configureViews()
-        
-        presenter?.didTriggerViewReadyEvent()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.didTriggerViewReadyEvent()
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -85,8 +86,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 answerView.text = question.answers[index].text
                 answerView.isHidden = false
             } else {
-                answerView.isHidden = false
-                answerView.text = "Mock"
+                answerView.isHidden = true
             }
         }
         
@@ -95,49 +95,62 @@ final class ExerciseViewController: UIViewController, ExerciseView {
             text = text + "\n\n" + question.ruleSubject
         }
         ruleQuestionLabel.text = text
-//        addBottom()
-        if let pulley = pulleyViewController {
+
+        calculateScrollViewContentHeight()
+        
+        if let pulley = pulleyViewController, pulley.drawerPosition != .closed {
             pulley.setDrawerPosition(position: .closed, animated: true)
             UIView.animate(withDuration: pulley.animationDuration) {
                 self.answerViews.forEach { $0.alpha = 1 }
                 self.view.layoutIfNeeded()
-                self.calculateScrollViewContentHeight()
             }
+        }
+        
+        if question.shouldShowExampleFirst {
+            presenter?.didChooseAnswer(atIndex: question.correctAnswer)
         }
     }
     
     func set(progress: CGFloat) {
-        print("progress \(progress)")
         progressView.set(progress: progress, animated: true)
     }
     
-    func showAnswer(animation: RuleAppearanceAnimation) {
+    func showAnswer(ruleAppearance: RuleAppearance, animated: Bool) {
         questionState = .answered
-        let (correctAnswerView, wrongAnswerView) = getWrongAndCorrectAnswersView(animation: animation)
+        let (correctAnswerView, wrongAnswerView) = getWrongAndCorrectAnswersView(appearance: ruleAppearance)
         answerViews.forEach { $0.isUserInteractionEnabled = false }
-        correctAnswerView.showAnswerAnimation(correctAnswer: true) { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                self?.calculate(animation: animation)
+        correctAnswerView.showAnswerResult(correctAnswer: true, animated: animated) { [weak self] in
+            if animated {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                    self?.calculate(appearance: ruleAppearance, animated: true)
+                }
+            } else {
+                self?.calculate(appearance: ruleAppearance, animated: false)
             }
         }
-        wrongAnswerView?.showAnswerAnimation(correctAnswer: false)
+        wrongAnswerView?.showAnswerResult(correctAnswer: false, animated: animated)
     }
     
-    func showExample() {
+    func showExample(animated: Bool) {
         guard let pulley = pulleyViewController else {
             assertionFailure()
             return
         }
         pulley.setDrawerPosition(position: .partiallyRevealed, animated: true)
-        UIView.animate(withDuration: pulley.animationDuration) {
-            self.setAlphaToDissappearingAnswerViews(alpha: 0)
+        
+        if animated {
+            UIView.animate(withDuration: pulley.animationDuration) {
+                self.setAlphaToDissappearingAnswerViews(alpha: 0)
+            }
+        } else {
+            setAlphaToDissappearingAnswerViews(alpha: 0)
         }
     }
     
     // MARK: - Private functions
     
-    private func calculate(animation: RuleAppearanceAnimation) {
-        let (correctAnswerView, wrongAnswerView) = getWrongAndCorrectAnswersView(animation: animation)
+    private func calculate(appearance: RuleAppearance, animated: Bool) {
+        let (correctAnswerView, wrongAnswerView) = getWrongAndCorrectAnswersView(appearance: appearance)
         
         let correctFrame = correctAnswerView.frame
         if let wrongFrame = wrongAnswerView?.frame {
@@ -157,7 +170,8 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 Constants.backdropAndAnswerGap
             )
         }
-        answersAnimation.calculateAnimations(animation: animation)
+        print("\(view.frame.height)")
+        answersAnimation.calculateAnimations(appearance: appearance)
         presenter?.didShowAnswer(partialRevealDrawerHeight: partialRevealDrawerHeight)
 
         var firstAnswerViewHeight: CGFloat? = nil
@@ -194,9 +208,16 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 $0.height.equalTo(contentHeight)
             }
         }
-        UIView.animate(withDuration: 0.25) {
+        
+        let block = {
             self.scrollView.contentOffset = .zero
             self.view.layoutIfNeeded()
+        }
+        
+        if animated {
+            UIView.animate(withDuration: 0.25, animations: block)
+        } else {
+            block()
         }
     }
 //
@@ -208,9 +229,9 @@ final class ExerciseViewController: UIViewController, ExerciseView {
 //    }
 //
     
-    func getWrongAndCorrectAnswersView(animation: RuleAppearanceAnimation)
+    func getWrongAndCorrectAnswersView(appearance: RuleAppearance)
         -> (correct: AnswerView, wrong: AnswerView?) {
-            switch animation {
+            switch appearance {
             case .correctAnswer(let index):
                 return (answerViews[index], nil)
             case .wrongAnswer(let correctIndex, let wrongIndex):
@@ -219,6 +240,8 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     }
     
     func configureViews() {
+        view.backgroundColor = .dark
+        
         configureScrollView()
         configureProgressView()
         configureChooseAnswerLabel()

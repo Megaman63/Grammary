@@ -13,7 +13,7 @@ class AnswersAnimationTests: XCTestCase {
 
     func testCorrectAnswerIsFirst() {
         // arrange
-        let animation = RuleAppearanceAnimation.correctAnswer(correctIndex: 0)
+        let animation = RuleAppearance.correctAnswer(correctIndex: 0)
         let examples: [AnswersAnimationType] = [
             .shouldChangeIndex(currentIndex: 0, newIndex: 0),
             .none,
@@ -27,7 +27,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsSecond() {
         // arrange
-        let animation = RuleAppearanceAnimation.correctAnswer(correctIndex: 1)
+        let animation = RuleAppearance.correctAnswer(correctIndex: 1)
         let examples: [AnswersAnimationType] = [
             .shouldDissappear,
             .shouldChangeIndex(currentIndex: 1, newIndex: 0),
@@ -41,7 +41,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsLast() {
         // arrange
-        let animation = RuleAppearanceAnimation.correctAnswer(correctIndex: 3)
+        let animation = RuleAppearance.correctAnswer(correctIndex: 3)
         let examples: [AnswersAnimationType] = [
             .shouldDissappear,
             .shouldDissappear,
@@ -55,7 +55,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsLastWrongIsFirst() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 3, wrongIndex: 0)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 3, wrongIndex: 0)
         let examples: [AnswersAnimationType] = [
             .shouldChangeIndex(currentIndex: 0, newIndex: 0),
             .shouldDissappear,
@@ -69,7 +69,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsFirstWrongIsLast() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 0, wrongIndex: 3)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 0, wrongIndex: 3)
         let examples: [AnswersAnimationType] = [
             .shouldChangeIndex(currentIndex: 0, newIndex: 0),
             .shouldDissappear,
@@ -83,7 +83,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsFirstWrongIsThird() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 0, wrongIndex: 2)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 0, wrongIndex: 2)
         let examples: [AnswersAnimationType] = [
             .shouldChangeIndex(currentIndex: 0, newIndex: 0),
             .shouldDissappear,
@@ -97,7 +97,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsFirstWrongIsSecond() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 0, wrongIndex: 1)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 0, wrongIndex: 1)
         let examples: [AnswersAnimationType] = [
             .shouldChangeIndex(currentIndex: 0, newIndex: 0),
             .shouldChangeIndex(currentIndex: 1, newIndex: 1),
@@ -111,7 +111,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsLastWrongIsThird() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 3, wrongIndex: 2)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 3, wrongIndex: 2)
         let examples: [AnswersAnimationType] = [
             .shouldDissappear,
             .shouldDissappear,
@@ -125,7 +125,7 @@ class AnswersAnimationTests: XCTestCase {
     
     func testCorrectAnswerIsThirdWrongIsSecond() {
         // arrange
-        let animation = RuleAppearanceAnimation.wrongAnswer(correctIndex: 2, wrongIndex: 1)
+        let animation = RuleAppearance.wrongAnswer(correctIndex: 2, wrongIndex: 1)
         let examples: [AnswersAnimationType] = [
             .shouldDissappear,
             .shouldChangeIndex(currentIndex: 1, newIndex: 0),
@@ -139,7 +139,7 @@ class AnswersAnimationTests: XCTestCase {
     
     // MARK: - act & assert
     
-    func evaluateAndCheck(ruleAppearanceAnimation: RuleAppearanceAnimation,
+    func evaluateAndCheck(ruleAppearanceAnimation: RuleAppearance,
                           examples: [AnswersAnimationType]) {
         // arrange
         var answersAnimation = AnswersAnimation()

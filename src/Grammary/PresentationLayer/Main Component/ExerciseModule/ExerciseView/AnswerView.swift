@@ -73,19 +73,26 @@ class AnswerView: UIView {
     
     // MARK: - Public functions
     
-    func showAnswerAnimation(correctAnswer: Bool, completion: CommonBlock? = nil) {
+    func showAnswerResult(correctAnswer: Bool, animated: Bool, completion: CommonBlock? = nil) {
         gradientView.alpha = 0
         gradientView.isHidden = false
         
         gradientView.topColor = correctAnswer ? UIColor.appleGreen : UIColor.grapefruit
         gradientView.bottomColor = correctAnswer ? UIColor.grassyGreen : UIColor.orangeRed
         
-        UIView.animate(withDuration: 0.25, animations: {
+        let block = {
             self.gradientView.alpha = 1
             self.layer.borderWidth = 0
-        }, completion: { _ in
+        }
+        
+        if animated {
+            UIView.animate(withDuration: 0.25, animations: block) { _ in
+                completion?()
+            }
+        } else {
+            block()
             completion?()
-        })
+        }
     }
     
     func resetAnswerState() {
