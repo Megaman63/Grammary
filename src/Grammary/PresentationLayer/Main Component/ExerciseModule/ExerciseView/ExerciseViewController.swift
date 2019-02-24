@@ -22,6 +22,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     
     // MARK: - Private properties
     
+    private var firstAppear = true
     private var scrollView: UIScrollView!
     private var scrollContentView: UIView!
     private var progressView: ProgressView!
@@ -38,12 +39,15 @@ final class ExerciseViewController: UIViewController, ExerciseView {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.didTriggerViewReadyEvent()
+        if firstAppear {
+            firstAppear = false
+            configureViews()
+            presenter?.didTriggerViewReadyEvent()
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -272,8 +276,8 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         progressView.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-16)
             $0.leading.equalToSuperview().offset(16)
-            $0.top.equalToSuperview().offset(5)
-            $0.height.equalTo(ProgressView.Constants.progressGradientViewHeight)
+            $0.top.equalToSuperview().offset(69)
+            $0.height.equalTo(progressView.progressGradientViewHeight)
         }
         progressView.set(progress: 0.5, animated: true)
     }

@@ -10,9 +10,7 @@ import UIKit
 
 class ProgressView: UIView {
     
-    enum Constants {
-        static let progressGradientViewHeight: CGFloat = 8
-        static let stripViewHeight: CGFloat = 4
+    private enum Constants {
         static let fullAnimationDuration = 1.0
     }
     
@@ -24,23 +22,25 @@ class ProgressView: UIView {
         }
     }
     
+    var progressGradientViewHeight: CGFloat = 8 {
+        didSet {
+            progressGradientView.cornerRadius = progressGradientViewHeight/2
+            setNeedsLayout()
+        }
+    }
+    
+    var stripViewHeight: CGFloat = 4 {
+        didSet {
+            stripView.layer.cornerRadius = stripViewHeight/2
+            setNeedsLayout()
+        }
+    }
+    
     // MARK: - Private properties
     
-    private var progressGradientView: GradientView = {
-        let view = GradientView()
-        view.topColor = .frenchBlue
-        view.bottomColor = .purpley
-        view.cornerRadius = Constants.progressGradientViewHeight/2
-        return view
-    }()
+    private var progressGradientView: GradientView!
     
-    private var stripView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .darkTwo
-        view.clipsToBounds = true
-        view.layer.cornerRadius = Constants.stripViewHeight/2
-        return view
-    }()
+    private var stripView: UIView!
     
     // MARK: - Init
     
@@ -50,27 +50,36 @@ class ProgressView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setup()
     }
     
     func setup() {
+        stripView = UIView()
+        stripView.backgroundColor = .darkTwo
+        stripView.clipsToBounds = true
+        stripView.layer.cornerRadius = stripViewHeight/2
         addSubview(stripView)
+        
+        progressGradientView = GradientView()
+        progressGradientView.gradientType = .progress
+        progressGradientView.cornerRadius = progressGradientViewHeight/2
         addSubview(progressGradientView)
     }
     
     // MARK: - UIView
     
     override func layoutSubviews() {
-        let width = max(frame.width * progress, Constants.progressGradientViewHeight)
+        let width = max(frame.width * progress, progressGradientViewHeight)
         progressGradientView.frame = CGRect(x: 0,
-                                            y: frame.height/2 - Constants.progressGradientViewHeight / 2,
+                                            y: frame.height/2 - progressGradientViewHeight / 2,
                                             width: width,
-                                            height: Constants.progressGradientViewHeight)
+                                            height: progressGradientViewHeight)
         
         stripView.frame = CGRect(x: 0,
-                                 y: frame.height/2 - Constants.stripViewHeight / 2,
+                                 y: frame.height/2 - stripViewHeight / 2,
                                  width: frame.width,
-                                 height: Constants.stripViewHeight)
+                                 height: stripViewHeight)
     }
     
     // MARK: - Public funstions

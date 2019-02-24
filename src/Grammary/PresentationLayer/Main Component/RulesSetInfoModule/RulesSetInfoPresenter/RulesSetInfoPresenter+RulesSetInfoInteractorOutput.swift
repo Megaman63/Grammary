@@ -32,23 +32,104 @@ extension RulesSetInfoPresenterImpl: RulesSetInfoInteractorOutput {
         rulesSet.progress.forEach { totalProgress = totalProgress + $0.percentOfProgress }
         totalProgress = totalProgress / Double(rulesSet.progress.count)
         
-        let rulesSetId = rulesSet.id
         let headerItem = RulesSetHeaderItem(
-            name: rulesSet.name,
+            title: rulesSet.name,
+            description: rulesSet.setDescription,
             totalProgress: totalProgress,
-            nextReviseRecommendedDateString: "\(rulesSet.nextReviseRecommendedDate)"
-        ) { [weak router] in
-            router?.showExercise(rulesSetId: rulesSetId)
+            reviseRecommendation: getReviseRecommendation(date: rulesSet.nextReviseRecommendedDate)
+        )
+        view?.configure(headerItem: headerItem)
+        
+        let ruleItems: [RuleProgressItem] = rulesSet
+            .progress
+            .enumerated()
+            .map { (index, progress) -> RuleProgressItem in
+                RuleProgressItem(name: progress.rule?.ruleDescription ?? "",
+                                 errorCount: progress.errorCount,
+                                 correctAnswers: progress.progress,
+                                 index: index)
         }
         
-        let ruleItems: [RuleProgressItem] = rulesSet.progress.map {
-            RuleProgressItem(name: $0.rule?.ruleDescription ?? "",
-                             errorCount: $0.errorCount,
-                             correctAnswers: $0.progress)
-        }
-        
-        let items: [TableViewItem] = [headerItem] + ruleItems
-        state.sections = [CommonAnyTypeSection(items: items, didSelectItem: nil)]
+        let items: [CollectionViewItem] = ruleItems
+        state.sections = [CommonAnyTypeCollectionViewSection(items: items, didSelectItem: nil)]
         view?.set(dataSource: state.sections)
+    }
+    
+    private func getReviseRecommendation(date: Date) -> ReviseRecommendation {
+        let calendar = Calendar.current
+
+        if calendar.isDateInYesterday(date) {
+            return .urgentRevise
+        }
+        else if calendar.isDateInToday(date) {
+            return .reviseIsNeeded
+        }
+        else if calendar.isDateInTomorrow(date) {
+            return .relax(nextRevise: "Завтра")
+        } else {
+            let startOfNow = calendar.startOfDay(for: Date())
+            let startOfTimeStamp = calendar.startOfDay(for: date)
+            let components = calendar.dateComponents([.day], from: startOfNow, to: startOfTimeStamp)
+            let day = components.day!
+            
+            switch day {
+            case let day where day < 1:
+                return .urgentRevise
+            case 1:
+                return .reviseIsNeeded
+            case let day where day > 1:
+                return .relax(nextRevise: "Через \(day) " + getDayEnding(day: day))
+            default:
+                return .urgentRevise
+            }
+        }
+    }
+    
+    func getDayEnding(day: Int) -> String {
+        switch day {
+        case 11, 12, 13, 14:
+            return "дней"
+        default:
+            if let lastDigitChat = String(day).last, let lastDigit = Int(String(lastDigitChat)) {
+                switch lastDigit {
+                case 1:
+                    return "день"
+                case 2,3,4:
+                    return "дня"
+                default:
+                    return "дней"
+                }
+            } else {
+                return "дней"
+            }
+        }
+    }
+}
+
+enum ReviseRecommendation {
+    case relax(nextRevise: String)
+    case urgentRevise
+    case reviseIsNeeded
+    
+    var dateString: String {
+        switch self {
+        case .relax(let nextRevise):
+            return nextRevise
+        case .reviseIsNeeded:
+            return "Сегодня"
+        case .urgentRevise:
+            return ""
+        }
+    }
+    
+    var labelString: String {
+        switch self {
+        case .relax:
+            return "Отдыхайте, тренировка"
+        case .reviseIsNeeded:
+            return "Следующая тренировка"
+        case .urgentRevise:
+            return "Необходимо срочно повторить"
+        }
     }
 }

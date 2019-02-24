@@ -97,4 +97,8 @@ extension UIFont {
     class var textStyle22: UIFont {
         return UIFont(name: "Futura-Bold", size: 16.0)!
     }
+    
+    class var textStyle23: UIFont {
+        return UIFont.systemFont(ofSize: 14.0, weight: .medium)
+    }
 }

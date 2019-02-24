@@ -75,7 +75,8 @@ final class UpdatesFacadeImpl: UpdatesFacade {
             let lastIndex = i * 10 + 10 < gerundRules.count ? i * 10 + 10 :  gerundRules.count
             let progress = gerundRules[i * 10..<lastIndex].map { getProgress(forRule: $0, reliableProgress: 6) }
             gerundSets.append(RulesSet(id: "\(i)",
-                name: "Gerund or Infinitive. Part \(i+1)",
+                name: "Part \(i+1). Gerund or Infinitive",
+                setDescription: "В предложении герундий и инфинитив часто могут выполнять одну и ту же функцию, поэтому иногда бывает трудно решить, где нужно использовать герундий, а где – инфинитив.",
                 progress: progress.toRealmList()))
         }
         return gerundSets
@@ -86,6 +87,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let conditionalProgress = contitionalRules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let conditionalSet = RulesSet(id: "c-1",
                                       name: "Conditional clauses",
+                                      setDescription: "",
                                       progress: conditionalProgress.toRealmList())
         return [conditionalSet]
     }
@@ -95,6 +97,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let articlesProgress = articleRules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let articlesSet = RulesSet(id: "a-1",
                                    name: "Articles",
+                                   setDescription: "",
                                    progress: articlesProgress.toRealmList())
         return [articlesSet]
     }
@@ -104,6 +107,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let timePrepositionsProgress = timePrepositionsRules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let timePrepositionsSet = RulesSet(id: "p-t-0",
                                            name: "Prepositions of time",
+                                           setDescription: "",
                                            progress: timePrepositionsProgress.toRealmList())
         return [timePrepositionsSet]
     }
@@ -113,6 +117,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let placePrepositionsProgress = placePrepositionsRules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let placePrepositionsSet = RulesSet(id: "p-p-0",
                                            name: "Prepositions of place",
+                                           setDescription: "",
                                            progress: placePrepositionsProgress.toRealmList())
         return [placePrepositionsSet]
     }
@@ -122,6 +127,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let set = RulesSet(id: "PresentTenses",
                            name: "Present tenses",
+                           setDescription: "",
                            progress: progress.toRealmList())
         return [set]
     }
@@ -131,6 +137,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let set = RulesSet(id: "PastTenses",
                            name: "Past tenses",
+                           setDescription: "",
                            progress: progress.toRealmList())
         return [set]
     }

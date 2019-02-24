@@ -8,12 +8,14 @@
 
 import UIKit
 
-struct RuleProgressItem: TableViewItem {
+struct RuleProgressItem: CollectionViewItem {
+    
     let name: String
     var errorCount: Int
     var correctAnswers: Int
+    let index: Int
     
-    // MARK: - TableViewItem
+    // MARK: - CollectionViewItem
     
-    static let cellClass: TableViewCellConformable.Type = RuleProgressTableViewCell.self
+    static let cellClass: CollectionViewCellConformable.Type = RuleProgressCollectionViewCell.self
 }

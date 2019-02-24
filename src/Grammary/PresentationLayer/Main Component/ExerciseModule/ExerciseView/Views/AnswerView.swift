@@ -77,8 +77,7 @@ class AnswerView: UIView {
         gradientView.alpha = 0
         gradientView.isHidden = false
         
-        gradientView.topColor = correctAnswer ? UIColor.appleGreen : UIColor.grapefruit
-        gradientView.bottomColor = correctAnswer ? UIColor.grassyGreen : UIColor.orangeRed
+        gradientView.gradientType = correctAnswer ? .green : .red
         
         let block = {
             self.gradientView.alpha = 1

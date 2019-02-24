@@ -7,9 +7,56 @@
 
 import UIKit
 
+enum GradientBaseLine {
+    case bottomLeftToTopRight
+    case leftToRight
+}
+
+struct GradientType {
+    
+    static let button   = GradientType(topColor: .veryLightPink, bottomColor: .paleLilac,   baseLine: .leftToRight)
+    static let blueBG   = GradientType(topColor: .purpley,       bottomColor: .frenchBlue,  baseLine: .leftToRight)
+    static let progress = GradientType(topColor: .frenchBlue,    bottomColor: .purpley,     baseLine: .leftToRight)
+    static let green    = GradientType(topColor: .appleGreen,    bottomColor: .grassyGreen, baseLine: .leftToRight)
+    static let red      = GradientType(topColor: .grapefruit,    bottomColor: .orangeRed,   baseLine: .leftToRight)
+    static let darkBG   = GradientType(topColor: .grapePurple,   bottomColor: .eggplant,    baseLine: .leftToRight)
+    
+    static let item0 = GradientType(topColor: .peach,       bottomColor: .pastelRed,      baseLine: .bottomLeftToTopRight)
+    static let item1 = GradientType(topColor: .fadedOrange, bottomColor: .lightMustard,   baseLine: .bottomLeftToTopRight)
+    static let item2 = GradientType(topColor: .coolBlue,    bottomColor: .lightGreyGreen, baseLine: .bottomLeftToTopRight)
+    static let item3 = GradientType(topColor: .dustyTeal,   bottomColor: .blueGreen,      baseLine: .bottomLeftToTopRight)
+    static let item4 = GradientType(topColor: .robinSEgg,   bottomColor: .lightUrple,     baseLine: .bottomLeftToTopRight)
+    
+    static let items = [item0, item1, item2, item3, item4]
+    
+    let topColor: UIColor
+    let bottomColor: UIColor
+    let baseLine: GradientBaseLine
+}
+
 @IBDesignable class GradientView: UIView {
     
     private var gradientLayer: CAGradientLayer!
+    
+    var gradientType: GradientType = .blueBG {
+        didSet {
+            topColor = gradientType.topColor
+            bottomColor = gradientType.bottomColor
+            
+            switch gradientType.baseLine {
+            case .bottomLeftToTopRight:
+                startPointX = 0
+                startPointY = 1
+                endPointX = 1
+                endPointY = 0
+            case .leftToRight:
+                startPointX = 0
+                startPointY = 0.5
+                endPointX = 1
+                endPointY = 0.5
+            }
+        }
+    }
     
     @IBInspectable var topColor: UIColor = .red {
         didSet {

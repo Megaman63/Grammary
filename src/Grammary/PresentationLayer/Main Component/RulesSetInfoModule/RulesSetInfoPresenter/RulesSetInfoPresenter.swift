@@ -36,5 +36,9 @@ final class RulesSetInfoPresenterImpl: RulesSetInfoPresenter {
     func didTriggerViewReadyEvent() {
         interactor.subscribeOnRuleSet(withId: state.rulesSetId)
     }
+    
+    func didTapStudyButton() {
+        router.showExercise(rulesSetId: state.rulesSetId)
+    }
 }
  

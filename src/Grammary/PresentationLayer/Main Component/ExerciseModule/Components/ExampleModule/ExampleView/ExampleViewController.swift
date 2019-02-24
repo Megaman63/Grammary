@@ -87,8 +87,7 @@ final class ExampleViewController: UIViewController, ExampleView {
     
     private func configureBackground() {
         let background = GradientView()
-        background.bottomColor = .frenchBlue
-        background.topColor = .purpley
+        background.gradientType = .blueBG
         view.addSubview(background)
         background.snp.makeConstraints {
             $0.edges.equalToSuperview()

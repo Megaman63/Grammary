@@ -14,6 +14,7 @@ class RulesSet: Object {
     
     @objc dynamic var id: String = ""
     @objc dynamic var name: String = ""
+    @objc dynamic var setDescription: String = ""
     @objc dynamic var nextReviseRecommendedDate: Date = Date()
     
     var progress = List<RuleProgress>()
@@ -26,11 +27,13 @@ class RulesSet: Object {
     
     convenience init(id: String,
                      name: String,
+                     setDescription: String,
                      progress: List<RuleProgress>) {
         self.init()
         
         self.id = id
         self.name = name
+        self.setDescription = setDescription
         self.progress = progress
     }
 }

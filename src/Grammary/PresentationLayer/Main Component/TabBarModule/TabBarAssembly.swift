@@ -20,9 +20,11 @@ final class TabBarAssembly {
         settingsController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
 
         let rulesSetsNavigationController = UINavigationController(rootViewController: rulesSetsController)
-        rulesSetsNavigationController.navigationBar.barTintColor = .dark
-        rulesSetsNavigationController.navigationBar.isTranslucent = false
         rulesSetsNavigationController.navigationBar.tintColor = UIColor.white.withAlphaComponent(0.5)
+        rulesSetsNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        rulesSetsNavigationController.navigationBar.shadowImage = UIImage()
+        rulesSetsNavigationController.navigationBar.isTranslucent = true
+        rulesSetsNavigationController.view.backgroundColor = .clear
         
         view.viewControllers = [
             rulesSetsNavigationController,

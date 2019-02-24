@@ -26,6 +26,8 @@ final class RulesSetInfoAssembly {
         interactor.output = presenter
         router.viewController = view
 
+        view.hidesBottomBarWhenPushed = true
+        
         return view
     }
 }

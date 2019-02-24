@@ -10,7 +10,7 @@ import UIKit
 
 struct RulesSetInfoState {
     let rulesSetId: String
-    var sections: [CommonAnyTypeSection] = []
+    var sections: [CommonAnyTypeCollectionViewSection] = []
     
     init(rulesSetId: String) {
         self.rulesSetId = rulesSetId

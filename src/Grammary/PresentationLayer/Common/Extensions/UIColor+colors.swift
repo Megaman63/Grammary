@@ -106,4 +106,11 @@ extension UIColor {
         return UIColor(red: 28.0 / 255.0, green: 16.0 / 255.0, blue: 40.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var eggplant: UIColor {
+        return UIColor(red: 36.0 / 255.0, green: 13.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var grapePurple: UIColor {
+        return UIColor(red: 48.0 / 255.0, green: 24.0 / 255.0, blue: 72.0 / 255.0, alpha: 1.0)
+    }
 }

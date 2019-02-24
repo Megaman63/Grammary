@@ -18,6 +18,7 @@ protocol RulesSetInfoRouter: AnyObject {
 // MARK: - Presenter
 
 protocol RulesSetInfoPresenter: AnyObject {
+    func didTapStudyButton()
     func didTriggerViewReadyEvent()
 }
 
@@ -37,5 +38,6 @@ protocol RulesSetInfoInteractorOutput: AnyObject {
 
 protocol RulesSetInfoView: AnyObject {
 	var presenter: RulesSetInfoPresenter? { get set }
-    func set(dataSource: [TableViewSection])
+    func configure(headerItem: RulesSetHeaderItem)
+    func set(dataSource: [CollectionViewSection])
 }

@@ -8,13 +8,11 @@
 
 import UIKit
 
-struct RulesSetHeaderItem: TableViewItem {
-    let name: String
+struct RulesSetHeaderItem {
+    let title: String
+    let description: String
+    
     var totalProgress: Double
-    var nextReviseRecommendedDateString: String?
-    var onStudyTap: (CommonBlock)?
     
-    // MARK: - TableViewItem
-    
-    static let cellClass: TableViewCellConformable.Type = RulesSetHeaderTableViewCell.self
+    var reviseRecommendation: ReviseRecommendation
 }

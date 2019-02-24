@@ -73,6 +73,15 @@
 		A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7A21F33C6C009FDFFD /* ArticleParser.swift */; };
 		A50CBE7D21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */; };
 		A52855F221DE409100228F0E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52855F121DE409100228F0E /* Question.swift */; };
+		A52CD7DC2221634300503CF8 /* CollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7DB2221634300503CF8 /* CollectionViewManager.swift */; };
+		A52CD7E0222163C000503CF8 /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7DF222163C000503CF8 /* CollectionViewItem.swift */; };
+		A52CD7E2222163F200503CF8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7E1222163F200503CF8 /* CollectionViewCell.swift */; };
+		A52CD7E4222164F800503CF8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7E3222164F800503CF8 /* UICollectionView+Extension.swift */; };
+		A52CD7E6222165C000503CF8 /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7E5222165C000503CF8 /* CollectionViewSection.swift */; };
+		A52CD7E922216BCC00503CF8 /* RuleProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7E722216BCC00503CF8 /* RuleProgressCollectionViewCell.swift */; };
+		A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52CD7E822216BCC00503CF8 /* RuleProgressCollectionViewCell.xib */; };
+		A52CD7EE22217F2D00503CF8 /* SpringFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7EC22217F2D00503CF8 /* SpringFlowLayout.swift */; };
+		A52CD7EF22217F2D00503CF8 /* BehaviorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
 		A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */; };
@@ -84,10 +93,6 @@
 		A55FCB5A21E2F60C009932A2 /* RulesSetInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */; };
 		A55FCB5B21E2F60C009932A2 /* RulesSetInfoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB5221E2F60C009932A2 /* RulesSetInfoState.swift */; };
 		A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB5F21E2F7EC009932A2 /* RulesSetHeaderItem.swift */; };
-		A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */; };
-		A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */; };
-		A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */; };
-		A55FCB6D21E2FBA0009932A2 /* RuleProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */; };
 		A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB6E21E2FCC1009932A2 /* RuleProgressItem.swift */; };
 		A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */; };
 		A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5737A8721DCF4270037AAFD /* RuleLocalService.swift */; };
@@ -221,6 +226,15 @@
 		A50CBE7A21F33C6C009FDFFD /* ArticleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleParser.swift; sourceTree = "<group>"; };
 		A50CBE7C21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsOfPlaceParser.swift; sourceTree = "<group>"; };
 		A52855F121DE409100228F0E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A52CD7DB2221634300503CF8 /* CollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewManager.swift; sourceTree = "<group>"; };
+		A52CD7DF222163C000503CF8 /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		A52CD7E1222163F200503CF8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A52CD7E3222164F800503CF8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		A52CD7E5222165C000503CF8 /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
+		A52CD7E722216BCC00503CF8 /* RuleProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressCollectionViewCell.swift; sourceTree = "<group>"; };
+		A52CD7E822216BCC00503CF8 /* RuleProgressCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleProgressCollectionViewCell.xib; sourceTree = "<group>"; };
+		A52CD7EC22217F2D00503CF8 /* SpringFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringFlowLayout.swift; sourceTree = "<group>"; };
+		A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorManager.swift; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
 		A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoRouter.swift; sourceTree = "<group>"; };
@@ -232,10 +246,6 @@
 		A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetInfoViewController.xib; sourceTree = "<group>"; };
 		A55FCB5221E2F60C009932A2 /* RulesSetInfoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoState.swift; sourceTree = "<group>"; };
 		A55FCB5F21E2F7EC009932A2 /* RulesSetHeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetHeaderItem.swift; sourceTree = "<group>"; };
-		A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressTableViewCell.swift; sourceTree = "<group>"; };
-		A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleProgressTableViewCell.xib; sourceTree = "<group>"; };
 		A55FCB6E21E2FCC1009932A2 /* RuleProgressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressItem.swift; sourceTree = "<group>"; };
 		A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFacade.swift; sourceTree = "<group>"; };
 		A5737A8721DCF4270037AAFD /* RuleLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleLocalService.swift; sourceTree = "<group>"; };
@@ -342,8 +352,10 @@
 		1CEC0CE121D905A3003C9C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A52CD7EB22217F2300503CF8 /* SpringyCollectionView */,
 				A5FC166B220DD93400194793 /* GradientView.swift */,
 				A5FC165C220DC68E00194793 /* Pulley */,
+				A52CD7DD2221634F00503CF8 /* CollectionViewManager */,
 				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
 				1CEC0D0B21D94579003C9C7A /* Extensions */,
 				1CEC0D0A21D9456E003C9C7A /* Constants */,
@@ -413,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */,
+				A52CD7E3222164F800503CF8 /* UICollectionView+Extension.swift */,
 				A5737A9721DD4FEC0037AAFD /* UIView+Extension.swift */,
 				A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */,
 				A5FC1665220DD63B00194793 /* UIColor+colors.swift */,
@@ -823,6 +836,34 @@
 			path = "Core Services";
 			sourceTree = "<group>";
 		};
+		A52CD7DD2221634F00503CF8 /* CollectionViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD7DE2221636000503CF8 /* Protocols */,
+				A52CD7DB2221634300503CF8 /* CollectionViewManager.swift */,
+			);
+			path = CollectionViewManager;
+			sourceTree = "<group>";
+		};
+		A52CD7DE2221636000503CF8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD7DF222163C000503CF8 /* CollectionViewItem.swift */,
+				A52CD7E1222163F200503CF8 /* CollectionViewCell.swift */,
+				A52CD7E5222165C000503CF8 /* CollectionViewSection.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A52CD7EB22217F2300503CF8 /* SpringyCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD7EC22217F2D00503CF8 /* SpringFlowLayout.swift */,
+				A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */,
+			);
+			path = SpringyCollectionView;
+			sourceTree = "<group>";
+		};
 		A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,7 +890,7 @@
 		A55FCB5D21E2F63A009932A2 /* RulesSetInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				A55FCB6221E2F944009932A2 /* TableView */,
+				A55FCB6221E2F944009932A2 /* CollectionView */,
 				A55FCB4C21E2F60C009932A2 /* RulesSetInfoViewController.swift */,
 				A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */,
 			);
@@ -874,39 +915,29 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
-		A55FCB6221E2F944009932A2 /* TableView */ = {
+		A55FCB6221E2F944009932A2 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				A55FCB6321E2F94D009932A2 /* Cells */,
 			);
-			path = TableView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		A55FCB6321E2F94D009932A2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A55FCB6921E2FB87009932A2 /* RuleProgressTableViewCell */,
-				A55FCB6821E2FB81009932A2 /* RulesSetHeaderTableViewCell */,
+				A55FCB6921E2FB87009932A2 /* RuleProgressCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		A55FCB6821E2FB81009932A2 /* RulesSetHeaderTableViewCell */ = {
+		A55FCB6921E2FB87009932A2 /* RuleProgressCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				A55FCB6421E2F964009932A2 /* RulesSetHeaderTableViewCell.swift */,
-				A55FCB6521E2F964009932A2 /* RulesSetHeaderTableViewCell.xib */,
+				A52CD7E722216BCC00503CF8 /* RuleProgressCollectionViewCell.swift */,
+				A52CD7E822216BCC00503CF8 /* RuleProgressCollectionViewCell.xib */,
 			);
-			path = RulesSetHeaderTableViewCell;
-			sourceTree = "<group>";
-		};
-		A55FCB6921E2FB87009932A2 /* RuleProgressTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				A55FCB6A21E2FBA0009932A2 /* RuleProgressTableViewCell.swift */,
-				A55FCB6B21E2FBA0009932A2 /* RuleProgressTableViewCell.xib */,
-			);
-			path = RuleProgressTableViewCell;
+			path = RuleProgressCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		A5737A7F21DCF18C0037AAFD /* Services */ = {
@@ -1204,12 +1235,11 @@
 			files = (
 				1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */,
 				A55FCB5A21E2F60C009932A2 /* RulesSetInfoViewController.xib in Resources */,
-				A55FCB6D21E2FBA0009932A2 /* RuleProgressTableViewCell.xib in Resources */,
 				1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */,
-				A55FCB6721E2F964009932A2 /* RulesSetHeaderTableViewCell.xib in Resources */,
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				A5FC168222109F9600194793 /* ExampleActionButtonTableViewCell.xib in Resources */,
 				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
+				A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
 				A5FC167A2210971B00194793 /* ExampleHeaderTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
@@ -1323,6 +1353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52CD7EF22217F2D00503CF8 /* BehaviorManager.swift in Sources */,
 				A5FC166A220DD7B200194793 /* ProgressView.swift in Sources */,
 				1CFCD67F21D3F16B00F9D5A8 /* ExercisePresenter+ExerciseInteractorOutput.swift in Sources */,
 				1CEC0D2621DA2070003C9C7A /* RulesSetItem.swift in Sources */,
@@ -1349,7 +1380,9 @@
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
+				A52CD7EE22217F2D00503CF8 /* SpringFlowLayout.swift in Sources */,
 				A5FC168C2210C35D00194793 /* Assets.swift in Sources */,
+				A52CD7E922216BCC00503CF8 /* RuleProgressCollectionViewCell.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
@@ -1357,6 +1390,7 @@
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
 				A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */,
 				A586392B221994B800CDC204 /* PastContinuousParser.swift in Sources */,
+				A52CD7E4222164F800503CF8 /* UICollectionView+Extension.swift in Sources */,
 				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
 				A5FC1664220DC8BC00194793 /* UIView+constrainToParent.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
@@ -1367,8 +1401,10 @@
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
+				A52CD7DC2221634300503CF8 /* CollectionViewManager.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				A50CBE4921F30C49009FDFFD /* SettingsInteractor.swift in Sources */,
+				A52CD7E2222163F200503CF8 /* CollectionViewCell.swift in Sources */,
 				1CFCD67B21D3F16B00F9D5A8 /* ExerciseViewController.swift in Sources */,
 				A5FC166C220DD93500194793 /* GradientView.swift in Sources */,
 				A50BD87621E5A11C0080D1C0 /* ReportedSpeechParser.swift in Sources */,
@@ -1399,7 +1435,7 @@
 				A50CBE4A21F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
-				A55FCB6C21E2FBA0009932A2 /* RuleProgressTableViewCell.swift in Sources */,
+				A52CD7E0222163C000503CF8 /* CollectionViewItem.swift in Sources */,
 				1CEC0CD821D4007D003C9C7A /* ConditionalParser.swift in Sources */,
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
 				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
@@ -1423,12 +1459,12 @@
 				A50CBE7421F329EA009FDFFD /* QuestionLocalService.swift in Sources */,
 				A5FC1674221001B400194793 /* AnswersAnimation.swift in Sources */,
 				A5737A9821DD4FEC0037AAFD /* UIView+Extension.swift in Sources */,
+				A52CD7E6222165C000503CF8 /* CollectionViewSection.swift in Sources */,
 				A5FC166E220EBB6B00194793 /* AnswerView.swift in Sources */,
 				A5737A8221DCF1A90037AAFD /* ExerciseFacade.swift in Sources */,
 				A50CBE6B21F31E69009FDFFD /* RulesSetsInteractor+RulesSetNotificationCenterDelegate.swift in Sources */,
 				A58639272219938B00CDC204 /* PresentSimpleParser.swift in Sources */,
 				1CEC0D3621DA2C73003C9C7A /* TabBarAssembly.swift in Sources */,
-				A55FCB6621E2F964009932A2 /* RulesSetHeaderTableViewCell.swift in Sources */,
 				1CEC0CF721D90E6D003C9C7A /* RulesSetsInteractor.swift in Sources */,
 				A50CBE4421F30C49009FDFFD /* SettingsPresenter.swift in Sources */,
 				1CFCD67C21D3F16B00F9D5A8 /* ExerciseProtocols.swift in Sources */,

@@ -35,8 +35,7 @@ class NextButton: UIView {
         clipsToBounds = true
 
         let gradientView = GradientView(frame: .zero)
-        gradientView.topColor = .veryLightPink
-        gradientView.bottomColor = .paleLilac
+        gradientView.gradientType = .button
         addSubview(gradientView)
         gradientView.snp.makeConstraints {
             $0.edges.equalToSuperview()
