@@ -82,6 +82,8 @@
 		A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52CD7E822216BCC00503CF8 /* RuleProgressCollectionViewCell.xib */; };
 		A52CD7EE22217F2D00503CF8 /* SpringFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7EC22217F2D00503CF8 /* SpringFlowLayout.swift */; };
 		A52CD7EF22217F2D00503CF8 /* BehaviorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */; };
+		A52CD7F42222F6C600503CF8 /* RuleSetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */; };
+		A52CD7F62222F6DE00503CF8 /* RuleTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
 		A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */; };
@@ -235,6 +237,8 @@
 		A52CD7E822216BCC00503CF8 /* RuleProgressCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleProgressCollectionViewCell.xib; sourceTree = "<group>"; };
 		A52CD7EC22217F2D00503CF8 /* SpringFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringFlowLayout.swift; sourceTree = "<group>"; };
 		A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorManager.swift; sourceTree = "<group>"; };
+		A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetHeaderView.swift; sourceTree = "<group>"; };
+		A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTitleLabel.swift; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
 		A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoRouter.swift; sourceTree = "<group>"; };
@@ -864,6 +868,15 @@
 			path = SpringyCollectionView;
 			sourceTree = "<group>";
 		};
+		A52CD7F22222F6B300503CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */,
+				A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +903,7 @@
 		A55FCB5D21E2F63A009932A2 /* RulesSetInfoView */ = {
 			isa = PBXGroup;
 			children = (
+				A52CD7F22222F6B300503CF8 /* Views */,
 				A55FCB6221E2F944009932A2 /* CollectionView */,
 				A55FCB4C21E2F60C009932A2 /* RulesSetInfoViewController.swift */,
 				A55FCB5121E2F60C009932A2 /* RulesSetInfoViewController.xib */,
@@ -1402,6 +1416,7 @@
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
 				A52CD7DC2221634300503CF8 /* CollectionViewManager.swift in Sources */,
+				A52CD7F62222F6DE00503CF8 /* RuleTitleLabel.swift in Sources */,
 				1CFCD67D21D3F16B00F9D5A8 /* ExerciseAssembly.swift in Sources */,
 				A50CBE4921F30C49009FDFFD /* SettingsInteractor.swift in Sources */,
 				A52CD7E2222163F200503CF8 /* CollectionViewCell.swift in Sources */,
@@ -1435,6 +1450,7 @@
 				A50CBE4A21F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
+				A52CD7F42222F6C600503CF8 /* RuleSetHeaderView.swift in Sources */,
 				A52CD7E0222163C000503CF8 /* CollectionViewItem.swift in Sources */,
 				1CEC0CD821D4007D003C9C7A /* ConditionalParser.swift in Sources */,
 				1CEC0CE421D905C0003C9C7A /* PresentationConstants.swift in Sources */,
