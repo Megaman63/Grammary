@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RulesSetsViewController" customModule="Grammary" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="ArY-5O-7Qb" id="BcA-oA-8oW"/>
+                <outlet property="collectionView" destination="L70-sI-zuq" id="GbG-KF-VJz"/>
+                <outlet property="filtersView" destination="Zrq-M8-FZR" id="H16-eg-6Gj"/>
+                <outlet property="flowLayout" destination="Ofd-hg-s3a" id="NO3-In-5mi"/>
+                <outlet property="searchTextField" destination="bhZ-i3-eZc" id="DG8-Oo-WPf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="filterButtons" destination="c6a-aB-QFm" collectionClass="NSMutableArray" id="zGm-OG-a6D"/>
+                <outletCollection property="filterButtons" destination="gmJ-Zs-59k" collectionClass="NSMutableArray" id="fiR-io-Pke"/>
+                <outletCollection property="filterButtons" destination="8Zj-9Z-idP" collectionClass="NSMutableArray" id="1bv-TK-E7W"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,18 +26,99 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ArY-5O-7Qb">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L70-sI-zuq">
+                    <rect key="frame" x="0.0" y="124" width="375" height="538"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="17" minimumInteritemSpacing="17" id="Ofd-hg-s3a" customClass="SpringyFlowLayout" customModule="Grammary" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="80"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="springyRow" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrq-M8-FZR">
+                    <rect key="frame" x="16" y="84" width="343" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmJ-Zs-59k">
+                            <rect key="frame" x="114.5" y="0.0" width="113" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="На изучении"/>
+                            <connections>
+                                <action selector="didTapFilterButton:" destination="-1" eventType="touchUpInside" id="o45-Gb-csi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zj-9Z-idP">
+                            <rect key="frame" x="229.5" y="0.0" width="113.5" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Не начатые"/>
+                            <connections>
+                                <action selector="didTapFilterButton:" destination="-1" eventType="touchUpInside" id="gwW-22-JS1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6a-aB-QFm">
+                            <rect key="frame" x="0.0" y="0.0" width="113.5" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Все"/>
+                            <connections>
+                                <action selector="didTapFilterButton:" destination="-1" eventType="touchUpInside" id="x5I-j5-jSl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gmJ-Zs-59k" firstAttribute="width" secondItem="c6a-aB-QFm" secondAttribute="width" id="8Ys-Oy-juN"/>
+                        <constraint firstAttribute="bottom" secondItem="8Zj-9Z-idP" secondAttribute="bottom" id="C44-75-oTK"/>
+                        <constraint firstAttribute="bottom" secondItem="gmJ-Zs-59k" secondAttribute="bottom" id="C5D-PW-YjG"/>
+                        <constraint firstAttribute="trailing" secondItem="8Zj-9Z-idP" secondAttribute="trailing" id="N3n-aI-p3L"/>
+                        <constraint firstAttribute="height" constant="36" id="Qlk-l0-XdO"/>
+                        <constraint firstItem="8Zj-9Z-idP" firstAttribute="width" secondItem="c6a-aB-QFm" secondAttribute="width" id="TlE-4R-Zag"/>
+                        <constraint firstItem="c6a-aB-QFm" firstAttribute="top" secondItem="Zrq-M8-FZR" secondAttribute="top" id="Yb8-JZ-CLl"/>
+                        <constraint firstItem="8Zj-9Z-idP" firstAttribute="top" secondItem="Zrq-M8-FZR" secondAttribute="top" id="e5r-uA-MN8"/>
+                        <constraint firstAttribute="bottom" secondItem="c6a-aB-QFm" secondAttribute="bottom" id="f0W-fh-UFU"/>
+                        <constraint firstItem="gmJ-Zs-59k" firstAttribute="top" secondItem="Zrq-M8-FZR" secondAttribute="top" id="qr3-k2-IyD"/>
+                        <constraint firstItem="gmJ-Zs-59k" firstAttribute="leading" secondItem="c6a-aB-QFm" secondAttribute="trailing" constant="1" id="rUO-ly-o9X"/>
+                        <constraint firstItem="c6a-aB-QFm" firstAttribute="leading" secondItem="Zrq-M8-FZR" secondAttribute="leading" id="yaW-r7-Ss5"/>
+                        <constraint firstItem="8Zj-9Z-idP" firstAttribute="leading" secondItem="gmJ-Zs-59k" secondAttribute="trailing" constant="2" id="ynE-xV-OHX"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Поиск" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bhZ-i3-eZc" customClass="TextField" customModule="Grammary" customModuleProvider="target">
+                    <rect key="frame" x="16" y="36" width="343" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="1Cm-oL-djX"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetX">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didChangeSearchText:" destination="-1" eventType="editingChanged" id="FCF-Hj-wsM"/>
+                    </connections>
+                </textField>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.062745098040000002" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ArY-5O-7Qb" secondAttribute="bottom" id="17x-PN-NDu"/>
-                <constraint firstItem="ArY-5O-7Qb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dwj-mJ-nva"/>
-                <constraint firstItem="ArY-5O-7Qb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hvn-dv-Qhf"/>
-                <constraint firstAttribute="trailing" secondItem="ArY-5O-7Qb" secondAttribute="trailing" id="KUp-8w-dWP"/>
+                <constraint firstItem="bhZ-i3-eZc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="5qo-64-ISf"/>
+                <constraint firstAttribute="trailing" secondItem="Zrq-M8-FZR" secondAttribute="trailing" constant="16" id="Aoq-pC-zWG"/>
+                <constraint firstAttribute="trailing" secondItem="bhZ-i3-eZc" secondAttribute="trailing" constant="16" id="DbO-hB-zdR"/>
+                <constraint firstItem="L70-sI-zuq" firstAttribute="top" secondItem="Zrq-M8-FZR" secondAttribute="bottom" constant="4" id="Nlf-R9-gpN"/>
+                <constraint firstAttribute="trailing" secondItem="L70-sI-zuq" secondAttribute="trailing" id="Tyy-5c-OAA"/>
+                <constraint firstItem="L70-sI-zuq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WhC-HE-txW"/>
+                <constraint firstItem="Zrq-M8-FZR" firstAttribute="top" secondItem="bhZ-i3-eZc" secondAttribute="bottom" constant="12" id="abP-cZ-pah"/>
+                <constraint firstItem="bhZ-i3-eZc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="gmL-X4-z8D"/>
+                <constraint firstAttribute="bottom" secondItem="L70-sI-zuq" secondAttribute="bottom" constant="5" id="gp2-jB-0yQ"/>
+                <constraint firstItem="Zrq-M8-FZR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mmo-Hc-BHE"/>
             </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="151.57421289355324"/>
         </view>
     </objects>
 </document>

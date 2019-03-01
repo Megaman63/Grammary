@@ -17,15 +17,8 @@ extension RulesSetsPresenterImpl: RulesSetsInteractorOutput {
         case .error(let error):
             printError(error)
         case .initial(let sets), .update(let sets, _, _, _):
-            let items: [RulesSetItem] = sets.map { set -> RulesSetItem in
-                return RulesSetItem(id: set.id, name: set.name, totalProgress: set.totalProgress)
-            }
-            let section = CommonSection(items: items) { [weak router] index in
-                router?.showRulesSetInfo(rulesSetId: sets[index].id)
-            }
-            
-            state.sections = [section]
-            view?.set(dataSource: state.sections)
+            state.sets = sets.toArray()
+            buildSections()
         }
     }
 }

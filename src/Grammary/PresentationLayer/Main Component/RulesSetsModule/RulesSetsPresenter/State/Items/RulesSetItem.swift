@@ -8,12 +8,15 @@
 
 import UIKit
 
-struct RulesSetItem: TableViewItem {
+struct RulesSetItem: CollectionViewItem {
     let id: String
     let name: String
-    var totalProgress: Double
+    let sibtitle: String
+    let totalProgress: Double
+    let index: Int
+    let searchText: String
     
-    // MARK: - TableViewItem
+    // MARK: - CollectionViewItem
     
-    static let cellClass: TableViewCellConformable.Type = RulesSetTableViewCell.self
+    static let cellClass: CollectionViewCellConformable.Type = RulesSetCollectionViewCell.self
 }

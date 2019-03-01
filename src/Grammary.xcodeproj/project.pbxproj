@@ -26,8 +26,6 @@
 		1CEC0D0921D9453B003C9C7A /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */; };
 		1CEC0D0E21DA0918003C9C7A /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */; };
 		1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */; };
-		1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */; };
-		1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */; };
 		1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */; };
 		1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */; };
 		1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC0D2221DA1F30003C9C7A /* ExersiceConstants.swift */; };
@@ -84,6 +82,8 @@
 		A52CD7EF22217F2D00503CF8 /* BehaviorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */; };
 		A52CD7F42222F6C600503CF8 /* RuleSetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */; };
 		A52CD7F62222F6DE00503CF8 /* RuleTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */; };
+		A55D37932229853D008261FC /* RulesSetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */; };
+		A55D37942229853D008261FC /* RulesSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
 		A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */; };
@@ -175,8 +175,6 @@
 		1CEC0D0821D9453B003C9C7A /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 		1CEC0D0D21DA0918003C9C7A /* TableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
 		1CEC0D0F21DA0B00003C9C7A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetTableViewCell.swift; sourceTree = "<group>"; };
-		1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetTableViewCell.xib; sourceTree = "<group>"; };
 		1CEC0D1921DA0CC5003C9C7A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1CEC0D1B21DA0E39003C9C7A /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
 		1CEC0D2221DA1F30003C9C7A /* ExersiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersiceConstants.swift; sourceTree = "<group>"; };
@@ -239,6 +237,8 @@
 		A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorManager.swift; sourceTree = "<group>"; };
 		A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetHeaderView.swift; sourceTree = "<group>"; };
 		A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTitleLabel.swift; sourceTree = "<group>"; };
+		A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetCollectionViewCell.swift; sourceTree = "<group>"; };
+		A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetCollectionViewCell.xib; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
 		A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoRouter.swift; sourceTree = "<group>"; };
@@ -402,19 +402,19 @@
 		1CEC0CFF21D91031003C9C7A /* RulesSetsView */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D0721D9453B003C9C7A /* TableView */,
+				1CEC0D0721D9453B003C9C7A /* CollectionView */,
 				1CEC0D0121D91031003C9C7A /* RulesSetsViewController.swift */,
 				1CEC0D0221D91031003C9C7A /* RulesSetsViewController.xib */,
 			);
 			path = RulesSetsView;
 			sourceTree = "<group>";
 		};
-		1CEC0D0721D9453B003C9C7A /* TableView */ = {
+		1CEC0D0721D9453B003C9C7A /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				1CEC0D1321DA0C4C003C9C7A /* Cells */,
 			);
-			path = TableView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		1CEC0D0A21D9456E003C9C7A /* Constants */ = {
@@ -451,18 +451,18 @@
 		1CEC0D1321DA0C4C003C9C7A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D1821DA0C70003C9C7A /* RulesSetTableViewCell */,
+				1CEC0D1821DA0C70003C9C7A /* RulesSetCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		1CEC0D1821DA0C70003C9C7A /* RulesSetTableViewCell */ = {
+		1CEC0D1821DA0C70003C9C7A /* RulesSetCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC0D1421DA0C6A003C9C7A /* RulesSetTableViewCell.swift */,
-				1CEC0D1521DA0C6A003C9C7A /* RulesSetTableViewCell.xib */,
+				A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */,
+				A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */,
 			);
-			path = RulesSetTableViewCell;
+			path = RulesSetCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		1CEC0D2021DA1F0E003C9C7A /* Common */ = {
@@ -1247,11 +1247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CEC0D1721DA0C6A003C9C7A /* RulesSetTableViewCell.xib in Resources */,
 				A55FCB5A21E2F60C009932A2 /* RulesSetInfoViewController.xib in Resources */,
 				1CFCD64521D3EA8700F9D5A8 /* LaunchScreen.storyboard in Resources */,
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				A5FC168222109F9600194793 /* ExampleActionButtonTableViewCell.xib in Resources */,
+				A55D37942229853D008261FC /* RulesSetCollectionViewCell.xib in Resources */,
 				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
 				A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
@@ -1392,7 +1392,6 @@
 				A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */,
 				A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
-				1CEC0D1621DA0C6A003C9C7A /* RulesSetTableViewCell.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
 				A52CD7EE22217F2D00503CF8 /* SpringFlowLayout.swift in Sources */,
 				A5FC168C2210C35D00194793 /* Assets.swift in Sources */,
@@ -1425,6 +1424,7 @@
 				A50BD87621E5A11C0080D1C0 /* ReportedSpeechParser.swift in Sources */,
 				A55FCB5821E2F60C009932A2 /* RulesSetInfoInteractor.swift in Sources */,
 				A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */,
+				A55D37932229853D008261FC /* RulesSetCollectionViewCell.swift in Sources */,
 				A5FC168122109F9600194793 /* ExampleActionButtonTableViewCell.swift in Sources */,
 				1CEC0CF821D90E6D003C9C7A /* RulesSetsPresenter+QuestionsSetsInteractorOutput.swift in Sources */,
 				A5737AB321DDDFF50037AAFD /* ExampleItem.swift in Sources */,

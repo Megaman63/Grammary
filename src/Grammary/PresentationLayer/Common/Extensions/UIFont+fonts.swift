@@ -101,4 +101,8 @@ extension UIFont {
     class var textStyle23: UIFont {
         return UIFont.systemFont(ofSize: 14.0, weight: .medium)
     }
+    
+    class var textStyle24: UIFont {
+        return UIFont.systemFont(ofSize: 16.0, weight: .regular)
+    }
 }

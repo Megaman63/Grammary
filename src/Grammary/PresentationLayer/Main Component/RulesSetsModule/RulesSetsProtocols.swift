@@ -18,6 +18,8 @@ protocol RulesSetsRouter: AnyObject {
 
 protocol RulesSetsPresenter: AnyObject {
     func didTriggerViewReadyEvent()
+    func didChangeSearchText(_ searchText: String)
+    func didSelectFilterAtIndex(_ index: Int)
 }
 
 // MARK: - Interactor
@@ -36,5 +38,5 @@ protocol RulesSetsInteractorOutput: AnyObject {
 
 protocol RulesSetsView: AnyObject {
 	var presenter: RulesSetsPresenter? { get set }
-    func set(dataSource: [TableViewSection])
+    func set(dataSource: [CollectionViewSection])
 }

@@ -8,6 +8,15 @@
 
 import Foundation
 
+enum RulesFilter: Int {
+    case all = 0
+    case learning
+    case notLearning
+}
+
 struct RulesSetsState {
-    var sections: [CommonSection<RulesSetItem>] = []
+    var sets: [RulesSet] = []
+    var sections: [CommonCollectionViewSection<RulesSetItem>] = []
+    var selectedFilter: RulesFilter = .all
+    var searchText = ""
 }
