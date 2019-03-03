@@ -14,6 +14,10 @@ protocol ProgressFacade: AnyObject {
     func resetProgress(forQuestionId questionId: String)
     func setMaximumProgress(forQuestionId questionId: String)
     func setNewNextReviseRecommendedDate(forRulesSetId id: String)
+    
+    func obtainTotalProgress() -> Double
+    func obtainTotalCountOfCompletedRules() -> Int
+    func ontainNextReviseRecommendedRulesSet() -> RulesSet?
 }
 
 final class ProgressFacadeImpl: ProgressFacade {
@@ -80,5 +84,40 @@ final class ProgressFacadeImpl: ProgressFacade {
         rulesSetLocalService.update(rulesSet) { rulesSet in
             rulesSet.nextReviseRecommendedDate = characteristic.evaluateNextReviseRecommendedDate()
         }
+    }
+    
+    func obtainTotalProgress() -> Double {
+        let sets = rulesSetLocalService.obtainRulesSet()
+        return sets.reduce(0.0, { $0 + $1.totalProgress }) / Double(sets.count)
+    }
+    
+    func obtainTotalCountOfCompletedRules() -> Int {
+        return rulesSetLocalService
+            .obtainRulesSet()
+            .filter { set -> Bool in
+                return set.progress.contains(where: { $0.progress > 0 })
+            }
+            .count
+    }
+    
+    func ontainNextReviseRecommendedRulesSet() -> RulesSet? {
+        let sets = rulesSetLocalService
+            .obtainRulesSet()
+            .filter { $0.nextReviseRecommendedDate != nil }
+        
+        guard
+            var nextReviseRecommendedRulesSet = sets.first,
+            var minDate = nextReviseRecommendedRulesSet.nextReviseRecommendedDate
+        else {
+            return nil
+        }
+        
+        sets.forEach {
+            if let nextReviseRecommendedDate = $0.nextReviseRecommendedDate, nextReviseRecommendedDate < minDate {
+                minDate = nextReviseRecommendedDate
+                nextReviseRecommendedRulesSet = $0
+            }
+        }
+        return nextReviseRecommendedRulesSet
     }
 }

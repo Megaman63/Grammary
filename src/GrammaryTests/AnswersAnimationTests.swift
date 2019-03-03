@@ -145,7 +145,7 @@ class AnswersAnimationTests: XCTestCase {
         var answersAnimation = AnswersAnimation()
         
         // act
-        answersAnimation.calculateAnimations(animation: ruleAppearanceAnimation)
+        answersAnimation.calculateAnimations(appearance: ruleAppearanceAnimation)
         
         // asserts
         for (index, animationType) in answersAnimation.animations.enumerated() {

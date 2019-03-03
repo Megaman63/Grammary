@@ -14,6 +14,7 @@ enum RuleAppearance {
 }
 
 struct ExerciseState {
+    let exersiceStartDate = Date()
     let rulesSetId: String
     
     var questions: [QuestionItem] = []

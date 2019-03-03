@@ -72,6 +72,10 @@ final class ExercisePresenterImpl: ExercisePresenter {
         router.dismissView()
     }
     
+    func didTriggerViewDeinitEvent() {
+        interactor.addTimeSpentOnExersice(time: -state.exersiceStartDate.timeIntervalSinceNow)
+    }
+    
     // MARK: - Public functions
     
     func show(question: QuestionItem) {

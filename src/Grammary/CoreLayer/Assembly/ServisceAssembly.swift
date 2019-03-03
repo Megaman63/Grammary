@@ -12,6 +12,7 @@ protocol ServiceAssembly: AnyObject {
     func getUpdateFacade() -> UpdatesFacade
     func getExerciseFacade() -> ExerciseFacade
     func getProgressFacade() -> ProgressFacade
+    func getAccountFacade() -> AccountFacade
     
     var rulesSetNotificationCenter: RulesSetNotificationCenter { get }
 }
@@ -37,6 +38,10 @@ final class ServiceAssemblyImpl: ServiceAssembly {
         return ProgressFacadeImpl(ruleLocalService: RuleLocalServiceImpl(),
                                   rulesSetLocalService: RulesSetLocalServiceImpl(),
                                   ruleProgressLocalService: RuleProgressLocalServiceImpl())
+    }
+    
+    func getAccountFacade() -> AccountFacade {
+        return AccountFacadeImpl(accountLocalService: AccountLocalServiceImpl())
     }
     
     lazy var rulesSetNotificationCenter: RulesSetNotificationCenter = RulesSetNotificationCenterImpl()

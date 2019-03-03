@@ -84,6 +84,26 @@
 		A52CD7F62222F6DE00503CF8 /* RuleTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */; };
 		A55D37932229853D008261FC /* RulesSetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */; };
 		A55D37942229853D008261FC /* RulesSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */; };
+		A55D379F222A693B008261FC /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D3796222A693A008261FC /* DashboardPresenter.swift */; };
+		A55D37A0222A693B008261FC /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D3797222A693A008261FC /* DashboardRouter.swift */; };
+		A55D37A1222A693B008261FC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D3798222A693A008261FC /* DashboardViewController.swift */; };
+		A55D37A2222A693B008261FC /* DashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D3799222A693A008261FC /* DashboardProtocols.swift */; };
+		A55D37A3222A693B008261FC /* DashboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D379A222A693B008261FC /* DashboardAssembly.swift */; };
+		A55D37A4222A693B008261FC /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D379B222A693B008261FC /* DashboardInteractor.swift */; };
+		A55D37A5222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D379C222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift */; };
+		A55D37A6222A693B008261FC /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D379D222A693B008261FC /* DashboardViewController.xib */; };
+		A55D37A7222A693B008261FC /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D379E222A693B008261FC /* DashboardState.swift */; };
+		A55D37AE222A70E2008261FC /* NightDashboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37AD222A70E2008261FC /* NightDashboardView.xib */; };
+		A55D37B2222A72BF008261FC /* DayDashboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37B1222A72BF008261FC /* DayDashboardView.xib */; };
+		A55D37B4222A750B008261FC /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37B3222A750B008261FC /* StatisticView.swift */; };
+		A55D37B6222A7514008261FC /* StatisticView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37B5222A7514008261FC /* StatisticView.xib */; };
+		A55D37B9222A8E3B008261FC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37B8222A8E3B008261FC /* TabBarController.swift */; };
+		A55D37BB222AA3A6008261FC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37BA222AA3A6008261FC /* RoundedView.swift */; };
+		A55D37BD222AA521008261FC /* ReviseRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37BC222AA521008261FC /* ReviseRecommendation.swift */; };
+		A55D37C0222AB525008261FC /* AccountFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37BF222AB525008261FC /* AccountFacade.swift */; };
+		A55D37C2222AB560008261FC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37C1222AB560008261FC /* Account.swift */; };
+		A55D37C5222AB651008261FC /* AccountLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37C4222AB651008261FC /* AccountLocalService.swift */; };
+		A55D37C7222BAD1E008261FC /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37C6222BAD1E008261FC /* Collection+Extension.swift */; };
 		A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */; };
 		A55FCB5321E2F60C009932A2 /* RulesSetInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */; };
 		A55FCB5421E2F60C009932A2 /* RulesSetInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */; };
@@ -239,6 +259,26 @@
 		A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTitleLabel.swift; sourceTree = "<group>"; };
 		A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetCollectionViewCell.swift; sourceTree = "<group>"; };
 		A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetCollectionViewCell.xib; sourceTree = "<group>"; };
+		A55D3796222A693A008261FC /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		A55D3797222A693A008261FC /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		A55D3798222A693A008261FC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A55D3799222A693A008261FC /* DashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardProtocols.swift; sourceTree = "<group>"; };
+		A55D379A222A693B008261FC /* DashboardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAssembly.swift; sourceTree = "<group>"; };
+		A55D379B222A693B008261FC /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		A55D379C222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardPresenter+DashboardInteractorOutput.swift"; sourceTree = "<group>"; };
+		A55D379D222A693B008261FC /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		A55D379E222A693B008261FC /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
+		A55D37AD222A70E2008261FC /* NightDashboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NightDashboardView.xib; sourceTree = "<group>"; };
+		A55D37B1222A72BF008261FC /* DayDashboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayDashboardView.xib; sourceTree = "<group>"; };
+		A55D37B3222A750B008261FC /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		A55D37B5222A7514008261FC /* StatisticView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticView.xib; sourceTree = "<group>"; };
+		A55D37B8222A8E3B008261FC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A55D37BA222AA3A6008261FC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		A55D37BC222AA521008261FC /* ReviseRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseRecommendation.swift; sourceTree = "<group>"; };
+		A55D37BF222AB525008261FC /* AccountFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFacade.swift; sourceTree = "<group>"; };
+		A55D37C1222AB560008261FC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A55D37C4222AB651008261FC /* AccountLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLocalService.swift; sourceTree = "<group>"; };
+		A55D37C6222BAD1E008261FC /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		A55FCB4721E29580009932A2 /* RuleProgressLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressLocalService.swift; sourceTree = "<group>"; };
 		A55FCB4A21E2F60C009932A2 /* RulesSetInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoPresenter.swift; sourceTree = "<group>"; };
 		A55FCB4B21E2F60C009932A2 /* RulesSetInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetInfoRouter.swift; sourceTree = "<group>"; };
@@ -336,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0CDC21D40290003C9C7A /* Rule */,
+				A55D37C1222AB560008261FC /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +404,7 @@
 				1CEC0D2721DA29C9003C9C7A /* TableViewManager */,
 				1CEC0D0B21D94579003C9C7A /* Extensions */,
 				1CEC0D0A21D9456E003C9C7A /* Constants */,
+				A55D37BC222AA521008261FC /* ReviseRecommendation.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -434,6 +476,7 @@
 				A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */,
 				A5FC1665220DD63B00194793 /* UIColor+colors.swift */,
 				A5FC1667220DD64900194793 /* UIFont+fonts.swift */,
+				A55D37C6222BAD1E008261FC /* Collection+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -504,6 +547,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D2D21DA2C73003C9C7A /* TabBarAssembly.swift */,
+				A55D37B8222A8E3B008261FC /* TabBarController.swift */,
 			);
 			path = TabBarModule;
 			sourceTree = "<group>";
@@ -561,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC0D2821DA2C49003C9C7A /* TabBarModule */,
+				A55D3795222A691C008261FC /* DashboardModule */,
 				1CEC0CE721D90E49003C9C7A /* RulesSetsModule */,
 				A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */,
 				1CFCD68221D3F16F00F9D5A8 /* ExerciseModule */,
@@ -877,6 +922,75 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A55D3795222A691C008261FC /* DashboardModule */ = {
+			isa = PBXGroup;
+			children = (
+				A55D379A222A693B008261FC /* DashboardAssembly.swift */,
+				A55D379B222A693B008261FC /* DashboardInteractor.swift */,
+				A55D37A8222A694A008261FC /* DashboardPresenter */,
+				A55D3799222A693A008261FC /* DashboardProtocols.swift */,
+				A55D3797222A693A008261FC /* DashboardRouter.swift */,
+				A55D37A9222A6953008261FC /* DashboardView */,
+			);
+			path = DashboardModule;
+			sourceTree = "<group>";
+		};
+		A55D37A8222A694A008261FC /* DashboardPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				A55D37BE222AB3F0008261FC /* State */,
+				A55D3796222A693A008261FC /* DashboardPresenter.swift */,
+				A55D379C222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift */,
+			);
+			path = DashboardPresenter;
+			sourceTree = "<group>";
+		};
+		A55D37A9222A6953008261FC /* DashboardView */ = {
+			isa = PBXGroup;
+			children = (
+				A55D37AA222A70BD008261FC /* Subviews */,
+				A55D3798222A693A008261FC /* DashboardViewController.swift */,
+				A55D379D222A693B008261FC /* DashboardViewController.xib */,
+			);
+			path = DashboardView;
+			sourceTree = "<group>";
+		};
+		A55D37AA222A70BD008261FC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A55D37AD222A70E2008261FC /* NightDashboardView.xib */,
+				A55D37B1222A72BF008261FC /* DayDashboardView.xib */,
+				A55D37B7222A7518008261FC /* StatisticView */,
+				A55D37BA222AA3A6008261FC /* RoundedView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A55D37B7222A7518008261FC /* StatisticView */ = {
+			isa = PBXGroup;
+			children = (
+				A55D37B3222A750B008261FC /* StatisticView.swift */,
+				A55D37B5222A7514008261FC /* StatisticView.xib */,
+			);
+			path = StatisticView;
+			sourceTree = "<group>";
+		};
+		A55D37BE222AB3F0008261FC /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A55D379E222A693B008261FC /* DashboardState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A55D37C3222AB646008261FC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				A55D37C4222AB651008261FC /* AccountLocalService.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		A55FCB4921E2F5C3009932A2 /* RulesSetInfoModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,6 +1071,7 @@
 		A5737A7F21DCF18C0037AAFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A55D37C3222AB646008261FC /* Account */,
 				A50CBE7221F329E1009FDFFD /* Question */,
 				A50CBE6121F319E8009FDFFD /* Rule */,
 				A50CBE6221F319F0009FDFFD /* RulesSet */,
@@ -971,6 +1086,7 @@
 				A5737A8121DCF1A90037AAFD /* ExerciseFacade.swift */,
 				A50CBE5F21F31329009FDFFD /* ProgressFacade.swift */,
 				A50CBE7021F3299E009FDFFD /* UpdatesFacade.swift */,
+				A55D37BF222AB525008261FC /* AccountFacade.swift */,
 			);
 			path = Facades;
 			sourceTree = "<group>";
@@ -1252,12 +1368,16 @@
 				1CEC0D0521D91031003C9C7A /* RulesSetsViewController.xib in Resources */,
 				A5FC168222109F9600194793 /* ExampleActionButtonTableViewCell.xib in Resources */,
 				A55D37942229853D008261FC /* RulesSetCollectionViewCell.xib in Resources */,
+				A55D37AE222A70E2008261FC /* NightDashboardView.xib in Resources */,
+				A55D37B2222A72BF008261FC /* DayDashboardView.xib in Resources */,
 				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
+				A55D37B6222A7514008261FC /* StatisticView.xib in Resources */,
 				A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
 				A5FC167A2210971B00194793 /* ExampleHeaderTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
 				A50CBE4C21F30C49009FDFFD /* SettingsViewController.xib in Resources */,
+				A55D37A6222A693B008261FC /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1377,6 +1497,7 @@
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,
+				A55D37B4222A750B008261FC /* StatisticView.swift in Sources */,
 				A50CBE4821F30C49009FDFFD /* SettingsAssembly.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
 				1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */,
@@ -1388,13 +1509,16 @@
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
 				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
+				A55D37A5222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift in Sources */,
 				A5FC168522109FE600194793 /* ExampleActionButtonItem.swift in Sources */,
 				A50CBE5421F30F9B009FDFFD /* CommonButtonItem.swift in Sources */,
+				A55D37A4222A693B008261FC /* DashboardInteractor.swift in Sources */,
 				A50CBE7B21F33C6C009FDFFD /* ArticleParser.swift in Sources */,
 				A5737A9121DD0CF80037AAFD /* RulesSetLocalService.swift in Sources */,
 				A55FCB5921E2F60C009932A2 /* RulesSetInfoPresenter+RulesSetInfoInteractorOutput.swift in Sources */,
 				A52CD7EE22217F2D00503CF8 /* SpringFlowLayout.swift in Sources */,
 				A5FC168C2210C35D00194793 /* Assets.swift in Sources */,
+				A55D37C5222AB651008261FC /* AccountLocalService.swift in Sources */,
 				A52CD7E922216BCC00503CF8 /* RuleProgressCollectionViewCell.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */,
@@ -1405,13 +1529,17 @@
 				A586392B221994B800CDC204 /* PastContinuousParser.swift in Sources */,
 				A52CD7E4222164F800503CF8 /* UICollectionView+Extension.swift in Sources */,
 				A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */,
+				A55D37A2222A693B008261FC /* DashboardProtocols.swift in Sources */,
 				A5FC1664220DC8BC00194793 /* UIView+constrainToParent.swift in Sources */,
 				A50CBE6F21F31F99009FDFFD /* Logger.swift in Sources */,
 				A50CBE7121F3299E009FDFFD /* UpdatesFacade.swift in Sources */,
+				A55D37C2222AB560008261FC /* Account.swift in Sources */,
 				A50CBE6821F31AFC009FDFFD /* MulticastDelegate.swift in Sources */,
+				A55D37BD222AA521008261FC /* ReviseRecommendation.swift in Sources */,
 				A50CBE4D21F30C49009FDFFD /* SettingsState.swift in Sources */,
 				A55FCB5621E2F60C009932A2 /* RulesSetInfoProtocols.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
+				A55D37A3222A693B008261FC /* DashboardAssembly.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
 				A52CD7DC2221634300503CF8 /* CollectionViewManager.swift in Sources */,
@@ -1434,6 +1562,7 @@
 				A55FCB5B21E2F60C009932A2 /* RulesSetInfoState.swift in Sources */,
 				A5737AA721DD533A0037AAFD /* ExampleProtocols.swift in Sources */,
 				A5FC1660220DC69B00194793 /* PulleyViewController.swift in Sources */,
+				A55D37A1222A693B008261FC /* DashboardViewController.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
 				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
@@ -1444,10 +1573,12 @@
 				A50CBE4721F30C49009FDFFD /* SettingsProtocols.swift in Sources */,
 				A50CBE3621F30A90009FDFFD /* GerundParser.swift in Sources */,
 				A50CBE6021F31329009FDFFD /* ProgressFacade.swift in Sources */,
+				A55D379F222A693B008261FC /* DashboardPresenter.swift in Sources */,
 				A55FCB4821E29580009932A2 /* RuleProgressLocalService.swift in Sources */,
 				1CEC0D1021DA0B00003C9C7A /* UITableView+Extension.swift in Sources */,
 				A5737AA421DD533A0037AAFD /* ExamplePresenter.swift in Sources */,
 				A50CBE4A21F30C49009FDFFD /* SettingsPresenter+SettingsInteractorOutput.swift in Sources */,
+				A55D37C7222BAD1E008261FC /* Collection+Extension.swift in Sources */,
 				1CEC0CFB21D90E6D003C9C7A /* RulesSetsState.swift in Sources */,
 				A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */,
 				A52CD7F42222F6C600503CF8 /* RuleSetHeaderView.swift in Sources */,
@@ -1457,6 +1588,7 @@
 				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
 				A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */,
+				A55D37A7222A693B008261FC /* DashboardState.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
 				A5863929221993F700CDC204 /* PastSimpleParser.swift in Sources */,
 				A5737AB821DDE07E0037AAFD /* ExampleTableViewCell.swift in Sources */,
@@ -1471,6 +1603,10 @@
 				1CEC0CDB21D4015D003C9C7A /* Rule.swift in Sources */,
 				A5737AA921DD533A0037AAFD /* ExampleInteractor.swift in Sources */,
 				A50CBE4521F30C49009FDFFD /* SettingsRouter.swift in Sources */,
+				A55D37C0222AB525008261FC /* AccountFacade.swift in Sources */,
+				A55D37B9222A8E3B008261FC /* TabBarController.swift in Sources */,
+				A55D37A0222A693B008261FC /* DashboardRouter.swift in Sources */,
+				A55D37BB222AA3A6008261FC /* RoundedView.swift in Sources */,
 				1CEC0CF321D90E6D003C9C7A /* RulesSetsRouter.swift in Sources */,
 				A50CBE7421F329EA009FDFFD /* QuestionLocalService.swift in Sources */,
 				A5FC1674221001B400194793 /* AnswersAnimation.swift in Sources */,

@@ -16,13 +16,17 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     
     private let exerciseFacade: ExerciseFacade
     private let progressFacade: ProgressFacade
+    private let accountFacade: AccountFacade
     
     // MARK: - Init
     
     init(exerciseFacade: ExerciseFacade,
-         progressFacade: ProgressFacade) {
+         progressFacade: ProgressFacade,
+         accountFacade: AccountFacade) {
+        
         self.exerciseFacade = exerciseFacade
         self.progressFacade = progressFacade
+        self.accountFacade = accountFacade
     }
     
     // MARK: - ExerciseInteractor
@@ -40,5 +44,9 @@ final class ExerciseInteractorImpl: ExerciseInteractor {
     
     func finishExercies(ruleSetId: String) {
         progressFacade.setNewNextReviseRecommendedDate(forRulesSetId: ruleSetId)
+    }
+    
+    func addTimeSpentOnExersice(time: Double) {
+        accountFacade.addTimeSpentOnExersice(time: time)
     }
 }

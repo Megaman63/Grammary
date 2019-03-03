@@ -18,12 +18,6 @@ class RuleSetHeaderView: UIView {
         static let alphaPositionTreshold: CGFloat = 30
     }
     
-    override var frame: CGRect {
-        didSet {
-            print("RuleSetHeaderView \(frame)")
-        }
-    }
-    
     // MARK: - Public functions
     
     weak var delegate: RuleSetHeaderViewDelegate?
@@ -41,7 +35,7 @@ class RuleSetHeaderView: UIView {
     @IBOutlet private weak var progressView: ProgressView!
     @IBOutlet private weak var leftoverProgressLabel: UILabel!
     
-    @IBOutlet private weak var nextExerciseDateLabel: UILabel!
+    @IBOutlet private weak var nextExersiceDateLabel: UILabel!
     @IBOutlet private weak var nextExersiceLabel: UILabel!
     
     // MARK: - UIView
@@ -75,8 +69,8 @@ class RuleSetHeaderView: UIView {
         nextExersiceLabel.font = .textStyle14
         nextExersiceLabel.textColor = UIColor.white.withAlphaComponent(0.5)
         
-        nextExerciseDateLabel.font = .textStyle13
-        nextExerciseDateLabel.textColor = .white
+        nextExersiceDateLabel.font = .textStyle13
+        nextExersiceDateLabel.textColor = .white
     }
     
     func configure(headerItem: RulesSetHeaderItem) {
@@ -91,7 +85,7 @@ class RuleSetHeaderView: UIView {
         progressView.set(progress: CGFloat(headerItem.totalProgress), animated: true)
         
         nextExersiceLabel.text = headerItem.reviseRecommendation.labelString
-        nextExerciseDateLabel.text = headerItem.reviseRecommendation.dateString.uppercased()
+        nextExersiceDateLabel.text = headerItem.reviseRecommendation.dateString.uppercased()
     }
     
     func calculateAlphaForSubviews(collectionViewOffsetY: CGFloat, maxOffset: CGFloat) {

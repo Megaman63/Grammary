@@ -18,6 +18,7 @@ protocol ExerciseRouter: AnyObject {
 
 protocol ExercisePresenter: AnyObject {
     func didTriggerViewReadyEvent()
+    func didTriggerViewDeinitEvent()
     func didChooseAnswer(atIndex index: Int)
     func didShowAnswer(partialRevealDrawerHeight: CGFloat)
     func didTapCloseButton()
@@ -29,6 +30,7 @@ protocol ExerciseInteractor: AnyObject {
     func loadRules(forSetWithId id: String)
     func finishExercies(ruleSetId: String)
     func setProgress(questionId: String, isCorrectAnswer: Bool)
+    func addTimeSpentOnExersice(time: Double)
 }
 
 // MARK: - InteractorOutput

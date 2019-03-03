@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L70-sI-zuq">
-                    <rect key="frame" x="0.0" y="124" width="375" height="538"/>
+                    <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="17" minimumInteritemSpacing="17" id="Ofd-hg-s3a" customClass="SpringyFlowLayout" customModule="Grammary" customModuleProvider="target">
                         <size key="itemSize" width="50" height="50"/>
@@ -115,7 +115,7 @@
                 <constraint firstItem="L70-sI-zuq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WhC-HE-txW"/>
                 <constraint firstItem="Zrq-M8-FZR" firstAttribute="top" secondItem="bhZ-i3-eZc" secondAttribute="bottom" constant="12" id="abP-cZ-pah"/>
                 <constraint firstItem="bhZ-i3-eZc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="gmL-X4-z8D"/>
-                <constraint firstAttribute="bottom" secondItem="L70-sI-zuq" secondAttribute="bottom" constant="5" id="gp2-jB-0yQ"/>
+                <constraint firstAttribute="bottom" secondItem="L70-sI-zuq" secondAttribute="bottom" id="gp2-jB-0yQ"/>
                 <constraint firstItem="Zrq-M8-FZR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mmo-Hc-BHE"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="151.57421289355324"/>

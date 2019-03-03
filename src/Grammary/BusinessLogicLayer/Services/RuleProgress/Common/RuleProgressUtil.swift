@@ -18,6 +18,7 @@ enum NextReviseRecommendedDateOffset {
 }
 
 enum RulesSetProgressCharacteristic {
+    case notStartedYet
     case veryPoorly
     case poorly
     case medium
@@ -28,6 +29,8 @@ enum RulesSetProgressCharacteristic {
     init(totalProgress: Double) {
         assert(totalProgress >= 0)
         switch totalProgress {
+        case 0:
+            self = .notStartedYet
         case 0..<0.2:
             self = .veryPoorly
         case 0.2..<0.4:
@@ -43,8 +46,10 @@ enum RulesSetProgressCharacteristic {
         }
     }
     
-    func evaluateNextReviseRecommendedDate() -> Date {
+    func evaluateNextReviseRecommendedDate() -> Date? {
         switch self {
+        case .notStartedYet:
+            return nil
         case .veryPoorly:
             return Date(timeIntervalSinceNow: NextReviseRecommendedDateOffset.veryPoorly)
         case .poorly:

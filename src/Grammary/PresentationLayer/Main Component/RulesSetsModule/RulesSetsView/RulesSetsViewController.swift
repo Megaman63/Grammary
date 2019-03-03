@@ -15,6 +15,9 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
         static let itemsBottomMargin: CGFloat = 80
         static let itemsMinSpace: CGFloat = 17
         static let itemsTopMargin: CGFloat = 31
+        static let flowLayoutResistence: CGFloat = 3000
+        static let searchTextFieldCornerRadius: CGFloat = 10
+        static let filtersViewCornerRadius: CGFloat = 8
     }
     
     // MARK: - Private properties
@@ -85,7 +88,7 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
         searchTextField.backgroundColor = .darkTwo
         searchTextField.textColor = .white
         searchTextField.font = .textStyle24
-        searchTextField.layer.cornerRadius = 10
+        searchTextField.layer.cornerRadius = Constants.searchTextFieldCornerRadius
         searchTextField.attributedPlaceholder = NSAttributedString(
             string: "Поиск",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.blueGrey]
@@ -93,7 +96,7 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
     }
     
     private func configureFiltersView() {
-        filtersView.layer.cornerRadius = 8
+        filtersView.layer.cornerRadius = Constants.filtersViewCornerRadius
         filtersView.backgroundColor = .darkTwo
         
         let titles = ["Все", "На изучении", "Не начатые"]
@@ -132,7 +135,7 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
         
         var itemWidth = Int((UIScreen.main.bounds.width - 2 * Constants.itemsSideMargin - Constants.itemsMinSpace)/2)
         itemWidth = itemWidth % 2 == 0 ? itemWidth : itemWidth - 1
-        flowLayout.kResistence = 1800
+        flowLayout.kResistence = Constants.flowLayoutResistence
         flowLayout.itemSize = CGSize(width: CGFloat(itemWidth), height: CGFloat(itemWidth))
         flowLayout.sectionInset = UIEdgeInsets(top: Constants.itemsTopMargin,
                                                left: Constants.itemsSideMargin,

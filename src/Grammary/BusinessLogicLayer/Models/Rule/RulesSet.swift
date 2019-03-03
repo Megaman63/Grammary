@@ -16,7 +16,7 @@ class RulesSet: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var sibtitle: String = ""
     @objc dynamic var setDescription: String = ""
-    @objc dynamic var nextReviseRecommendedDate: Date = Date()
+    @objc dynamic var nextReviseRecommendedDate: Date?
     
     var progress = List<RuleProgress>()
     

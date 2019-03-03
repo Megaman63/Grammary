@@ -57,6 +57,7 @@ internal enum Asset {
   internal static let group4 = ImageAsset(name: "group4")
   internal static let house = ImageAsset(name: "house")
   internal static let laMountain = ImageAsset(name: "laMountain")
+  internal static let laMountainDay = ImageAsset(name: "laMountainDay")
   internal static let leftArrow = ImageAsset(name: "leftArrow")
   internal static let moon = ImageAsset(name: "moon")
   internal static let pencilEditButton = ImageAsset(name: "pencilEditButton")
@@ -81,6 +82,7 @@ internal enum Asset {
     group4,
     house,
     laMountain,
+    laMountainDay,
     leftArrow,
     moon,
     pencilEditButton,

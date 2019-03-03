@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StatisticView" customModule="Grammary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="218" height="89"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правил" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gf-SW-dZN">
+                    <rect key="frame" x="64" y="22" width="94" height="34"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изучено в рамках тренировок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkV-GQ-7Nc">
+                    <rect key="frame" x="0.0" y="65" width="218" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="47" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXi-2O-EoI">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="63"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GkV-GQ-7Nc" firstAttribute="top" secondItem="NXi-2O-EoI" secondAttribute="bottom" constant="2" id="1PE-SE-biX"/>
+                <constraint firstItem="GkV-GQ-7Nc" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="2Gd-iB-T9F"/>
+                <constraint firstItem="NXi-2O-EoI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4FX-84-cY6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GkV-GQ-7Nc" secondAttribute="trailing" id="DwP-k2-aj7"/>
+                <constraint firstItem="GkV-GQ-7Nc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QSC-YA-abh"/>
+                <constraint firstItem="GkV-GQ-7Nc" firstAttribute="top" secondItem="3gf-SW-dZN" secondAttribute="bottom" constant="9" id="pxm-Te-IrM"/>
+                <constraint firstItem="NXi-2O-EoI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uPD-yH-aA7"/>
+                <constraint firstItem="3gf-SW-dZN" firstAttribute="leading" secondItem="NXi-2O-EoI" secondAttribute="trailing" constant="4" id="ywz-E2-q9u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="countLabel" destination="NXi-2O-EoI" id="Oog-a9-KHG"/>
+                <outlet property="countTitleLabel" destination="3gf-SW-dZN" id="9L4-2T-n3K"/>
+                <outlet property="titleLabel" destination="GkV-GQ-7Nc" id="GLo-h9-gpi"/>
+            </connections>
+        </view>
+    </objects>
+</document>

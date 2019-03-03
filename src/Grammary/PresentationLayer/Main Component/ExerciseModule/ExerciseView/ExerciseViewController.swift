@@ -50,6 +50,10 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         }
     }
     
+    deinit {
+        presenter?.didTriggerViewDeinitEvent()
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
