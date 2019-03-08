@@ -143,6 +143,18 @@
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
 		A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */; };
 		A5B8306721FDA86600627023 /* PrimaryKeyObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */; };
+		A5C2E564222C3BC300ABC54C /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2E562222C3BC300ABC54C /* SliderTableViewCell.swift */; };
+		A5C2E565222C3BC300ABC54C /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C2E563222C3BC300ABC54C /* SliderTableViewCell.xib */; };
+		A5C2E568222C3EBB00ABC54C /* SettingsSliderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2E567222C3EBB00ABC54C /* SettingsSliderItem.swift */; };
+		A5C2E56C222C403200ABC54C /* SecondaryTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2E56A222C403200ABC54C /* SecondaryTitleTableViewCell.swift */; };
+		A5C2E56D222C403200ABC54C /* SecondaryTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C2E56B222C403200ABC54C /* SecondaryTitleTableViewCell.xib */; };
+		A5C2E56F222C40B300ABC54C /* SecondaryTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2E56E222C40B300ABC54C /* SecondaryTitleItem.swift */; };
+		A5C2E572222C41C800ABC54C /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2E570222C41C800ABC54C /* NotificationTableViewCell.swift */; };
+		A5C2E573222C41C800ABC54C /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C2E571222C41C800ABC54C /* NotificationTableViewCell.xib */; };
+		A5E30A7A2232A522009C3172 /* SettingsSwitchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E30A792232A522009C3172 /* SettingsSwitchItem.swift */; };
+		A5E30A7F2232ACEA009C3172 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E30A7D2232ACEA009C3172 /* NameTableViewCell.swift */; };
+		A5E30A802232ACEA009C3172 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E30A7E2232ACEA009C3172 /* NameTableViewCell.xib */; };
+		A5E30A822232AD11009C3172 /* SettingsNameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E30A812232AD11009C3172 /* SettingsNameItem.swift */; };
 		A5E6836421EA1BE70083789E /* PrepositionsrOfTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */; };
 		A5FC1660220DC69B00194793 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC165D220DC69A00194793 /* PulleyViewController.swift */; };
 		A5FC1661220DC69B00194793 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC165E220DC69B00194793 /* PulleyPassthroughScrollView.swift */; };
@@ -319,6 +331,18 @@
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
 		A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterToken.swift; sourceTree = "<group>"; };
 		A5B8306621FDA86600627023 /* PrimaryKeyObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryKeyObservable.swift; sourceTree = "<group>"; };
+		A5C2E562222C3BC300ABC54C /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		A5C2E563222C3BC300ABC54C /* SliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		A5C2E567222C3EBB00ABC54C /* SettingsSliderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSliderItem.swift; sourceTree = "<group>"; };
+		A5C2E56A222C403200ABC54C /* SecondaryTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleTableViewCell.swift; sourceTree = "<group>"; };
+		A5C2E56B222C403200ABC54C /* SecondaryTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryTitleTableViewCell.xib; sourceTree = "<group>"; };
+		A5C2E56E222C40B300ABC54C /* SecondaryTitleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleItem.swift; sourceTree = "<group>"; };
+		A5C2E570222C41C800ABC54C /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		A5C2E571222C41C800ABC54C /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		A5E30A792232A522009C3172 /* SettingsSwitchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchItem.swift; sourceTree = "<group>"; };
+		A5E30A7D2232ACEA009C3172 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		A5E30A7E2232ACEA009C3172 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		A5E30A812232AD11009C3172 /* SettingsNameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNameItem.swift; sourceTree = "<group>"; };
 		A5E6836321EA1BE70083789E /* PrepositionsrOfTimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepositionsrOfTimeParser.swift; sourceTree = "<group>"; };
 		A5FC165D220DC69A00194793 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
 		A5FC165E220DC69B00194793 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
@@ -767,6 +791,7 @@
 		A50CBE4F21F30C6B009FDFFD /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				A5C2E561222C3BA200ABC54C /* Cells */,
 				A50CBE3C21F30C49009FDFFD /* SettingsViewController.swift */,
 				A50CBE4221F30C49009FDFFD /* SettingsViewController.xib */,
 			);
@@ -777,6 +802,9 @@
 			isa = PBXGroup;
 			children = (
 				A50CBE4321F30C49009FDFFD /* SettingsState.swift */,
+				A5C2E567222C3EBB00ABC54C /* SettingsSliderItem.swift */,
+				A5E30A792232A522009C3172 /* SettingsSwitchItem.swift */,
+				A5E30A812232AD11009C3172 /* SettingsNameItem.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -785,6 +813,7 @@
 			isa = PBXGroup;
 			children = (
 				A50CBE5321F30F9B009FDFFD /* CommonButtonItem.swift */,
+				A5C2E56E222C40B300ABC54C /* SecondaryTitleItem.swift */,
 			);
 			path = CommonItems;
 			sourceTree = "<group>";
@@ -792,6 +821,7 @@
 		A50CBE5221F30F88009FDFFD /* CommonCells */ = {
 			isa = PBXGroup;
 			children = (
+				A5C2E569222C401E00ABC54C /* SecondaryTitleTableViewCell */,
 				A50CBE5A21F30FBE009FDFFD /* CommonButtonTableViewCell */,
 			);
 			path = CommonCells;
@@ -1231,6 +1261,52 @@
 			path = PersistenceService;
 			sourceTree = "<group>";
 		};
+		A5C2E561222C3BA200ABC54C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A5E30A7C2232ACCF009C3172 /* NameTableViewCell */,
+				A5C2E566222C3BCC00ABC54C /* SliderTableViewCell */,
+				A5C2E574222C41D000ABC54C /* NotificationTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A5C2E566222C3BCC00ABC54C /* SliderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2E562222C3BC300ABC54C /* SliderTableViewCell.swift */,
+				A5C2E563222C3BC300ABC54C /* SliderTableViewCell.xib */,
+			);
+			path = SliderTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5C2E569222C401E00ABC54C /* SecondaryTitleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2E56A222C403200ABC54C /* SecondaryTitleTableViewCell.swift */,
+				A5C2E56B222C403200ABC54C /* SecondaryTitleTableViewCell.xib */,
+			);
+			path = SecondaryTitleTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5C2E574222C41D000ABC54C /* NotificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2E570222C41C800ABC54C /* NotificationTableViewCell.swift */,
+				A5C2E571222C41C800ABC54C /* NotificationTableViewCell.xib */,
+			);
+			path = NotificationTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5E30A7C2232ACCF009C3172 /* NameTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5E30A7D2232ACEA009C3172 /* NameTableViewCell.swift */,
+				A5E30A7E2232ACEA009C3172 /* NameTableViewCell.xib */,
+			);
+			path = NameTableViewCell;
+			sourceTree = "<group>";
+		};
 		A5FC165C220DC68E00194793 /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
@@ -1371,12 +1447,16 @@
 				A55D37AE222A70E2008261FC /* NightDashboardView.xib in Resources */,
 				A55D37B2222A72BF008261FC /* DayDashboardView.xib in Resources */,
 				A50CBE5821F30FB6009FDFFD /* CommonButtonTableViewCell.xib in Resources */,
+				A5C2E573222C41C800ABC54C /* NotificationTableViewCell.xib in Resources */,
+				A5C2E56D222C403200ABC54C /* SecondaryTitleTableViewCell.xib in Resources */,
 				A55D37B6222A7514008261FC /* StatisticView.xib in Resources */,
 				A52CD7EA22216BCC00503CF8 /* RuleProgressCollectionViewCell.xib in Resources */,
 				A5737AB921DDE07E0037AAFD /* ExampleTableViewCell.xib in Resources */,
 				A5FC167A2210971B00194793 /* ExampleHeaderTableViewCell.xib in Resources */,
 				1CFCD64221D3EA8700F9D5A8 /* Assets.xcassets in Resources */,
 				A50CBE4C21F30C49009FDFFD /* SettingsViewController.xib in Resources */,
+				A5C2E565222C3BC300ABC54C /* SliderTableViewCell.xib in Resources */,
+				A5E30A802232ACEA009C3172 /* NameTableViewCell.xib in Resources */,
 				A55D37A6222A693B008261FC /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1501,12 +1581,15 @@
 				A50CBE4821F30C49009FDFFD /* SettingsAssembly.swift in Sources */,
 				1CFCD67A21D3F16B00F9D5A8 /* ExerciseRouter.swift in Sources */,
 				1CEC0CF621D90E6D003C9C7A /* RulesSetsAssembly.swift in Sources */,
+				A5C2E568222C3EBB00ABC54C /* SettingsSliderItem.swift in Sources */,
 				A5737AA821DD533A0037AAFD /* ExampleAssembly.swift in Sources */,
 				1CEC0CE021D402AD003C9C7A /* Answer.swift in Sources */,
 				A5737A8D21DCFB6D0037AAFD /* Array+toRealmList.swift in Sources */,
 				A5FC1668220DD64900194793 /* UIFont+fonts.swift in Sources */,
+				A5E30A7F2232ACEA009C3172 /* NameTableViewCell.swift in Sources */,
 				A50CBE6521F31A36009FDFFD /* RulesSetNotificationCenter.swift in Sources */,
 				1CEC0CE621D90CFB003C9C7A /* RulesSet.swift in Sources */,
+				A5E30A822232AD11009C3172 /* SettingsNameItem.swift in Sources */,
 				A55FCB5721E2F60C009932A2 /* RulesSetInfoAssembly.swift in Sources */,
 				1CEC0CDE21D402A1003C9C7A /* RuleExample.swift in Sources */,
 				A55D37A5222A693B008261FC /* DashboardPresenter+DashboardInteractorOutput.swift in Sources */,
@@ -1520,8 +1603,10 @@
 				A5FC168C2210C35D00194793 /* Assets.swift in Sources */,
 				A55D37C5222AB651008261FC /* AccountLocalService.swift in Sources */,
 				A52CD7E922216BCC00503CF8 /* RuleProgressCollectionViewCell.swift in Sources */,
+				A5C2E56F222C40B300ABC54C /* SecondaryTitleItem.swift in Sources */,
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */,
+				A5E30A7A2232A522009C3172 /* SettingsSwitchItem.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
 				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,
@@ -1539,6 +1624,7 @@
 				A50CBE4D21F30C49009FDFFD /* SettingsState.swift in Sources */,
 				A55FCB5621E2F60C009932A2 /* RulesSetInfoProtocols.swift in Sources */,
 				1CEC0D1C21DA0E39003C9C7A /* TableViewSection.swift in Sources */,
+				A5C2E572222C41C800ABC54C /* NotificationTableViewCell.swift in Sources */,
 				A55D37A3222A693B008261FC /* DashboardAssembly.swift in Sources */,
 				1CEC0D2321DA1F30003C9C7A /* ExersiceConstants.swift in Sources */,
 				A5737A8821DCF4270037AAFD /* RuleLocalService.swift in Sources */,
@@ -1565,6 +1651,7 @@
 				A55D37A1222A693B008261FC /* DashboardViewController.swift in Sources */,
 				1CFCD67921D3F16B00F9D5A8 /* ExercisePresenter.swift in Sources */,
 				A5737A9321DD0E980037AAFD /* RuleProgress.swift in Sources */,
+				A5C2E56C222C403200ABC54C /* SecondaryTitleTableViewCell.swift in Sources */,
 				1CEC0D1A21DA0CC5003C9C7A /* TableViewCell.swift in Sources */,
 				A55FCB6021E2F7EC009932A2 /* RulesSetHeaderItem.swift in Sources */,
 				A5FC168E2210C61900194793 /* NextButton.swift in Sources */,
@@ -1588,6 +1675,7 @@
 				A5737AAA21DD533A0037AAFD /* ExamplePresenter+ExampleInteractorOutput.swift in Sources */,
 				1CFCD63B21D3EA8600F9D5A8 /* AppDelegate.swift in Sources */,
 				A55FCB6F21E2FCC1009932A2 /* RuleProgressItem.swift in Sources */,
+				A5C2E564222C3BC300ABC54C /* SliderTableViewCell.swift in Sources */,
 				A55D37A7222A693B008261FC /* DashboardState.swift in Sources */,
 				1CEC0D0421D91031003C9C7A /* RulesSetsViewController.swift in Sources */,
 				A5863929221993F700CDC204 /* PastSimpleParser.swift in Sources */,

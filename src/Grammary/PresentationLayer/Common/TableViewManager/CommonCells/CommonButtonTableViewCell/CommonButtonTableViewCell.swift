@@ -22,6 +22,10 @@ class CommonButtonTableViewCell: UITableViewCell, TableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = .dark
+        button.layer.cornerRadius = button.frame.height * 0.5
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.withAlphaComponent(0.15).cgColor
     }
 
     // MARK: - Actions

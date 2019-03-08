@@ -14,17 +14,29 @@ final class SettingsInteractorImpl: SettingsInteractor {
 
     // MARK: - Private properties
     
+    private let accountFacade: AccountFacade
     private let progressFacade: ProgressFacade
     
     // MARK: - Init
     
-    init(progressFacade: ProgressFacade) {
+    init(accountFacade: AccountFacade,
+         progressFacade: ProgressFacade) {
+        
+        self.accountFacade = accountFacade
         self.progressFacade = progressFacade
     }
     
     // MARK: - SettingsInteractor
     
+    func obtainAccount() -> Account {
+        return accountFacade.obtainAccount()
+    }
+    
     func resetAllProgresses() {
         progressFacade.resetAllProgresses()
+    }
+    
+    func updateAccount(block: @escaping (Account) -> Void) {
+        accountFacade.updateAccount(block: block)
     }
 }

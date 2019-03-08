@@ -10,6 +10,7 @@ import UIKit
 
 protocol AccountFacade: AnyObject {
     func obtainAccount() -> Account
+    func updateAccount(block: @escaping (Account) -> Void)
     func addTimeSpentOnExersice(time: Double)
 }
 
@@ -36,5 +37,10 @@ final class AccountFacadeImpl: AccountFacade {
         accountLocalService.update(account) { account in
             account.timeSpentInApplication += time
         }
+    }
+    
+    func updateAccount(block: @escaping (Account) -> Void) {
+        let account = accountLocalService.obtainAccount()
+        accountLocalService.update(account, block)
     }
 }

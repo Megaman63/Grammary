@@ -23,6 +23,8 @@ protocol SettingsPresenter: AnyObject {
 // MARK: - Interactor
 
 protocol SettingsInteractor: AnyObject {
+    func obtainAccount() -> Account
+    func updateAccount(block: @escaping (Account) -> Void)
     func resetAllProgresses()
 }
 

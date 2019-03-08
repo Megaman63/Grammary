@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameTableViewCell" rowHeight="105" id="KGk-i7-Jjw" customClass="NameTableViewCell" customModule="Grammary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваше имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQT-Hh-ACf">
+                        <rect key="frame" x="32" y="27" width="70.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-OY-DjM">
+                        <rect key="frame" x="249.5" y="27" width="38.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencilEditButton" translatesAutoresizingMaskIntoConstraints="NO" id="sir-ZM-mk2">
+                        <rect key="frame" x="152" y="28" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="ASj-UZ-cN0"/>
+                            <constraint firstAttribute="height" constant="16" id="dZZ-TM-gq8"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fpx-PB-DqF">
+                        <rect key="frame" x="16" y="12" width="288" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="no6-sS-A6c"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
+                        <connections>
+                            <action selector="didBeginEditing" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="bIA-fJ-jii"/>
+                            <action selector="didChangeName" destination="KGk-i7-Jjw" eventType="editingChanged" id="wmk-Sx-nzR"/>
+                            <action selector="didEndEditing" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="Vb6-qX-eeq"/>
+                            <action selector="didTapReturnButton" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="Ecu-Ap-tEu"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" red="0.10980392160000001" green="0.062745098040000002" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="sQT-Hh-ACf" firstAttribute="centerY" secondItem="Fpx-PB-DqF" secondAttribute="centerY" id="1Ux-kC-yr5"/>
+                    <constraint firstItem="KKH-OY-DjM" firstAttribute="centerY" secondItem="Fpx-PB-DqF" secondAttribute="centerY" id="B8A-x2-wvi"/>
+                    <constraint firstAttribute="bottom" secondItem="Fpx-PB-DqF" secondAttribute="bottom" constant="28" id="HiW-MM-eWf"/>
+                    <constraint firstItem="Fpx-PB-DqF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="KUR-w7-KlB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KKH-OY-DjM" secondAttribute="trailing" constant="16" id="YoQ-rG-mh4"/>
+                    <constraint firstItem="sir-ZM-mk2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="aNf-px-xDn"/>
+                    <constraint firstItem="sQT-Hh-ACf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="eMw-Tn-w4p"/>
+                    <constraint firstAttribute="trailing" secondItem="Fpx-PB-DqF" secondAttribute="trailing" constant="16" id="tGj-Pf-LRQ"/>
+                    <constraint firstItem="Fpx-PB-DqF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uqb-uj-Xcw"/>
+                    <constraint firstItem="sir-ZM-mk2" firstAttribute="centerY" secondItem="Fpx-PB-DqF" secondAttribute="centerY" id="zVf-zx-EJi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iconImageView" destination="sir-ZM-mk2" id="NV4-vd-5qg"/>
+                <outlet property="nameLabel" destination="KKH-OY-DjM" id="tK3-Tc-j96"/>
+                <outlet property="nameTextField" destination="Fpx-PB-DqF" id="cVQ-ui-0gb"/>
+                <outlet property="placeholderLabel" destination="sQT-Hh-ACf" id="iz3-ff-n69"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="81.409295352323838"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pencilEditButton" width="16" height="16"/>
+    </resources>
+</document>

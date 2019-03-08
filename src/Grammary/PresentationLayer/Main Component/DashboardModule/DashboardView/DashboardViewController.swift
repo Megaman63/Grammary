@@ -85,12 +85,13 @@ final class DashboardViewController: UIViewController, DashboardView {
     func configure(state: DashboardState) {
         topGradientView.gradientType = state.isDay ? .item1 : .blueBG
         configureTopBackgroudImageView(isDay: state.isDay)
-        
+
         let topStatisticTitle = "Общий прогресс за \(state.totalCountOfDays) \(state.totalCountOfDays.getDayEnding())"
         topStatisticView.configure(count: Int(state.totalProgress * 100),
                                    countTitle: "/ 100%",
                                    title: topStatisticTitle)
-        
+        topGradientView.bringSubviewToFront(topStatisticView)
+
         middleStatisticView.configure(count: state.totalCountOfCompletedRules,
                                       countTitle: state.totalCountOfCompletedRules.getRuleEnding(),
                                       title: "Изучено в рамках тренировок")

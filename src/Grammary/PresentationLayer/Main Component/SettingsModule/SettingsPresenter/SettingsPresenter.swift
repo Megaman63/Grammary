@@ -34,11 +34,55 @@ final class SettingsPresenterImpl: SettingsPresenter {
     // MARK: - SettingsPresenter
 
     func didTriggerViewReadyEvent() {
+        let account = interactor.obtainAccount()
+    
+        let countOfExerciseInWeekItem = SettingsSliderItem(
+            title: "Интентсивность тренировок в неделю",
+            currentValue: account.countOfExercisesInWeek,
+            minValue: AccountConstants.minCountOfExercisesInWeek,
+            maxValue: AccountConstants.maxCountOfExercisesInWeek
+        ) { [weak self] currentValue in
+            self?.interactor.updateAccount(block: { $0.countOfExercisesInWeek = currentValue } )
+        }
+        
+        let countOfQuestionInExerciseItem = SettingsSliderItem(
+            title: "Длительность тренировок",
+            currentValue: account.countOfQuestionInExercise,
+            minValue: AccountConstants.minCountOfQuestionInExercise,
+            maxValue: AccountConstants.maxCountOfQuestionInExercise
+        ) { [weak self] currentValue in
+            self?.interactor.updateAccount(block: { $0.countOfQuestionInExercise = currentValue } )
+        }
+        
+        let notificationItem = SettingsSwitchItem(
+            title: "Напоминания",
+            subTitle: "Уведомления о том, что необходимо повторить изученные правила",
+            isOn: account.notificationIsOn
+        ) { [weak self] isOn in
+            self?.interactor.updateAccount(block: { $0.notificationIsOn = isOn } )
+        }
+        
+        let nameItem = SettingsNameItem.init(name: account.name) { [weak self] name in
+            self?.interactor.updateAccount(block: { $0.name = name } )
+        }
+        
         let resetProgressItem = CommonButtonItem(name: "Reset progress") { [weak self] in
             self?.didTapResetProgressButton()
         }
         
-        let section = CommonSection(items: [resetProgressItem], didSelectItem: nil)
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        let grammaryVersion = SecondaryTitleItem(title: "Grammary v\(version)")
+        
+        let items: [TableViewItem] = [
+            countOfExerciseInWeekItem,
+            countOfQuestionInExerciseItem,
+            notificationItem,
+            nameItem,
+            resetProgressItem,
+            grammaryVersion,
+        ]
+        
+        let section = CommonAnyTypeSection(items: items, didSelectItem: nil)
         view?.set(dataSource: [section])
     }
     

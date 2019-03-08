@@ -12,7 +12,8 @@ final class SettingsAssembly {
     
     static func createModule(serviceAssembly: ServiceAssembly) -> UIViewController {
         let view = SettingsViewController()
-        let interactor = SettingsInteractorImpl(progressFacade: serviceAssembly.getProgressFacade())
+        let interactor = SettingsInteractorImpl(accountFacade: serviceAssembly.getAccountFacade(),
+                                                progressFacade: serviceAssembly.getProgressFacade())
         let router = SettingsRouterImpl(serviceAssembly: serviceAssembly)
         let state = SettingsState()
         let presenter = SettingsPresenterImpl(view: view,

@@ -17,17 +17,23 @@ final class SettingsViewController: UIViewController, SettingsView {
     // MARK: - Outlets
 
     @IBOutlet private var tableView: UITableView!
-
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewManager = TableViewManager(tableView: tableView, options: .withoutBottomSeparators)
-        tableView.registerWithNib(cellClass: CommonButtonTableViewCell.self)
+        view.backgroundColor = .dark
+        
+        configureTableView()
+        
         presenter?.didTriggerViewReadyEvent()
     }
     
     // MARK: - Actions
+    
+    @IBAction func backgroudTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     // MARK: - SettingsView
     
@@ -35,5 +41,18 @@ final class SettingsViewController: UIViewController, SettingsView {
     
     func set(dataSource: [TableViewSection]) {
         tableViewManager.dataSource = dataSource
+    }
+}
+
+private extension SettingsViewController {
+    func configureTableView() {
+        tableView.backgroundColor = .dark
+        tableView.separatorColor = .clear
+        tableViewManager = TableViewManager(tableView: tableView, options: .withoutBottomSeparators)
+        tableView.registerWithNib(cellClass: CommonButtonTableViewCell.self)
+        tableView.registerWithNib(cellClass: SliderTableViewCell.self)
+        tableView.registerWithNib(cellClass: SecondaryTitleTableViewCell.self)
+        tableView.registerWithNib(cellClass: NotificationTableViewCell.self)
+        tableView.registerWithNib(cellClass: NameTableViewCell.self)
     }
 }
