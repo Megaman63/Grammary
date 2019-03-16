@@ -140,6 +140,7 @@
 		A586392B221994B800CDC204 /* PastContinuousParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392A221994B800CDC204 /* PastContinuousParser.swift */; };
 		A586392D221995A900CDC204 /* PresentPerfectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392C221995A900CDC204 /* PresentPerfectParser.swift */; };
 		A586392F221996AE00CDC204 /* PastPerfectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586392E221996AE00CDC204 /* PastPerfectParser.swift */; };
+		A586C836223CB89900A838FE /* FuturePerfectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586C835223CB89900A838FE /* FuturePerfectParser.swift */; };
 		A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */; };
 		A59DD98221E2891F004947F3 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59DD98121E2891F004947F3 /* QuestionItem.swift */; };
 		A5B8306521FDA01C00627023 /* NotificationCenterToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8306421FDA01C00627023 /* NotificationCenterToken.swift */; };
@@ -328,6 +329,7 @@
 		A586392A221994B800CDC204 /* PastContinuousParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastContinuousParser.swift; sourceTree = "<group>"; };
 		A586392C221995A900CDC204 /* PresentPerfectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentPerfectParser.swift; sourceTree = "<group>"; };
 		A586392E221996AE00CDC204 /* PastPerfectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPerfectParser.swift; sourceTree = "<group>"; };
+		A586C835223CB89900A838FE /* FuturePerfectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturePerfectParser.swift; sourceTree = "<group>"; };
 		A59C0B062206D60200B07D65 /* RuleProgressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleProgressUtil.swift; sourceTree = "<group>"; };
 		A59C0B0B2207365C00B07D65 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		A59DD98121E2891F004947F3 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
@@ -1242,6 +1244,7 @@
 				A586392A221994B800CDC204 /* PastContinuousParser.swift */,
 				A586392C221995A900CDC204 /* PresentPerfectParser.swift */,
 				A586392E221996AE00CDC204 /* PastPerfectParser.swift */,
+				A586C835223CB89900A838FE /* FuturePerfectParser.swift */,
 			);
 			path = Tenses;
 			sourceTree = "<group>";
@@ -1619,6 +1622,7 @@
 				A5737A8F21DD0C530037AAFD /* PersistenceService.swift in Sources */,
 				A59C0B072206D60200B07D65 /* RuleProgressUtil.swift in Sources */,
 				A5E30A7A2232A522009C3172 /* SettingsSwitchItem.swift in Sources */,
+				A586C836223CB89900A838FE /* FuturePerfectParser.swift in Sources */,
 				A5737A8A21DCF4B50037AAFD /* RuleNetworkService.swift in Sources */,
 				A50CBE4621F30C49009FDFFD /* SettingsViewController.swift in Sources */,
 				A50CBE7721F3327B009FDFFD /* Application.swift in Sources */,

@@ -41,6 +41,7 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         sets += getTimePrepositionsRulesSet()
         sets += getPresentTensesRulesSet()
         sets += getPastTensesRulesSet()
+        sets += getFutureTensesRulesSet()
         
         for set in sets {
             if let existedRuleSet = rulesSetLocalService.obtainRulesSet(forId: set.id) {
@@ -143,6 +144,17 @@ final class UpdatesFacadeImpl: UpdatesFacade {
         let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
         let set = RulesSet(id: "PastTenses",
                            name: "Past tenses",
+                           sibtitle: "",
+                           setDescription: "",
+                           progress: progress.toRealmList())
+        return [set]
+    }
+    
+    private func getFutureTensesRulesSet() -> [RulesSet] {
+        let rules = parseFuturePerfect()
+        let progress = rules.map { getProgress(forRule: $0, reliableProgress: 15) }
+        let set = RulesSet(id: "FutureTenses",
+                           name: "Future tenses",
                            sibtitle: "",
                            setDescription: "",
                            progress: progress.toRealmList())
