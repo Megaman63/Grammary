@@ -48,6 +48,10 @@ final class RulesSetInfoViewController: UIViewController, RulesSetInfoView {
         presenter?.didTriggerViewReadyEvent()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Actions
 
     @IBAction func studyButtonTap(_ sender: UIButton) {

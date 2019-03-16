@@ -12,7 +12,6 @@ import SnapKit
 final class ExampleViewController: UIViewController, ExampleView {
 
     enum Constants {
-        static let collapsedDrawerHeight: CGFloat = 70
         static let nextButtonHeight: CGFloat = 44
         static let tableViewBottomContentInset: CGFloat = nextButtonHeight + 20
     }
@@ -117,13 +116,13 @@ extension ExampleViewController: PulleyDrawerViewControllerDelegate {
     }
     
     func partialRevealDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-        if partialRevealDrawerHeight < Constants.collapsedDrawerHeight {
+        if partialRevealDrawerHeight < ExerciseModuleConstants.collapsedDrawerHeight {
             
         }
-        return max(Constants.collapsedDrawerHeight, partialRevealDrawerHeight)
+        return max(ExerciseModuleConstants.collapsedDrawerHeight, partialRevealDrawerHeight)
     }
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-        return Constants.collapsedDrawerHeight
+        return ExerciseModuleConstants.collapsedDrawerHeight
     }
 }

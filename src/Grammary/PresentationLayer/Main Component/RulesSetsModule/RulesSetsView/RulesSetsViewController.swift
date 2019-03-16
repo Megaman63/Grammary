@@ -23,7 +23,8 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
     // MARK: - Private properties
 
     private var collectionViewManager: CollectionViewManager!
-
+    private var tabBarHeight: CGFloat = 0
+    
     // MARK: - Outlets
 
     @IBOutlet private weak var searchTextField: TextField!
@@ -53,6 +54,17 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        let bottomSafeAreaPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        tabBarHeight = tabBarController?.tabBar.frame.height ?? 0 + bottomSafeAreaPadding
+        flowLayout.sectionInset.bottom = Constants.itemsSideMargin + tabBarHeight
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - Actions
@@ -140,7 +152,7 @@ final class RulesSetsViewController: UIViewController, RulesSetsView {
         flowLayout.sectionInset = UIEdgeInsets(top: Constants.itemsTopMargin,
                                                left: Constants.itemsSideMargin,
                                                bottom: 0,
-                                               right: Constants.itemsSideMargin)
+                                               right: Constants.itemsSideMargin + tabBarHeight)
     }
 }
 

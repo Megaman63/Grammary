@@ -50,12 +50,22 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         }
     }
     
-    deinit {
-        presenter?.didTriggerViewDeinitEvent()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        calculateScrollViewContentHeight()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        calculateScrollViewContentHeight()
+    }
+    
+    deinit {
+        presenter?.didTriggerViewDeinitEvent()
     }
     
     // MARK: - Actions
@@ -103,8 +113,6 @@ final class ExerciseViewController: UIViewController, ExerciseView {
             text = text + "\n\n" + question.ruleSubject
         }
         ruleQuestionLabel.text = text
-
-        calculateScrollViewContentHeight()
         
         if let pulley = pulleyViewController, pulley.drawerPosition != .closed {
             pulley.setDrawerPosition(position: .closed, animated: true)
@@ -117,6 +125,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         if question.shouldShowExampleFirst {
             presenter?.didChooseAnswer(atIndex: question.correctAnswer)
         }
+        view.setNeedsLayout()
     }
     
     func set(progress: CGFloat) {
@@ -178,19 +187,17 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 Constants.backdropAndAnswerGap
             )
         }
-        print("\(view.frame.height)")
+        print("calculate view.frame.height \(view.frame.height)")
         answersAnimation.calculateAnimations(appearance: appearance)
         presenter?.didShowAnswer(partialRevealDrawerHeight: partialRevealDrawerHeight)
 
         var firstAnswerViewHeight: CGFloat? = nil
-        var lastAnswerView: UIView? = nil
         for (index, animation) in answersAnimation.animations.enumerated() {
             switch animation {
             case .shouldDissappear, .none:
                 answerViews[index].alpha = 0
             case .shouldChangeIndex(let currentIndex, _):
                 let answerView = answerViews[currentIndex]
-                lastAnswerView = answerView
                 
                 let delta: CGFloat
                 if let firstAnswerViewHeight = firstAnswerViewHeight {
@@ -208,14 +215,6 @@ final class ExerciseViewController: UIViewController, ExerciseView {
                 }
             }
         }
-        if let maxY = lastAnswerView?.frame.maxY {
-            let contentHeight = max(view.frame.height, maxY + Constants.backdropAndAnswerGap + 70)
-            print("contentHeight \(contentHeight)")
-            scrollView.contentSize.height = contentHeight
-            scrollContentView.snp.updateConstraints {
-                $0.height.equalTo(contentHeight)
-            }
-        }
         
         let block = {
             self.scrollView.contentOffset = .zero
@@ -227,6 +226,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
         } else {
             block()
         }
+        view.setNeedsLayout()
     }
 //
 //    func addBottom() {
@@ -261,6 +261,7 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     func configureScrollView() {
         scrollView = UIScrollView(frame: .zero)
         view.addSubview(scrollView)
+        scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -349,7 +350,6 @@ final class ExerciseViewController: UIViewController, ExerciseView {
             }
             answerViews.append(answerView)
         }
-        calculateScrollViewContentHeight()
     }
 
     func setAlphaToDissappearingAnswerViews(alpha: CGFloat) {
@@ -359,8 +359,14 @@ final class ExerciseViewController: UIViewController, ExerciseView {
     }
     
     func calculateScrollViewContentHeight() {
-        let lastAnswerView = answerViews[3].isHidden ? answerViews[2] : answerViews[3]
-        let contentHeight = max(view.frame.height, lastAnswerView.frame.maxY + Constants.backdropAndAnswerGap)
+        guard let lastAnswerView = answerViews.reversed().first(where: { $0.alpha != 0 && !$0.isHidden}) else {
+            assertionFailure()
+            return
+        }
+        
+        let bottomInset: CGFloat = questionState == .answered ? ExerciseModuleConstants.collapsedDrawerHeight : 0
+        var contentHeight = lastAnswerView.frame.maxY + Constants.backdropAndAnswerGap + bottomInset
+        contentHeight = max(view.frame.height, contentHeight)
         scrollView.contentSize.height = contentHeight
         scrollContentView.snp.updateConstraints {
             $0.height.equalTo(contentHeight)

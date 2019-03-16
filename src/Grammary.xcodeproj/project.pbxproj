@@ -82,6 +82,7 @@
 		A52CD7EF22217F2D00503CF8 /* BehaviorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */; };
 		A52CD7F42222F6C600503CF8 /* RuleSetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */; };
 		A52CD7F62222F6DE00503CF8 /* RuleTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */; };
+		A556808B223C9945004E83DA /* ExerciseModuleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A556808A223C9945004E83DA /* ExerciseModuleUtils.swift */; };
 		A55D37932229853D008261FC /* RulesSetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */; };
 		A55D37942229853D008261FC /* RulesSetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */; };
 		A55D379F222A693B008261FC /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D3796222A693A008261FC /* DashboardPresenter.swift */; };
@@ -269,6 +270,7 @@
 		A52CD7ED22217F2D00503CF8 /* BehaviorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorManager.swift; sourceTree = "<group>"; };
 		A52CD7F32222F6C600503CF8 /* RuleSetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetHeaderView.swift; sourceTree = "<group>"; };
 		A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTitleLabel.swift; sourceTree = "<group>"; };
+		A556808A223C9945004E83DA /* ExerciseModuleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleUtils.swift; sourceTree = "<group>"; };
 		A55D37912229853D008261FC /* RulesSetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesSetCollectionViewCell.swift; sourceTree = "<group>"; };
 		A55D37922229853D008261FC /* RulesSetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesSetCollectionViewCell.xib; sourceTree = "<group>"; };
 		A55D3796222A693A008261FC /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -700,6 +702,7 @@
 		1CFCD68221D3F16F00F9D5A8 /* ExerciseModule */ = {
 			isa = PBXGroup;
 			children = (
+				A5568089223C992D004E83DA /* Common */,
 				A59C0B082206E34F00B07D65 /* Components */,
 				1CFCD67421D3F16B00F9D5A8 /* ExerciseAssembly.swift */,
 				1CFCD67521D3F16B00F9D5A8 /* ExerciseInteractor.swift */,
@@ -950,6 +953,14 @@
 				A52CD7F52222F6DE00503CF8 /* RuleTitleLabel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A5568089223C992D004E83DA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A556808A223C9945004E83DA /* ExerciseModuleUtils.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A55D3795222A691C008261FC /* DashboardModule */ = {
@@ -1574,6 +1585,7 @@
 				A50CBE5721F30FB6009FDFFD /* CommonButtonTableViewCell.swift in Sources */,
 				A55FCB5521E2F60C009932A2 /* RulesSetInfoViewController.swift in Sources */,
 				A50CBE7D21F345BA009FDFFD /* PrepositionsOfPlaceParser.swift in Sources */,
+				A556808B223C9945004E83DA /* ExerciseModuleUtils.swift in Sources */,
 				1CEC0CF221D90E6D003C9C7A /* RulesSetsPresenter.swift in Sources */,
 				A52855F221DE409100228F0E /* Question.swift in Sources */,
 				1CFCD68121D3F16B00F9D5A8 /* ExerciseState.swift in Sources */,

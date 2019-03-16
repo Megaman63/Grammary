@@ -17,6 +17,7 @@ final class DashboardViewController: UIViewController, DashboardView {
         static let footerHeight: CGFloat = 74
         static let statisticViewLeft: CGFloat = 30
         static let statisticViewBottom: CGFloat = 31
+        static let statisticViewTop: CGFloat = 60
     }
     
     // MARK: - Outlets
@@ -90,8 +91,9 @@ final class DashboardViewController: UIViewController, DashboardView {
         topStatisticView.configure(count: Int(state.totalProgress * 100),
                                    countTitle: "/ 100%",
                                    title: topStatisticTitle)
-        topGradientView.bringSubviewToFront(topStatisticView)
-
+        
+        configureGreetingLabel(isDay: state.isDay, userName: state.userName)
+        
         middleStatisticView.configure(count: state.totalCountOfCompletedRules,
                                       countTitle: state.totalCountOfCompletedRules.getRuleEnding(),
                                       title: "Изучено в рамках тренировок")
@@ -118,6 +120,8 @@ final class DashboardViewController: UIViewController, DashboardView {
         }
         nextExersiceLabel.text = state.reviseRecommendation.labelString
         nextExersiceDateLabel.text = state.reviseRecommendation.dateString
+        
+        topGradientView.sendSubviewToBack(topBackgroundView)
     }
 }
 
@@ -149,6 +153,19 @@ private extension DashboardViewController {
         topBackgroundView = bgView
     }
 
+    func configureGreetingLabel(isDay: Bool, userName: String?) {
+        let nameStr: String
+        if let userName = userName, !userName.isEmpty {
+            nameStr = ", " + userName
+        } else {
+            nameStr = ""
+        }
+        greetingLabel.text = isDay
+            ? "Добрый день" + nameStr
+            : "Добрый вечер" + nameStr
+        topGradientView.bringSubviewToFront(greetingLabel)
+    }
+    
     func configureStatisticViews() {
         topStatisticView = StatisticView.fromNib()
         topGradientView.addSubview(topStatisticView)
@@ -161,14 +178,16 @@ private extension DashboardViewController {
         middleGradientView.addSubview(middleStatisticView)
         middleStatisticView.snp.makeConstraints {
             $0.left.equalToSuperview().offset(Constants.statisticViewLeft)
-            $0.bottom.equalToSuperview().offset(-Constants.statisticViewBottom)
+            $0.bottom.equalToSuperview().offset(-Constants.statisticViewBottom).priority(500)
+            $0.top.greaterThanOrEqualToSuperview().offset(Constants.statisticViewTop)
         }
         
         bottomStatisticView = StatisticView.fromNib()
         bottomGradientView.addSubview(bottomStatisticView)
         bottomStatisticView.snp.makeConstraints {
             $0.left.equalToSuperview().offset(Constants.statisticViewLeft)
-            $0.bottom.equalToSuperview().offset(-Constants.statisticViewBottom)
+            $0.bottom.equalToSuperview().offset(-Constants.statisticViewBottom).priority(500)
+            $0.top.greaterThanOrEqualToSuperview().offset(Constants.statisticViewTop)
         }
     }
     

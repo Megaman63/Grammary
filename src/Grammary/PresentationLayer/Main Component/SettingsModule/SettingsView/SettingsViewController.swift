@@ -29,6 +29,10 @@ final class SettingsViewController: UIViewController, SettingsView {
         presenter?.didTriggerViewReadyEvent()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Actions
     
     @IBAction func backgroudTap(_ sender: Any) {
